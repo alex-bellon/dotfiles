@@ -1,2 +1,2 @@
 # Ricing Resources
-Files for ricing, including .vimrc, .zshrc, and links to all GTK themes and icons.
+Files for ricing including .vimrc, .zshrc, and links to all GTK themes and icons.
