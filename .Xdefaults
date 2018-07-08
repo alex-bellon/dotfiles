@@ -1,0 +1,31 @@
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+urxvt.internalBorder: 10
+
+!font size
+urxvt.font: xft:Hack:pixelsize=13
+
+!larger history limit
+urxvt.saveLines: 1000000
+
+URxvt*background: #151515
+URxvt*foreground: #ffffff
+
+*.cursorColor:  #cdcdcd
+
+*.color0: #151515
+*.color1: #FF5252
+*.color2: #C3D82C
+*.color3: #FFC135
+*.color4: #42A5F5
+*.color5: #D81B60
+*.color6: #00ACC1
+*.color7: #F5F5F5
+*.color8: #708284
+*.color9: #FF5252
+*.color10: #C3D82C
+*.color11: #FFC135
+*.color12: #42A5F5
+*.color13: #D81B60
+*.color14: #00ACC1
+*.color15: #F5F5F5
