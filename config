@@ -8,7 +8,9 @@ set $mod Mod1
 gaps inner 30
 gaps outer 5
 
-font Hack 8
+#smart_gaps on
+
+font pango:Source Sans Pro, Hack 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
