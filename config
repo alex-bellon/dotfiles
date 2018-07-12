@@ -5,12 +5,26 @@ exec --no-startup-id feh --bg-fill ~/Pictures/background.png
 
 set $mod Mod1
 
-gaps inner 30
-gaps outer 5
+gaps inner 20
+gaps outer 0
 
 #smart_gaps on
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 font pango:Source Sans Pro, Hack 8
+
+# class                 border  backgr. text    indicator
+client.focused          #551a8b #f18b6d #ffffff #551a8b
+client.focused_inactive #551a8b #93d8f4 #ffffff #484e50
+client.unfocused        #333333 #93d8f4 #888888 #292d2e
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
