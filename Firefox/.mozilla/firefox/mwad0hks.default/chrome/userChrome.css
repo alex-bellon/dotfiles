@@ -5,9 +5,9 @@
 /*********************************/
 /**** TAB BAR VARIABLES ****/
 /*********************************/
-    --bg-dark: var(--bg);
-    --bg-light: #575c66 ; 
-    --fg-dark: var(--bg);
+    --bg-dark: #151515;
+    --bg-light: #252525;
+	--fg-dark: var(--bg);
     --fg-light: var(--fg); 
     --tab-fonts: "Hack"; 
     --tab-font-size: 9pt;
