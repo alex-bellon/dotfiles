@@ -136,6 +136,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 
+		#i3bar_command ~/.i3/lemonbar/i3_lemonbar.py		
+
     	colors {
         	background #000000
         	statusline #ffffff
@@ -144,7 +146,7 @@ bar {
 	    	#loc               border  backgd  text
         	focused_workspace  #f18b6d #f18b6d #ffffff
         	active_workspace   #f18b6d #f18b6d #ffffff
-        	inactive_workspace #93d8f4 #93d8f4 #888888
+         	inactive_workspace #93d8f4 #93d8f4 #888888
         	urgent_workspace   #2f343a #900000 #ffffff
         	binding_mode       #2f343a #900000 #ffffff
     	}
