@@ -25,9 +25,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 font pango:Source Sans Pro, Hack 8
 
 # class                 border  backgr. text    indicator
-client.focused          #551a8b #f18b6d #ffffff #551a8b
-client.focused_inactive #551a8b #93d8f4 #ffffff #484e50
-client.unfocused        #333333 #93d8f4 #888888 #292d2e
+client.focused          #551a8b #f18b6d #ffffff #f18b6d
+client.focused_inactive #551a8b #93d8f4 #ffffff #93d8f4
+client.unfocused        #333333 #93d8f4 #888888 #93d8f4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -137,11 +137,11 @@ bindsym $mod+r mode "resize"
 bar {
 
     	colors {
-        	background #151515
+        	background #000000
         	statusline #ffffff
         	separator #666666
 
-		#loc               border  backgd  text
+	    	#loc               border  backgd  text
         	focused_workspace  #f18b6d #f18b6d #ffffff
         	active_workspace   #f18b6d #f18b6d #ffffff
         	inactive_workspace #93d8f4 #93d8f4 #888888

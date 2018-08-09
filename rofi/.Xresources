@@ -55,8 +55,8 @@ URxvt*foreground: #ffffff
 
 rofi.color-window: #151515, #f18b6d, #f18b6d
 rofi.color-normal: #151515, #bbbbbb, #151515, #f18b6d, #ffffff
-rofi.color-active: #f18b6d, #ffffff, #f18b6d, #f18b6d, #bbbbbb
-rofi.color-urgent: #f18b6d, #ffffff, #f18b6d, #f18b6d, #bbbbbb
+rofi.color-active: #f18b6d, #ffffff, #f18b6d, #f18b6d, #ffffff
+rofi.color-urgent: #f18b6d, #ffffff, #f18b6d, #f18b6d, #ffffff
 rofi.width: 50
 rofi.lines: 10
 rofi.columns: 1
@@ -65,4 +65,4 @@ rofi.bw: 2
 rofi.padding: 20
 rofi.eh: 1
 !rofi.separator-style: solid
-!rofi.hide-scrollbar: true
+rofi.hide-scrollbar: true
