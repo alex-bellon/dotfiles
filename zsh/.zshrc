@@ -22,6 +22,11 @@ alias status="vim ~/.i3statusbar.conf"
 alias resources="vim ~/.Xresources"
 alias defualts="vim ~/.Xdefaults"
 
+alias gy="git pull"
+alias ga="git add --all"
+alias gc="git commit"
+alias gp="git push"
+
 plugins=(
   git
 )
