@@ -45,6 +45,7 @@ bindsym $mod+Control+f exec nemo
 bindsym $mod+Control+t exec Telegram
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+l exec lock
+bindsym $mod+Control+s exec shutdown
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
