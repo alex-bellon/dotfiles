@@ -3,7 +3,7 @@ export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 ZSH_THEME="bullet-train" #theme
 
 alias python="python3"
-alias telegram="/opt/Telegram/Telegram"
+alias telegram="~/Repositories/Telegram/Telegram"
 
 alias accio="sudo apt-get install"
 alias c="clear"
