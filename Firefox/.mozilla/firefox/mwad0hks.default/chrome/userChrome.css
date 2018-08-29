@@ -97,10 +97,10 @@ tab, .tabbrowser-tabs *|tab {
 }
 
 /**** TAB ICONS (DEFAULT=NONE)  ****/
-.tab-icon-image { 
+/*.tab-icon-image { 
     display: none !important; 
 }
-
+*/
 
 /*********************************/
 /**** URL BAR CONFIG ****/
