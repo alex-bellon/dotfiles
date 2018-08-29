@@ -12,6 +12,7 @@ alias x="bye"
 alias matrix="cmatrix"
 alias shutdown="shutdown -h now"
 alias cancer="ssh abellon@cancer.cs.utexas.edu"
+alias ..="cd .."
 
 alias power="sudo vim /etc/systemd/logind.conf"
 alias zshrc="vim ~/.zshrc"
