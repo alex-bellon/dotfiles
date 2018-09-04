@@ -2,6 +2,8 @@
 
 sudo apt-get install i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake
 
+#ADD IN YES TO ALL INSTALLATION STUFF
+
 #install i3 dependencies
 #add PPA
 #clone i3-gaps repo
