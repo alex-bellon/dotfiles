@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec "rofi -combi-modi window,run,ssh -show combi"
 
 bindsym $mod+Control+f exec nemo
-bindsym $mod+Control+t exec "telegram"
+bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram"
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+l exec lock
 bindsym $mod+Control+x exec "shutdown -h now"
