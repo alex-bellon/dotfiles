@@ -40,7 +40,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec "rofi -combi-modi window,run,ssh -show combi"
+bindsym $mod+d exec "rofi -combi-modi window,run,ssh,find:~/.local/share/rofi/finder.sh -show combi"
 
 bindsym $mod+Control+f exec nemo
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram"
