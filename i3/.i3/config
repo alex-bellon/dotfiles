@@ -48,6 +48,7 @@ bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+l exec lock
 bindsym $mod+Control+x exec "shutdown -h now"
 bindsym $mod+Control+s exec "scrot ~/Pictures/scrots/%b-%d-%H:%M.png"
+bindsym $mod+Control+m exec "mupdf ~/Documents/Introduction-to-Linear-Algebra.pdf"
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
