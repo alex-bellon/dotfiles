@@ -13,6 +13,7 @@ alias matrix="cmatrix"
 alias shutdown="shutdown -h now"
 alias cancer="ssh abellon@cancer.cs.utexas.edu"
 alias ..="cd .."
+alias textbook="mupdf ~/Documents/Introduction-to-Linear-Algebra.pdf"
 
 alias power="sudo vim /etc/systemd/logind.conf"
 alias zshrc="vim ~/.zshrc"
@@ -30,6 +31,7 @@ alias gp="git push"
 
 plugins=(
   git
+  colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
