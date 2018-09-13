@@ -13,6 +13,7 @@ alias matrix="cmatrix"
 alias shutdown="shutdown -h now"
 alias cancer="ssh abellon@cancer.cs.utexas.edu"
 alias ..="cd .."
+alias eclipse="~/eclipse/jee-photon/eclipse/eclipse"
 
 alias power="sudo vim /etc/systemd/logind.conf"
 alias zshrc="vim ~/.zshrc"
