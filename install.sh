@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake
+sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake
 
 #ADD IN YES TO ALL INSTALLATION STUFF
 
@@ -29,6 +29,14 @@ sudo make install
 #i3 dependencies
 #add PPA
 #clone i3-gaps repo
+
+#Neofetch
+git clone https://github.com/dylanaraps/neofetch
+cd neofetch
+make install
+
+#Install stuff I use
+sudo apt-get install atom scrot cmatrix 
 
 #clone oh my zsh and make
 

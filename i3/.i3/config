@@ -72,9 +72,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -89,6 +89,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
+bindsym $mod+q workspace 1
+bindsym $mod+w workspace 2
+bindsym $mod+e workspace 3
+bindsym $mod+r workspace 4
+bindsym $mod+t workspace 5
+bindsym $mod+y workspace 6
+bindsym $mod+u workspace 7
+bindsym $mod+i workspace 8
+bindsym $mod+o workspace 9
+bindsym $mod+p workspace 10
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -134,7 +144,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+c mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
