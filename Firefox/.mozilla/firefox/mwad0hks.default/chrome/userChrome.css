@@ -87,8 +87,8 @@ tab, .tabbrowser-tabs *|tab {
 /**** TAB SEPARATOR (DEFAULT=NONE)  ****/
 #TabsToolbar .tab-background {
     background: transparent !important;
-    border-right: 0px !important;
-    border-left: 0px !important;
+    border-right: 10px !important;
+    border-left: 10px !important;
 }
 
 /**** TAB SEPARATOR (DEFAULT=NONE) ****/
@@ -97,10 +97,10 @@ tab, .tabbrowser-tabs *|tab {
 }
 
 /**** TAB ICONS (DEFAULT=NONE)  ****/
-/*.tab-icon-image { 
-    display: none !important; 
+.tab-icon-image { 
+    border-left: 10px !important;
 }
-*/
+
 
 /*********************************/
 /**** URL BAR CONFIG ****/

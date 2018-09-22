@@ -2,6 +2,8 @@
 for_window [class="^.*"] border pixel 4
 
 exec --no-startup-id feh --bg-fill ~/Pictures/background.png
+exec --no-startup-id "firefox https://todoist.com/app?lang=en#agenda%2Foverdue%20%26%20!assigned%20to%3A%20other%2C%207%20days%20%26%20!assigned%20to%3A%20other"
+exec --no-startup-id "firefox https://calendar.google.com/calendar/r https://mail.google.com/mail/u/1/#inbox"
 
 set $mod Mod1
 
@@ -108,7 +110,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+` workspace 10
 
 bindsym Control+$mod+Right workspace next
 
