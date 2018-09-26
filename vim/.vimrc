@@ -5,7 +5,9 @@ set tabstop=4
 set mouse=a
 set number
 set numberwidth=4
+set pastetoggle=<F2>
 
+" Highlight text over 80 chars in red
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
