@@ -1,14 +1,29 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+
+filetype on                 " required
 set laststatus=2
+
+set scrolloff=2
+
+set expandtab
 set tabstop=4
+
 set mouse=a
+
 set number
 set numberwidth=4
+
 set pastetoggle=<F2>
 
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=black guibg=darkred guifg=white
-highlight CursorColumn cterm=NONE ctermbg=white ctermfg=black guibg=darkred guifg=white
+set foldenable
+
+" highlight whitespace characters
+set list
+set listchars=tab:>-,trail:.,extends:#,nbsp:.
+
+" set crosshair colors
+highlight CursorLine   cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
+highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
 
 " Set crosshairs
 :set cursorline    " enable the horizontal line
