@@ -1,5 +1,5 @@
 # i3 config file (v4)
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 3
 
 exec --no-startup-id feh --bg-fill ~/Pictures/background.png
 exec --no-startup-id "firefox https://todoist.com/app?lang=en#agenda%2Foverdue%20%26%20!assigned%20to%3A%20other%2C%207%20days%20%26%20!assigned%20to%3A%20other"
@@ -162,9 +162,9 @@ bar {
         	separator #666666
 
 	    	#loc               border  backgd  text
-        	focused_workspace  #f18b6d #f18b6d #ffffff
-        	active_workspace   #f18b6d #f18b6d #ffffff
-         	inactive_workspace #93d8f4 #93d8f4 #888888
+        	focused_workspace  #000000 #000000 #ffffff
+        	active_workspace   #000000 #000000 #ffffff
+         	inactive_workspace #000000 #000000 #888888
         	urgent_workspace   #2f343a #900000 #ffffff
         	binding_mode       #2f343a #900000 #ffffff
     	}
