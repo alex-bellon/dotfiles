@@ -7,9 +7,16 @@ set number
 set numberwidth=4
 set pastetoggle=<F2>
 
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=black guibg=darkred guifg=white
+highlight CursorColumn cterm=NONE ctermbg=white ctermfg=black guibg=darkred guifg=white
+
+" Set crosshairs
+:set cursorline    " enable the horizontal line
+:set cursorcolumn  " enable the vertical line
+
 " Highlight text over 80 chars in red
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
