@@ -2,8 +2,7 @@
 for_window [class="^.*"] border pixel 3
 
 exec --no-startup-id feh --bg-fill ~/Pictures/background.png
-exec --no-startup-id "firefox https://todoist.com/app?lang=en#agenda%2Foverdue%20%26%20!assigned%20to%3A%20other%2C%207%20days%20%26%20!assigned%20to%3A%20other"
-exec --no-startup-id "firefox https://calendar.google.com/calendar/r https://mail.google.com/mail/u/1/#inbox"
+exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine
 
 set $mod Mod1
 
@@ -51,7 +50,7 @@ bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram"
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+l exec lock
 bindsym $mod+Control+x exec "shutdown -h now"
-bindsym $mod+Control+s exec "scrot ~/Pictures/scrots/%b-%d-%H:%M.png"
+bindsym $mod+Control+s exec "shutter"
 bindsym $mod+Control+m exec "mupdf ~/Documents/Textbooks/Introduction-to-Linear-Algebra.pdf"
 
 # alternatively, you can use the cursor keys:
@@ -154,18 +153,18 @@ bindsym $mod+c mode "resize"
 # finds out, if available)
 bar {
 
-		#i3bar_command ~/.i3/lemonbar/i3_lemonbar.py		
+		#i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
 
     	colors {
-        	background #000000
+        	background #151515
         	statusline #ffffff
         	separator #666666
 
 	    	#loc               border  backgd  text
-        	focused_workspace  #000000 #000000 #ffffff
-        	active_workspace   #000000 #000000 #ffffff
-         	inactive_workspace #000000 #000000 #888888
-        	urgent_workspace   #2f343a #900000 #ffffff
+        	focused_workspace  #151515 #151515 #ffffff
+        	active_workspace   #151515 #151515 #ffffff
+         	inactive_workspace #151515 #151515 #888888
+        	urgent_workspace   #aaaaaa #aaaaaa #ffffff
         	binding_mode       #2f343a #900000 #ffffff
     	}
         status_command i3status

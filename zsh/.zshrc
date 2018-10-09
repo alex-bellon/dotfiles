@@ -16,6 +16,7 @@ alias ..="cd .."
 alias eclipse="~/eclipse/jee-photon/eclipse/eclipse"
 alias metasploit="msfconsole"
 alias carles="~/Repos/charles/bin/charles"
+alias home="cd"
 
 alias power="sudo vim /etc/systemd/logind.conf"
 alias zshrc="vim ~/.zshrc"
