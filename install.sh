@@ -44,4 +44,7 @@ sudo apt-get install atom scrot cmatrix
 
 #stow everything
 
+#install write
+#wget the tar
+sudo apt install libqt5widgets5 libqt5network5 libqt5svg5
 
