@@ -39,9 +39,7 @@ make install
 sudo apt-get install atom scrot cmatrix 
 
 #clone oh my zsh and make
-
 #download zsh theme
-
 #stow everything
 
 #install write
