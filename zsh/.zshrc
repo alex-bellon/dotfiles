@@ -2,35 +2,74 @@ export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
 ZSH_THEME="bullet-train" #theme
 
+################
+# PROG ALIASES #
+################
+
+alias charles="~/Repos/charles/bin/charles"
+alias matrix="cmatrix"
+alias metasploit="msfconsole"
 alias python="python3"
 alias telegram="~/Repos/Telegram/Telegram"
 
+###################
+# COMMAND ALIASES #
+###################
+
 alias accio="sudo apt-get install"
 alias c="clear"
-alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M.png'
-alias x="bye"
-alias matrix="cmatrix"
-alias shutdown="shutdown -h now"
-alias cancer="ssh abellon@cancer.cs.utexas.edu"
-alias ..="cd .."
-alias eclipse="~/eclipse/jee-photon/eclipse/eclipse"
-alias metasploit="msfconsole"
-alias carles="~/Repos/charles/bin/charles"
 alias home="cd"
+alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M.png'
+alias shutdown="shutdown -h now"
+alias x="bye"
+alias ..="cd .."
 
-alias power="sudo vim /etc/systemd/logind.conf"
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
-alias tmux="vim ~/.tmux.conf"
+###############
+# SSH ALIASES #
+###############
+
+alias cancer="ssh abellon@cancer.cs.utexas.edu"
+
+###################
+# DOTFILE ALIASES #
+###################
+
 alias config="vim ~/.i3/config"
-alias status="vim ~/.i3statusbar.conf"
-alias resources="vim ~/.Xresources"
 alias defaults="vim ~/.Xdefaults"
+alias power="sudo vim /etc/systemd/logind.conf"
+alias resources="vim ~/.Xresources"
+alias status="vim ~/.i3statusbar.conf"
+alias tmux="vim ~/.tmux.conf"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+
+###############
+# GIT ALIASES #
+###############
 
 alias gy="git pull"
-alias ga="git add --all"
-alias gc="git commit"
 alias gp="git push"
+alias ga="git add --all"
+
+#############
+# FUNCTIONS #
+#############
+
+# git commit
+gc() { builtin git commit -m "$@" }
+
+#make directory and cd into it
+mcd (){
+  mkdir $1
+  cd $1
+}
+
+#ls every time you cd
+cd() { builtin cd "$@" && ls; }
+
+###########
+# PLUGINS #
+###########
 
 plugins=(
   git
@@ -46,8 +85,9 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-if [[ ! $TERM =~ screen ]]; then 
-    exec tmux #load tmux automatically
+#load tmux automatically
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
