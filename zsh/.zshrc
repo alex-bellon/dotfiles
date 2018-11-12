@@ -49,7 +49,7 @@ alias zshrc="vim ~/.zshrc"
 
 alias gy="git pull"
 alias gp="git push"
-alias ga="git add --all"
+alias ga="git add -A"
 
 #############
 # FUNCTIONS #
