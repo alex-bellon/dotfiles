@@ -7,6 +7,7 @@ ZSH_THEME="bullet-train" #theme
 ################
 
 alias charles="~/Repos/charles/bin/charles"
+alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
 alias metasploit="msfconsole"
 alias python="python3"
