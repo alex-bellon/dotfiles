@@ -20,6 +20,7 @@ alias telegram="~/Repos/Telegram/Telegram"
 alias accio="sudo apt-get install"
 alias c="clear"
 alias home="cd"
+alias i3lock="~/Repos/i3lock-color/lock.sh"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M.png'
 alias shutdown="shutdown -h now"
 alias x="bye"
