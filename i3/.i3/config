@@ -48,7 +48,7 @@ bindsym $mod+d exec "rofi -combi-modi window,run,ssh,find:~/.local/share/rofi/fi
 bindsym $mod+Control+f exec nemo
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram"
 bindsym $mod+Control+b exec firefox
-bindsym $mod+Control+l exec lock
+bindsym $mod+Control+l exec "~/Repos/i3lock-fancy/i3lock-fancy"
 bindsym $mod+Control+x exec "shutdown -h now"
 bindsym $mod+Control+s exec "shutter"
 bindsym $mod+Control+m exec "mupdf ~/Documents/Textbooks/Introduction-to-Linear-Algebra.pdf"
