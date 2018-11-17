@@ -35,6 +35,12 @@ sudo apt-get install atom scrot cmatrix
 #download zsh theme
 #stow everything
 
+
+#BootISO
+git clone https://github.com/jsamr/bootiso.git
+cd bootiso/
+chmod +x bootiso
+
 #install write
 #wget the tar
 sudo apt install libqt5widgets5 libqt5network5 libqt5svg5
