@@ -31,6 +31,7 @@ alias ..="cd .."
 ###############
 
 alias cancer="ssh abellon@cancer.cs.utexas.edu"
+alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 
 ###################
 # DOTFILE ALIASES #

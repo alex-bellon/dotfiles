@@ -22,8 +22,8 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +5% #increase sou
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 
 # Sreen brightness controls
-bindsym Control+Up exec xbacklight -inc 10 # increase screen brightness
-bindsym Control+Down exec xbacklight -dec 10 # decrease screen brightness
+bindsym Control+Up exec xbacklight -inc 5 # increase screen brightness
+bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 
 font pango:Source Sans Pro, Hack 8
 
