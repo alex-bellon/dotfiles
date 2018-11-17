@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake i3lock
+sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake i3lock xbacklight
 
 #ADD IN YES TO ALL INSTALLATION STUFF
 
