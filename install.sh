@@ -41,7 +41,8 @@ cd materia-theme-master
 sudo ./install.sh
 
 # Paper Icons
-sudo add-apt-repository -u ppa:snwh/ppa
+sudo add-apt-repository ppa:snwh/ppa
+sudo apt-get update
 sudo apt-get install paper-icon-theme
 
 #clone oh my zsh and make
