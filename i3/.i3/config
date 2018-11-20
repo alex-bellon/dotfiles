@@ -40,7 +40,7 @@ exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/a
 #########################
 
 #### BORDER WIDTH
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 #### GAP WIDTH
 gaps inner 20
@@ -78,7 +78,6 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 # PROGRAM SHORTCUTS #
 #####################
 
-bindsym $mod+Shift+q kill #kill current window
 bindsym $mod+l exec "~/Repos/i3lock-fancy/i3lock-fancy -p" #lock screen
 bindsym $mod+d exec "rofi -combi-modi window,run,ssh,find:~/.local/share/rofi/finder.sh -show combi" #program launcher
 
@@ -104,6 +103,9 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+#### KILL FOCUSED WINDOW
+bindsym $mod+Shift+q kill
 
 #### FULLSCREEN
 bindsym $mod+f fullscreen toggle
