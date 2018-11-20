@@ -17,6 +17,8 @@ set pastetoggle=<F2>
 
 set foldenable
 
+syntax on
+
 " highlight whitespace characters
 set list
 set listchars=tab:>-,trail:.,extends:#,nbsp:.
@@ -41,6 +43,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'ap/vim-css-color'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
