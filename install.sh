@@ -1,7 +1,10 @@
 #!/bin/sh
 
 # Common Programs
-sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake i3lock xbacklight atom scrot cmatrix
+sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix
+
+# Background
+wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/background.png
 
 cd
 mkdir Repos
@@ -18,11 +21,14 @@ cd ~/Repos/
 git clone https://github.com/PandorasFox/i3lock-color.git 
 cd i3lock-color
 autoreconf -i && ./configure && make
+cd x86_64-pc-linux-gnu
+sudo cp i3lock /usr/local/bin
 
-# i3lock-fancy
-cd ~/Repos/i3lock-fancy
-sudo apt-get install imagemagick util-linux
-
+# Mantablockscreen
+cd ~/Repos
+git clone https://github.com/reorr/mantablockscreen
+cd mantablockscreen
+./mantablockscreen -i ~/Pictures/background.png
 
 # i3 dependencies
 # add PPA
@@ -50,7 +56,7 @@ sudo apt-get install paper-icon-theme
 #stow everything
 
 
-#BootISO
+# BootISO
 git clone https://github.com/jsamr/bootiso.git
 cd bootiso/
 chmod +x bootiso
