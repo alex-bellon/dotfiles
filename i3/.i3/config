@@ -30,7 +30,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ###############
 
 #### LOAD WALLPAPER
-exec --no-startup-id feh --bg-fill ~/Pictures/background.png
+exec --no-startup-id feh --bg-fill ~/Pictures/background.jpg
+
+#### SET COLORS
+exec --no-startup-id wal -i ~/Pictures/background.jpg
+
+#### SET LOCKSCREEN
+exec --no-startup-id mantablockscreen -i ~/Pictures/background.jpg
 
 #### MOUNT LAB MACHINE
 exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine

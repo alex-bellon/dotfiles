@@ -59,12 +59,18 @@ alias ga="git add -A"
 # FUNCTIONS #
 #############
 
+#update colors and lockscreen with new wallpaper
+theme() {
+    wal -i ~/Pictures/$1
+    mantablockscreen -i ~/Pictures/$1
+}
+
 # git commit
 gc() { builtin git commit -m "$@" }
 
 #make directory and cd into it
-mcd (){
-  mkdir $1
+mkdir (){
+  builtin mkdir $1
   cd $1
 }
 
