@@ -40,7 +40,7 @@ exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/a
 #########################
 
 #### BORDER WIDTH
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 #### GAP WIDTH
 gaps inner 20
@@ -54,9 +54,9 @@ smart_gaps on
 
 #### WINDOW BORDERS
 # class                 border  backgr. text    indicator
-client.focused          #551a8b #f18b6d #ffffff #f18b6d
-client.focused_inactive #551a8b #93d8f4 #ffffff #93d8f4
-client.unfocused        #333333 #93d8f4 #888888 #93d8f4
+#client.focused          #551a8b #f18b6d #ffffff #f18b6d
+#client.focused_inactive #551a8b #93d8f4 #ffffff #93d8f4
+#client.unfocused        #333333 #93d8f4 #888888 #93d8f4
 
 ##################
 # MEDIA CONTROLS #
@@ -78,7 +78,7 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 # PROGRAM SHORTCUTS #
 #####################
 
-bindsym $mod+l exec "~/Repos/i3lock-fancy/i3lock-fancy -p" #lock screen
+bindsym $mod+l exec "mantablockscreen" #lock screen
 bindsym $mod+d exec "rofi -combi-modi window,run,ssh,find:~/.local/share/rofi/finder.sh -show combi" #program launcher
 
 bindsym $mod+Return exec urxvt #terminal
@@ -172,26 +172,44 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $hl i3wm.color6
+set_from_resource $bl i3wm.color3
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
+
 #################
 # i3 STATUS BAR #
 #################
 
 bar {
+        colors {
+            background $bg
+            statusline #ffffff
+            separator $fg
 
-		#i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
-
-    	colors {
-        	background #151515
-        	statusline #ffffff
-        	separator #666666
-
-	      	#loc               border  backgd  text
-        	focused_workspace  #151515 #151515 #ffffff
-        	active_workspace   #151515 #151515 #ffffff
-         	inactive_workspace #151515 #151515 #888888
-        	urgent_workspace   #aaaaaa #aaaaaa #ffffff
-        	binding_mode       #2f343a #900000 #ffffff
-    	}
+            #loc               border  backgd  text
+            focused_workspace  $bg $bg #ffffff
+            active_workspace   $bg $bg #ffffff
+            inactive_workspace $bg $bg #cccccc
+            urgent_workspace   $bg $bg #cccccc
+            binding_mode       $bg $bg #cccccc
+        }
         status_command i3status
+        #status_command i3blocks
         tray_output primary
 }

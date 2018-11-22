@@ -19,6 +19,7 @@ alias telegram="~/Repos/Telegram/Telegram"
 
 alias accio="sudo apt-get install"
 alias c="clear"
+alias float="i3-msg floating enable"
 alias home="cd"
 alias lock="mantablockscreen"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M.png'

@@ -8,8 +8,8 @@ urxvt.font: xft:Hack:pixelsize=13
 !larger history limit
 urxvt.saveLines: 1000000
 
-URxvt*background: #151515
-URxvt*foreground: #ffffff
+!URxvt*background: #151515
+!URxvt*foreground: #ffffff
 
 *.cursorColor:  #cdcdcd
 

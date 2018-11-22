@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Common Programs
-sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix
+sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3
 
 # Background
 wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/background.png
@@ -33,6 +33,11 @@ cd mantablockscreen
 # i3 dependencies
 # add PPA
 # clone i3-gaps repo
+
+# rEFInd
+sudo apt-add-repository ppa:rodsmith/refind
+sudo apt-get update
+sudo apt-get install refind
 
 # Neofetch
 cd ~/Repos/
