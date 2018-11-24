@@ -60,8 +60,15 @@ sudo apt-get install paper-icon-theme
 #download zsh theme
 #stow everything
 
+# pywal
+sudo pip3 install pywal
+
+# wal_steam
+cd ~/Repos/
+git clone https://github.com/kotajacob/wal_steam.git
 
 # BootISO
+cd ~/Repos/
 git clone https://github.com/jsamr/bootiso.git
 cd bootiso/
 chmod +x bootiso

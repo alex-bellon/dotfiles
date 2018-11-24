@@ -212,7 +212,7 @@ bar {
             focused_workspace  $bg $bg #ffffff
             active_workspace   $bg $bg #ffffff
             inactive_workspace $bg $bg #cccccc
-            urgent_workspace   $bg $bg #cccccc
+            urgent_workspace   $bg $fg #cccccc
             binding_mode       $bg $bg #cccccc
         }
         status_command i3status

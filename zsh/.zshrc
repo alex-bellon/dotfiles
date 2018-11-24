@@ -63,13 +63,14 @@ alias ga="git add -A"
 theme() {
     wal -i ~/Pictures/$1
     mantablockscreen -i ~/Pictures/$1
+    python3 ~/Repos/wal_steam.py -w
 }
 
 # git commit
 gc() { builtin git commit -m "$@" }
 
 #make directory and cd into it
-mkdir (){
+mcd (){
   builtin mkdir $1
   cd $1
 }
