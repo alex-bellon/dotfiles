@@ -1,1 +1,68 @@
-Dotfiles/rofi/.Xresources
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+urxvt.internalBorder: 0
+!font size
+urxvt.font: xft:Hack:pixelsize=13
+!
+!!larger history limit
+urxvt.saveLines: 1000000
+!
+!!open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+!
+!!change font size on Control-Plus/Minus
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
+!
+!!URxvt*background: #151515
+!!URxvt*foreground: #ffffff
+!
+!*.cursorColor:  #cdcdcd
+
+!!dark black
+!*.color0: #151515 
+!!dark red
+!*.color1: #F18B6D
+!!dark green
+!*.color2: #C3D82C
+!!dark yellow
+!*.color3: #FFC135
+!!dark blue
+!*.color4: #93D8F4
+!!dark magenta
+!*.color5: #FF5252
+!!dark cyan
+!*.color6: #00ACC1
+!!dark white
+!*.color7: #F5F5F5
+!!light black
+!*.color8: #708284
+!!light red
+!*.color9: #F18B6D
+!!light green
+!*.color10: #C3D82C
+!!light yellow
+!*.color11: #FFC135
+!!light blue
+!*.color12: #93D8F4
+!!light magenta
+!*.color13: #FF5252
+!!light cyan
+!*.color14: #00ACC1
+!!light white
+!*.color15: #F5F5F5
+
+!rofi.color-window: #151515, #f18b6d, #f18b6d
+!rofi.color-normal: #151515, #bbbbbb, #151515, #f18b6d, #ffffff
+!rofi.color-active: #f18b6d, #ffffff, #f18b6d, #f18b6d, #ffffff
+!rofi.color-urgent: #f18b6d, #ffffff, #f18b6d, #f18b6d, #ffffff
+rofi.width: 50
+rofi.lines: 10
+rofi.columns: 1
+rofi.font: Hack 10
+rofi.bw: 2
+rofi.padding: 20
+rofi.eh: 1
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
