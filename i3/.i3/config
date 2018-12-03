@@ -29,6 +29,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ON START UP #
 ###############
 
+## quick terminal
+exec --no-startup-id urxvt -name metask
+for_window [instance="metask"] floating enable;
+for_window [instance="metask"] move scratchpad; [instance="metask"] scratchpad show; move position 0px 22px; resize shrink height 300px; resize grow width 683px; move scratchpad
+bindsym $mod+t [instance="metask"] scratchpad show
+
 #### LOAD WALLPAPER
 exec --no-startup-id feh --bg-fill ~/Pictures/background.jpg
 

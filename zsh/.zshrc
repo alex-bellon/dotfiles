@@ -1,6 +1,7 @@
 export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
 ZSH_THEME="bullet-train" #theme
+#ZSH_THEME="oxide"
 
 ################
 # PROG ALIASES #
@@ -109,3 +110,4 @@ if [ -f '/home/alex/Repos/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then so
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH=$PATH:/usr/local/bin
