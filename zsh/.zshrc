@@ -1,7 +1,5 @@
 export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
-#ZSH_THEME="bullet-train" #theme
-#ZSH_THEME="oxide"
 ZSH_THEME="punctual"
 
 ################
@@ -22,9 +20,10 @@ alias telegram="~/Repos/Telegram/Telegram"
 alias accio="sudo apt-get install"
 alias c="clear"
 alias float="i3-msg floating enable"
-alias home="cd"
+alias h="cd"
 alias lock="mantablockscreen"
-alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M.png'
+alias ls='ls -a --color=auto'
+alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
 alias x="bye"
 alias ..="cd .."
@@ -78,7 +77,7 @@ mcd (){
 }
 
 #ls every time you cd
-cd() { builtin cd "$@" && ls; }
+cd() { builtin cd "$@" && ls -a --color=auto; }
 
 ###########
 # PLUGINS #
