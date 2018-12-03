@@ -1,7 +1,8 @@
 export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
-ZSH_THEME="bullet-train" #theme
+#ZSH_THEME="bullet-train" #theme
 #ZSH_THEME="oxide"
+ZSH_THEME="punctual"
 
 ################
 # PROG ALIASES #
