@@ -19,10 +19,12 @@ alias telegram="~/Repos/Telegram/Telegram"
 
 alias accio="sudo apt-get install"
 alias c="clear"
+alias dl="~/Downloads"
 alias float="i3-msg floating enable"
+alias gh="~/GitHub"
 alias h="cd"
 alias lock="mantablockscreen"
-alias ls='ls -a --color=auto'
+alias ls="ls -a --color=auto"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
 alias x="bye"
@@ -111,3 +113,4 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
+export GOPATH=$HOME
