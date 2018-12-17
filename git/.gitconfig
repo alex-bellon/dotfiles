@@ -1,0 +1,7 @@
+[user]
+	email = alexrbellon@gmail.com
+	name = alex-bellon
+[push]
+	default = matching
+[alias]
+	a = add --all
