@@ -43,6 +43,7 @@ alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 
 alias config="vim ~/.i3/config"
 alias defaults="vim ~/.Xdefaults"
+alias gconfig="vim ~/.gitconfig"
 alias power="sudo vim /etc/systemd/logind.conf"
 alias resources="vim ~/.Xresources"
 alias status="vim ~/.i3statusbar.conf"

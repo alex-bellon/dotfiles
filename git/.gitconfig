@@ -1,7 +1,9 @@
+[alias]
+        a = add --all
+[color]
+        ui = auto
+[push]
+	default = matching
 [user]
 	email = alexrbellon@gmail.com
 	name = alex-bellon
-[push]
-	default = matching
-[alias]
-	a = add --all
