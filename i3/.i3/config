@@ -50,6 +50,10 @@ exec --no-startup-id mantablockscreen -i ~/Pictures/background.jpg
 #### MOUNT LAB MACHINE
 exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine
 
+#### SET VOLUME TO 0
+exec --no-startup-id pactl set-sink-volume 0 0% #set volume to 0
+exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 #########################
 # WINDOW CUSOTMIZATIONS #
 #########################
