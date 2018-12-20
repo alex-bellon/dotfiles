@@ -29,7 +29,7 @@ sudo apt install brave-browser brave-keyring
 cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git
 cd gimp-cc-themes
-cp -r Gimp-CC-Theme-Darker ~/.gimp-2.8/themes
+cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
 
 # i3 dependencies
 # add PPA

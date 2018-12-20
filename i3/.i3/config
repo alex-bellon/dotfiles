@@ -101,7 +101,7 @@ bindsym $mod+l exec "mantablockscreen" #lock screen
 bindsym $mod+d exec "rofi -combi-modi window,run,ssh,find:~/.local/share/rofi/finder.sh -show combi" #program launcher
 
 bindsym $mod+Return exec urxvt #terminal
-bindsym $mod+Control+f exec nemo #file browser
+bindsym $mod+Control+f exec thunar #file browser
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram" #telegram
 bindsym $mod+Control+b exec firefox #firefox
 bindsym $mod+Control+x exec "shutdown -h now" #shut down
