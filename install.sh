@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install vim i3 git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm
+sudo apt-get install vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm
 
 # Background
 echo "Downloading background"
@@ -24,6 +24,12 @@ UBUNTU_CODENAME=$( (grep DISTRIB_CODENAME /etc/upstream-release/lsb-release || g
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-$UBUNTU_CODENAME.list
 sudo apt update
 sudo apt install brave-browser brave-keyring
+
+# GIMP Theme
+cd ~/Repos
+git clone https://github.com/draekko/gimp-cc-themes.git
+cd gimp-cc-themes
+cp -r Gimp-CC-Theme-Darker ~/.gimp-2.8/themes
 
 # i3 dependencies
 # add PPA

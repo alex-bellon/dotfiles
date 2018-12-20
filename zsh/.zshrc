@@ -19,6 +19,7 @@ alias telegram="~/Repos/Telegram/Telegram"
 
 alias accio="sudo apt-get install"
 alias c="clear"
+alias df="~/Dotfiles"
 alias dl="~/Downloads"
 alias float="i3-msg floating enable"
 alias gh="~/GitHub"
@@ -57,7 +58,6 @@ alias zshrc="vim ~/.zshrc"
 
 alias gy="git pull"
 alias gp="git push"
-alias ga="git add -A"
 
 #############
 # FUNCTIONS #
