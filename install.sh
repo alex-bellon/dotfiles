@@ -80,6 +80,10 @@ echo "Installing wal_steam"
 cd ~/Repos/
 git clone https://github.com/kotajacob/wal_steam.git
 
+# youtube_dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
 #stow everything
 stow Firefox
 stow i3
