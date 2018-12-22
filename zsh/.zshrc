@@ -1,5 +1,6 @@
 export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
+
 ZSH_THEME="punctual"
 
 ################
@@ -11,6 +12,7 @@ alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
 alias metasploit="msfconsole"
 alias python="python3"
+alias taizen="~/Repos/taizen/target/release/taizen"
 alias telegram="~/Repos/Telegram/Telegram"
 
 ###################

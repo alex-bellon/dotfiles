@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm
+sudo apt-get install vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm mpv
 
 # Background
 echo "Downloading background"
@@ -30,6 +30,9 @@ cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git
 cd gimp-cc-themes
 cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
+
+# GTK Theme things
+sudo apt-get install lxappearance gtk-chtheme qt4-qtconfig
 
 # i3 dependencies
 # add PPA
