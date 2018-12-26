@@ -1,5 +1,5 @@
 export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
-
+#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_THEME="punctual"
 
@@ -92,6 +92,7 @@ cd() { builtin cd "$@" && ls -a --color=auto; }
 plugins=(
   git
   colored-man-pages
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
