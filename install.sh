@@ -76,8 +76,8 @@ git clone https://github.com/dylanaraps/neofetch
 cd neofetch
 make install
 
-# clone oh my zsh and make
-# download zsh theme
+# Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Paper Icons
 echo "Installing Paper icons"
@@ -99,6 +99,9 @@ git clone https://github.com/kotajacob/wal_steam.git
 # youtube_dl
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
+
+#zsh-autosuggestion
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 #stow everything
 stow Firefox
