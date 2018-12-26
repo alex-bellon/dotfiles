@@ -46,7 +46,14 @@ git clone https://github.com/PandorasFox/i3lock-color.git
 cd i3lock-color
 autoreconf -i && ./configure && make
 cd x86_64-pc-linux-gnu
-sudo cp i3lock /usr/local/bin
+sudo cp i3lock /usr/local/bin/i3lock
+
+#i3-quickterm
+pip3 install --user i3ipc
+cd ~/Repos
+git clone https://github.com/lbonn/i3-quickterm.git
+cd i3-quickterm
+sudo cp i3-quickterm /usr/local/bin/i3_quickterm
 
 # Materia Theme
 echo "Installing Materia theme"
