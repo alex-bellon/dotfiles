@@ -7,7 +7,7 @@
 /*********************************/
     --bg-dark: var(--color2);
     --bg-light: var(--color3);
-	--fg-dark: var(--bg);
+    --fg-dark: var(--bg);
     --fg-light: var(--fg); 
     --tab-fonts: "Hack"; 
     --tab-font-size: 9pt;
@@ -101,6 +101,18 @@ tab, .tabbrowser-tabs *|tab {
     border-left: 10px !important;
 }
 
+/**** TAB ICONS (DEFAULT=NONE)  ****/
+.tab-icon-image {
+    margin-right: 6px !important;
+}
+
+
+.tab-content {
+    padding-left: 6px!important;
+    padding-right: 2px!important;
+}
+
+
 
 /*********************************/
 /**** URL BAR CONFIG ****/
@@ -148,3 +160,4 @@ browser[type="content-primary"], browser[type="content"] {
 browser, browser.display.background_color, tabbrowser tabpanels {
     background-color: var(--bg-dark) !important;
 }
+
