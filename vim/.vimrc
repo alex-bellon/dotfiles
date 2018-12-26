@@ -19,12 +19,12 @@ set list
 set listchars=tab:>-,trail:.,extends:#,nbsp:.
 
 " set crosshair colors
-highlight CursorLine   cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
-highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
+"highlight CursorLine   cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
+"highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
 
 " Set crosshairs
-:set cursorline    " enable the horizontal line
-:set cursorcolumn  " enable the vertical line
+":set cursorline    " enable the horizontal line
+":set cursorcolumn  " enable the vertical line
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -38,6 +38,8 @@ Plugin 'dylanaraps/wal.vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
+Plugin 'lilydjwg/colorizer'
+Plugin 'RRethy/vim-illuminate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

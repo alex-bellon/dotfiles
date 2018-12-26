@@ -39,13 +39,13 @@ bindsym $mod+t [instance="metask"] scratchpad show
 xmodmap ~/.Xmodmap
 
 #### LOAD WALLPAPER
-exec --no-startup-id feh --bg-fill ~/Pictures/background.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 #### SET COLORS
-exec --no-startup-id wal -i ~/Pictures/background.jpg
+exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
 #### SET LOCKSCREEN
-exec --no-startup-id mantablockscreen -i ~/Pictures/background.jpg
+exec --no-startup-id mantablockscreen -i ~/Pictures/wallpaper.jpg
 
 #### MOUNT LAB MACHINE
 exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine

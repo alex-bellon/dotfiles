@@ -5,7 +5,7 @@
 /*********************************/
 /**** TAB BAR VARIABLES ****/
 /*********************************/
-    --bg-dark: var(--color7);
+    --bg-dark: var(--color2);
     --bg-light: var(--color3);
 	--fg-dark: var(--bg);
     --fg-light: var(--fg); 
