@@ -1,12 +1,12 @@
-@import url('file:///home/alex/Dotfiles/colors.css');
+@import url('file:///home/alex/.cache/wal/colors.css');
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 :root {
 /*********************************/
 /**** TAB BAR VARIABLES ****/
 /*********************************/
-    --bg-dark: #151515;
-    --bg-light: #252525;
+    --bg-dark: var(--color7);
+    --bg-light: var(--color3);
 	--fg-dark: var(--bg);
     --fg-light: var(--fg); 
     --tab-fonts: "Hack"; 

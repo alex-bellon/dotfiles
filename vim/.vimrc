@@ -1,23 +1,18 @@
 set nocompatible              " be iMproved, required
-
 filetype on                 " required
 set laststatus=2
-
 set scrolloff=2
-
 set expandtab
 set tabstop=4
-
 set mouse=a
-
 set number
-set numberwidth=4
-
+set numberwidth=5
 set pastetoggle=<F2>
-
 set foldenable
-
 syntax on
+
+" Mappings
+map <C-t> :NERDTreeToggle<CR>
 
 " highlight whitespace characters
 set list
@@ -31,11 +26,7 @@ highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg
 :set cursorline    " enable the horizontal line
 :set cursorcolumn  " enable the vertical line
 
-" Highlight text over 80 chars in red
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
-
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -44,6 +35,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'dylanaraps/wal.vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

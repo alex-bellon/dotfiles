@@ -52,6 +52,7 @@ alias resources="vim ~/.Xresources"
 alias status="vim ~/.i3statusbar.conf"
 alias tmux="vim ~/.tmux.conf"
 alias vimrc="vim ~/.vimrc"
+alias vundle="vim +PluginInstall +qall"
 alias zshrc="vim ~/.zshrc"
 
 ###############
