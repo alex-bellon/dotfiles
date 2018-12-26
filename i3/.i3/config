@@ -98,7 +98,7 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 #####################
 
 bindsym $mod+l exec "mantablockscreen" #lock screen
-bindsym $mod+d exec "rofi -combi-modi window,run,ssh,find:~/.local/share/rofi/finder.sh -show combi" #program launcher
+bindsym $mod+d exec "rofi -combi-modi window,drun,ssh, -show combi" #program launcher
 
 bindsym $mod+Return exec urxvt #terminal
 bindsym $mod+Control+f exec thunar #file browser
