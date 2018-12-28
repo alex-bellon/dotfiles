@@ -28,6 +28,7 @@ alias gh="~/GitHub"
 alias h="cd"
 alias lock="mantablockscreen"
 alias ls="ls -a --color=auto"
+alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
 alias x="bye"

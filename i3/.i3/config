@@ -37,6 +37,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 #### SET COLORS
 exec --no-startup-id wal -c
+exec --no-startup-id wal -c
 exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
 #### SET LOCKSCREEN
