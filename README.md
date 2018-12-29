@@ -1,3 +1,13 @@
+
+```
+     ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
+     ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝
+     ██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗
+     ██║  ██║██║   ██║   ██║   ██╔══╝  ██║██║     ██╔══╝  ╚════██║
+     ██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║
+     ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝
+```                                                          
+
 # Dotfiles
 
 The dotfiles I use to customize my Linux setup. Includes files for:
@@ -9,7 +19,7 @@ The dotfiles I use to customize my Linux setup. Includes files for:
   * rofi
   * Firefox
 
-# Technical Information
+## Technical Information
 
 * Distro: Linux Mint 18.3 Sylvia 
 * Terminal: urxvt + tmux
