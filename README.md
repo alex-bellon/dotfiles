@@ -16,8 +16,8 @@ The dotfiles I use to customize my Linux setup. Includes files for i3, urxvt, zs
    Terminal: urxvt + tmux
       Shell: zsh + Oh-My-Zsh
          WM: i3-gaps
-      Icons: [Paper](snwh.org/paper)
-  GTK Theme: [Materia-Dark-Compact](github.com/nana-4/materia-theme)
+      Icons: Paper (snwh.org/paper)
+  GTK Theme: Materia-Dark-Compact (github.com/nana-4/materia-theme)
     Browser: Firefox
      Editor: Vim + Atom
        Font: Hack
