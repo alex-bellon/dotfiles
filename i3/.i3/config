@@ -25,6 +25,9 @@ bindsym $mod+Shift+r restart
 #### EXIT i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+#### DRAG FLOATING WINDOWS
+floating_modifier $mod
+
 ###############
 # ON START UP #
 ###############
@@ -49,6 +52,19 @@ exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/a
 #### SET VOLUME TO 0
 exec --no-startup-id pactl set-sink-volume 0 0% #set volume to 0
 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+assign [class="Telegram"] Telegram
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -95,9 +111,9 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 
 bindsym $mod+l exec "mantablockscreen" #lock screen
 bindsym $mod+d exec "rofi -combi-modi window,drun,ssh, -show combi" #program launcher
-
 bindsym $mod+Return exec urxvt #terminal
-bindsym $mod+t exec i3_quickterm shell
+bindsym $mod+q exec i3_quickterm shell
+
 bindsym $mod+Control+f exec thunar #file browser
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram" #telegram
 bindsym $mod+Control+b exec firefox #firefox
@@ -135,16 +151,16 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
 #### SWITCH TO WORKSPACE (for 40% keyboard)
-bindsym $mod+q workspace 1
-bindsym $mod+w workspace 2
-bindsym $mod+e workspace 3
-bindsym $mod+r workspace 4
-bindsym $mod+t workspace 5
-bindsym $mod+y workspace 6
-bindsym $mod+u workspace 7
-bindsym $mod+i workspace 8
-bindsym $mod+o workspace 9
-bindsym $mod+p workspace 10
+#bindsym $mod+q workspace 1
+#bindsym $mod+w workspace 2
+#bindsym $mod+e workspace 3
+#bindsym $mod+r workspace 4
+#bindsym $mod+t workspace 5
+#bindsym $mod+y workspace 6
+#bindsym $mod+u workspace 7
+#bindsym $mod+i workspace 8
+#bindsym $mod+o workspace 9
+#bindsym $mod+p workspace 10
 
 #### SWITCH TO WORKSPACE (normal)
 bindsym $mod+1 workspace 1
@@ -157,6 +173,8 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+` workspace 10
+
+bindsym $mod+t workspace Telegram
 
 #### CYCLE THROUGH WORKSPACEs
 bindsym Control+$mod+Right workspace next
