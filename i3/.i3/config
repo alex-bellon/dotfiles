@@ -64,7 +64,11 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
+#### GIVE TELEGRAM A WORKSPACE
 assign [class="Telegram"] Telegram
+
+#### STARTUP TODOIST, EMAIL, CALENDAR
+exec --no-startup-id ~/Dotfiles/i3/home.sh
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -174,7 +178,9 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+` workspace 10
 
-bindsym $mod+t workspace Telegram
+#### WORKSAPCE KEYBINDINGS
+bindsym $mod+e workspace Telegram
+bindsym $mod+w workspace Home
 
 #### CYCLE THROUGH WORKSPACEs
 bindsym Control+$mod+Right workspace next
