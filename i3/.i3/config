@@ -64,9 +64,10 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-#### GIVE TELEGRAM A WORKSPACE
+#### MAKE SPECIAL WORKSPACES
 assign [class="Telegram"] Telegram
 assign [class="franz"] Home
+assign [class="Franz"] Home
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
 # exec --no-startup-id ~/Dotfiles/i3/home.sh
