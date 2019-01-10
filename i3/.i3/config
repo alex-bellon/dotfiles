@@ -119,7 +119,7 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 bindsym $mod+l exec "mantablockscreen" #lock screen
 bindsym $mod+d exec "rofi -combi-modi window,drun,ssh, -show combi" #program launcher
 bindsym $mod+Return exec urxvt #terminal
-bindsym $mod+q exec i3_quickterm shell
+bindsym $mod+Tab exec i3_quickterm shell
 
 bindsym $mod+Control+f exec thunar #file browser
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram" #telegram
@@ -182,8 +182,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+` workspace 10
 
 #### WORKSAPCE KEYBINDINGS
-bindsym $mod+e workspace Telegram
-bindsym $mod+w workspace Home
+bindsym $mod+w workspace Telegram
+bindsym $mod+q workspace Home
 
 #### CYCLE THROUGH WORKSPACEs
 bindsym Control+$mod+Right workspace next
