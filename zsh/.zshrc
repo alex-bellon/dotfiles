@@ -21,16 +21,17 @@ alias telegram="~/Repos/Telegram/Telegram"
 
 alias accio="sudo apt-get install"
 alias c="clear"
-alias df="~/Dotfiles"
-alias dl="~/Downloads"
+alias df="cd ~/Dotfiles"
+alias dl="cd ~/Downloads"
 alias float="i3-msg floating enable"
-alias gh="~/GitHub"
+alias gh="cd ~/GitHub"
 alias h="cd"
 alias lock="mantablockscreen"
 alias ls="ls -a --color=auto"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
+alias tl="cd ~/Github/ctf-tools"
 alias x="bye"
 alias ..="cd .."
 
@@ -60,8 +61,8 @@ alias zshrc="vim ~/.zshrc"
 # GIT ALIASES #
 ###############
 
-alias gy="git pull"
 alias gp="git push"
+alias gy="git pull"
 
 #############
 # FUNCTIONS #
@@ -71,7 +72,7 @@ alias gp="git push"
 theme() {
     wal -i ~/Pictures/$1
     mantablockscreen -i ~/Pictures/$1
-    python3 ~/Repos/wal_steam.py -w
+    #python3 ~/Repos/wal_steam.py -w
 }
 
 # git commit
