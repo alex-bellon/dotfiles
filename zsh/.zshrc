@@ -3,44 +3,31 @@ export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
 ZSH_THEME="punctual"
 
-################
-# PROG ALIASES #
-################
-
-alias charles="~/Repos/charles/bin/charles"
-alias eclipse="~/eclipse/eclipse"
-alias matrix="cmatrix"
-alias metasploit="msfconsole"
-alias python="python3"
-alias taizen="~/Repos/taizen/target/release/taizen"
-alias telegram="~/Repos/Telegram/Telegram"
-
 ###################
 # COMMAND ALIASES #
 ###################
 
 alias accio="sudo apt-get install"
 alias c="clear"
-alias df="cd ~/Dotfiles"
-alias dl="cd ~/Downloads"
 alias float="i3-msg floating enable"
-alias gh="cd ~/GitHub"
 alias h="cd"
 alias lock="mantablockscreen"
 alias ls="ls -a --color=auto"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
-alias tl="cd ~/Github/ctf-tools"
 alias x="bye"
 alias ..="cd .."
 
-###############
-# SSH ALIASES #
-###############
+#####################
+# DIRECTORY ALIASES #
+#####################
 
-alias cancer="ssh abellon@cancer.cs.utexas.edu"
-alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
+alias ccdc="cd ~/Github/CCDC"
+alias df="cd ~/Dotfiles"
+alias dl="cd ~/Downloads"
+alias gh="cd ~/GitHub"
+alias tl="cd ~/GitHub/ctf-tools"
 
 ###################
 # DOTFILE ALIASES #
@@ -63,6 +50,25 @@ alias zshrc="vim ~/.zshrc"
 
 alias gp="git push"
 alias gy="git pull"
+
+################
+# PROG ALIASES #
+################
+
+alias charles="~/Repos/charles/bin/charles"
+alias eclipse="~/eclipse/eclipse"
+alias matrix="cmatrix"
+alias metasploit="msfconsole"
+alias python="python3"
+alias taizen="~/Repos/taizen/target/release/taizen"
+alias telegram="~/Repos/Telegram/Telegram"
+
+###############
+# SSH ALIASES #
+###############
+
+alias cancer="ssh abellon@cancer.cs.utexas.edu"
+alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 
 #############
 # FUNCTIONS #
