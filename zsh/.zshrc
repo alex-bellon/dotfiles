@@ -23,7 +23,7 @@ alias ..="cd .."
 # DIRECTORY ALIASES #
 #####################
 
-alias ccdc="cd ~/Github/CCDC"
+alias ccdc="cd ~/GitHub/CCDC"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
