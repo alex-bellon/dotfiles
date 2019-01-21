@@ -89,6 +89,9 @@ sudo apt-get install paper-icon-theme
 echo "Installing pywal"
 sudo pip3 install pywal
 
+# rclone
+curl https://rclone.org/install.sh | sudo bash
+
 # Install Telegram
 
 # wal_steam
@@ -100,7 +103,7 @@ git clone https://github.com/kotajacob/wal_steam.git
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
-#zsh-autosuggestion
+# zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 #stow everything
