@@ -25,6 +25,10 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_C
 sudo apt update
 sudo apt install brave-browser brave-keyring
 
+# Docker
+sudo curl -sSL https://get.docker.com/ | sh
+sudo apt-get update && sudo apt-get upgrade
+
 # GIMP Theme
 cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git
