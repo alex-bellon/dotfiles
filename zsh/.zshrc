@@ -27,6 +27,7 @@ alias ccdc="cd ~/GitHub/CCDC"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
+alias isss="cd ~/GitHub/isss-challenges"
 alias tl="cd ~/GitHub/ctf-tools"
 
 ###################
@@ -58,6 +59,7 @@ alias gy="git pull"
 alias charles="~/Repos/charles/bin/charles"
 alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
+
 alias metasploit="msfconsole"
 alias python="python3"
 alias taizen="~/Repos/taizen/target/release/taizen"
