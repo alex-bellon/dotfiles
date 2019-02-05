@@ -27,6 +27,7 @@ alias ccdc="cd ~/GitHub/CCDC"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
+alias graphics="cd ~/Classes/CS378H"
 alias isss="cd ~/GitHub/isss-challenges"
 alias tl="cd ~/GitHub/ctf-tools"
 
