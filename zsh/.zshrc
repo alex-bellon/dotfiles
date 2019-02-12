@@ -130,3 +130,4 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
 export GOPATH=$HOME
+export ANDROID_HOME="$HOME/Repos/android-cli"

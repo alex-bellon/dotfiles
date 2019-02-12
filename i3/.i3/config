@@ -121,7 +121,7 @@ bindsym $mod+d exec "rofi -combi-modi window,drun,ssh, -show combi" #program lau
 bindsym $mod+Return exec urxvt #terminal
 bindsym $mod+Shift exec i3_quickterm shell
 
-bindsym $mod+Control+f exec thunar #file browser
+bindsym $mod+Control+f exec "thunar ~/Downloads" #file browser
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram" #telegram
 bindsym $mod+Control+b exec firefox #firefox
 bindsym $mod+Control+x exec "shutdown -h now" #shut down
