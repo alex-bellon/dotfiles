@@ -161,3 +161,9 @@ browser, browser.display.background_color, tabbrowser tabpanels {
     background-color: var(--bg-dark) !important;
 }
 
+button, input, select, select > input[type="button"], textarea {
+  -moz-appearance: none !important;
+  /*background-color: red !important;*/
+  color: black !important;
+}
+
