@@ -19,7 +19,7 @@ set list
 set listchars=tab:>-,trail:.,extends:#,nbsp:.
 
 " set crosshair colors
-"highlight CursorLine   cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
+"highlight CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=black guibg=darkred guifg=gray
 "highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
 
 " Set crosshairs
@@ -40,6 +40,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lilydjwg/colorizer'
 Plugin 'RRethy/vim-illuminate'
+Plugin 'junegunn/goyo.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
