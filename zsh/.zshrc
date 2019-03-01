@@ -101,8 +101,10 @@ cd() { builtin cd "$@" && ls -a --color=auto; }
 ###########
 
 plugins=(
-  git
   colored-man-pages
+  fzf
+  git
+  vi-mode
   zsh-autosuggestions
 )
 

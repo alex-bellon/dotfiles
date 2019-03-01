@@ -43,6 +43,7 @@ Plugin 'RRethy/vim-illuminate'
 Plugin 'junegunn/goyo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+" Plugin 'junegunn/limelight.vim' // not supported on urxvt
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

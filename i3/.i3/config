@@ -68,10 +68,13 @@ set $workspace10 "10"
 assign [class="Telegram"] Telegram
 assign [class="franz"] Home
 assign [class="Franz"] Home
+assign [class="spotify"] Spotify
+assign [class="Spotify"] Spotify
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
 # exec --no-startup-id ~/Dotfiles/i3/home.sh
 exec --no-startup-id franz
+exec --no-startup-id Telegram
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -184,6 +187,8 @@ bindsym $mod+` workspace 10
 #### WORKSAPCE KEYBINDINGS
 bindsym $mod+w workspace Telegram
 bindsym $mod+q workspace Home
+bindsym $mod+e workspace Spotify
+bindsym $mod+a workspace To Do
 
 #### CYCLE THROUGH WORKSPACEs
 bindsym Control+$mod+Right workspace next
