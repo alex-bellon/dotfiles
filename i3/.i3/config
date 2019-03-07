@@ -70,6 +70,7 @@ assign [class="franz"] Home
 assign [class="Franz"] Home
 assign [class="spotify"] Spotify
 assign [class="Spotify"] Spotify
+assing [class="notion-app"] Notion
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
 # exec --no-startup-id ~/Dotfiles/i3/home.sh
@@ -122,7 +123,6 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 bindsym $mod+l exec "mantablockscreen" #lock screen
 bindsym $mod+d exec "rofi -combi-modi window,drun,ssh, -show combi" #program launcher
 bindsym $mod+Return exec urxvt #terminal
-bindsym $mod+Shift exec i3_quickterm shell
 
 bindsym $mod+Control+f exec "thunar ~/Downloads" #file browser
 bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram" #telegram
@@ -188,7 +188,7 @@ bindsym $mod+` workspace 10
 bindsym $mod+w workspace Telegram
 bindsym $mod+q workspace Home
 bindsym $mod+e workspace Spotify
-bindsym $mod+a workspace To Do
+bindsym $mod+a workspace Notion
 
 #### CYCLE THROUGH WORKSPACEs
 bindsym Control+$mod+Right workspace next
@@ -204,6 +204,10 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $mod+Shift+w move containter to workspace Telegram
+bindsym $mod+Shift+e move containter to workspace Spotify
+bindsym $mod+Shift+a move containter to workspace Notion
 
 #### RESIZE MODE
 bindsym $mod+c mode "resize"

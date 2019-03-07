@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install calcurse vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm mpv
+sudo apt-get install calcurse vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm mpv w3m
 
 # Background
 echo "Downloading background"
