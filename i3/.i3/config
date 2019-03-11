@@ -85,7 +85,7 @@ exec --no-startup-id Telegram
 for_window [class="^.*"] border pixel 4
 
 #### GAP WIDTH
-gaps inner 20
+gaps inner 15
 gaps outer 0
 
 #### HIDE BORDERS ON FULLSCREEN

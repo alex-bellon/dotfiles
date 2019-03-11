@@ -30,7 +30,10 @@ alias gh="cd ~/GitHub"
 alias graphics="cd ~/Classes/CS378H"
 alias isss="cd ~/GitHub/isss-challenges"
 alias netsec="cd ~/Classes/CS361S"
+alias notes="cd ~/GitHub/notes"
+alias rs="cd ~/GitHub/cybersecurity-resources"
 alias tl="cd ~/GitHub/ctf-tools"
+alias wiki="cd ~/GitHub/wikipedia"
 
 ###################
 # DOTFILE ALIASES #

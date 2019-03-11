@@ -8,7 +8,7 @@ set mouse=a
 set number
 set numberwidth=5
 set pastetoggle=<F2>
-set foldenable
+set nofoldenable
 syntax on
 
 " Mappings
