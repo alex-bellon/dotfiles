@@ -55,6 +55,8 @@ alias zshrc="vim ~/.zshrc"
 ###############
 
 alias gp="git push"
+alias gr="git-summary"
+alias gs="git status"
 alias gy="git pull"
 
 ################
@@ -65,6 +67,7 @@ alias charles="~/Repos/charles/bin/charles"
 alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
 alias metasploit="msfconsole"
+alias notion="~/Repos/notion-app/notion-app"
 alias python="python3"
 alias taizen="~/Repos/taizen/target/release/taizen"
 alias telegram="~/Repos/Telegram/Telegram"

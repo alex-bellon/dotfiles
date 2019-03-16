@@ -66,8 +66,10 @@ set $workspace10 "10"
 
 #### MAKE SPECIAL WORKSPACES
 assign [class="Telegram"] Telegram
+assign [class="telegram"] Telegram
 assign [class="franz"] Home
 assign [class="Franz"] Home
+assign [class="slack"] Slack
 assign [class="spotify"] Spotify
 assign [class="Spotify"] Spotify
 assing [class="notion-app"] Notion
@@ -75,7 +77,9 @@ assing [class="notion-app"] Notion
 #### STARTUP TODOIST, EMAIL, CALENDAR
 # exec --no-startup-id ~/Dotfiles/i3/home.sh
 exec --no-startup-id franz
-exec --no-startup-id Telegram
+exec --no-startup-id slack
+exec --no-startup-id telegram
+exec --no-startup-id notion
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -187,6 +191,7 @@ bindsym $mod+` workspace 10
 #### WORKSAPCE KEYBINDINGS
 bindsym $mod+w workspace Telegram
 bindsym $mod+q workspace Home
+bindsym $mod+s workspace Slack
 bindsym $mod+e workspace Spotify
 bindsym $mod+a workspace Notion
 
@@ -205,9 +210,10 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+Shift+w move containter to workspace Telegram
-bindsym $mod+Shift+e move containter to workspace Spotify
-bindsym $mod+Shift+a move containter to workspace Notion
+bindsym $mod+Shift+w move container to workspace Telegram
+bindsym $mod+Shift+e move container to workspace Spotify
+bindsym $mod+Shift+a move container to workspace Notion
+bindsym $mod+Shift+s move container to workspace Slack
 
 #### RESIZE MODE
 bindsym $mod+c mode "resize"

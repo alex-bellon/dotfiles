@@ -1,9 +1,10 @@
 [alias]
-        a = add --all
+    a = add --all
+    ac = !git add -A && git commit -m
 [color]
-        ui = auto
+    ui = auto
 [push]
-	default = matching
+    default = matching
 [user]
-	email = alexrbellon@gmail.com
-	name = alex-bellon
+    email = alexrbellon@gmail.com
+    name = alex-bellon
