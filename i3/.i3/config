@@ -70,6 +70,7 @@ assign [class="telegram"] Telegram
 assign [class="franz"] Home
 assign [class="Franz"] Home
 assign [class="slack"] Slack
+assign [class="Slack"] Slack
 assign [class="spotify"] Spotify
 assign [class="Spotify"] Spotify
 assing [class="notion-app"] Notion
@@ -133,6 +134,7 @@ bindsym $mod+Control+t exec "~/Repos/Telegram/Telegram" #telegram
 bindsym $mod+Control+b exec firefox #firefox
 bindsym $mod+Control+x exec "shutdown -h now" #shut down
 bindsym $mod+Control+s exec "shutter" #screenshot
+bindsym $mod+Control+h exec "zathura ~/Documents/textbooks/category-theory-for-programmers.pdf"
 
 #####################
 # WINDOW MANAGEMENT #
