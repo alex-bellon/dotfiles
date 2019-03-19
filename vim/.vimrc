@@ -32,7 +32,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'tpope/vim-eunuch'
