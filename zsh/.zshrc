@@ -3,15 +3,12 @@ export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
 ZSH_THEME="punctual"
 
-alias arc="sudo vim /etc/xdg/awesome/rc.lua"
-
 ###################
 # COMMAND ALIASES #
 ###################
 
 alias accio="sudo apt-get install"
 alias c="clear"
-alias float="i3-msg floating enable"
 alias h="cd"
 alias lock="mantablockscreen"
 alias ls="ls -a --color=auto"
@@ -41,12 +38,11 @@ alias wiki="cd ~/GitHub/wikipedia"
 # DOTFILE ALIASES #
 ###################
 
-alias config="vim ~/.i3/config"
 alias defaults="vim ~/.Xdefaults"
 alias gconfig="vim ~/.gitconfig"
 alias power="sudo vim /etc/systemd/logind.conf"
+alias rc="vim ~/.config/awesome/rc.lua"
 alias resources="vim ~/.Xresources"
-alias status="vim ~/.i3statusbar.conf"
 alias tmux="vim ~/.tmux.conf"
 alias vimrc="vim ~/.vimrc"
 alias vundle="vim +PluginInstall +qall"
@@ -86,23 +82,14 @@ alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 #############
 
 #update colors and lockscreen with new wallpaper
-#theme() {
-#    wal -i ~/Pictures/$1
+theme() {
+    wal -i ~/Pictures/$1
 #    mantablockscreen -i ~/Pictures/$1
 #    #python3 ~/Repos/wal_steam.py -w
-#}
-
-# git commit
-#gc() { builtin git commit -m "$@" }
-
-#make directory and cd into it
-#mcd (){
-#  builtin mkdir $1
-#  cd $1
-#}
+}
 
 #ls every time you cd
-#cd() { builtin cd "$@" && ls -a --color=auto; }
+cd() { builtin cd "$@" && ls -a --color=auto; }
 
 ###########
 # PLUGINS #
@@ -124,11 +111,6 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-#load tmux automatically
-#if [[ ! $TERM =~ screen ]]; then
-#    exec tmux
-#fi
 
 # The next line updates PATH for the Google Cloud SDK.
 #if [ -f '/home/alex/Repos/gcloud/google-cloud-sdk/path.zsh.inc' ]; then source '/home/alex/Repos/gcloud/google-cloud-sdk/path.zsh.inc'; fi
