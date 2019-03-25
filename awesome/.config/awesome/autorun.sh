@@ -8,4 +8,5 @@ function run {
 }
 
 #run atom
-wal -i /home/alex/Pictures/wallpaper.jpg
+feh --bg-fill ~/Pictures/wallpaper.png
+wal -i /home/alex/Pictures/wallpaper.png

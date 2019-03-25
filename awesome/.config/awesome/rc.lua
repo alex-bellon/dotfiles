@@ -50,6 +50,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.wallpaper = "/home/alex/Pictures/wallpaper.png"
+beautiful.useless_gap = 5
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -154,6 +156,7 @@ local tasklist_buttons = gears.table.join(
                                               awful.client.focus.byidx(-1)
                                           end))
 
+
 local function set_wallpaper(s)
     -- Wallpaper
     if beautiful.wallpaper then
@@ -170,6 +173,7 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
+
     -- Wallpaper
     set_wallpaper(s)
 
@@ -224,27 +228,7 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
---
---
---
---
--- STUFF I ADDED
---
---
---
---
---
 
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
-
-
---
---
---
---
---
---
---
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
@@ -256,6 +240,9 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+    
+    awful.key({ modkey, }, "l", function () awful.spawn.with_shell{ "gnome-screensaver-command -l" } end ),
+    
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
@@ -306,18 +293,12 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
+    -- RESIZE
+    awful.key({ modkey,           }, ".",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
+    awful.key({ modkey,           }, ",",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
-              {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
-              {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
-              {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
+    
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
@@ -466,6 +447,7 @@ clientbuttons = gears.table.join(
 root.keys(globalkeys)
 -- }}}
 
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
