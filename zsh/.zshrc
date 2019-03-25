@@ -7,7 +7,6 @@ ZSH_THEME="punctual"
 # COMMAND ALIASES #
 ###################
 
-alias accio="sudo apt-get install"
 alias c="clear"
 alias h="cd"
 alias lock="mantablockscreen"
@@ -15,6 +14,7 @@ alias ls="ls -a --color=auto"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
+alias udpate="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
 
