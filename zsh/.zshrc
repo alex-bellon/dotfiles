@@ -9,7 +9,7 @@ ZSH_THEME="punctual"
 
 alias c="clear"
 alias h="cd"
-alias lock="mantablockscreen"
+alias lock="gnome-screensaver-command -l"
 alias ls="ls -a --color=auto"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'

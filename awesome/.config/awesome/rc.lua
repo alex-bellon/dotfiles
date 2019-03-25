@@ -98,7 +98,7 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "open terminal", terminal },
-                                    { "firefox", terminal .. "firefox" }      
+                                    { "firefox", terminal .. "firefox" }
                             }
                         })
 
@@ -178,7 +178,9 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9", "slack"}, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9",
+      "home", "to do", "telegram", "slack" }, s, awful.layout.layouts[1])
+    --  10       11        12         13
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -240,16 +242,16 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    
-    awful.key({ modkey, }, "l", function () awful.spawn.with_shell{ "gnome-screensaver-command -l" } end ),
-    
+
+    awful.key({ modkey, }, "l", function () awful.util.spawn("lock") end ),
+
     -- SWITCH WORKSPACES
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
 
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    awful.key({ modkey,           }, "m", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- MOVE WINDOWS LEFT/RIGHT
@@ -271,7 +273,7 @@ globalkeys = gears.table.join(
     -- TERMINAL
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    
+
     -- RELOAD AWESOME
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -281,7 +283,7 @@ globalkeys = gears.table.join(
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, ",",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
-   
+
     -- SWITCH BETWEEN LAYOUTS
     awful.key({ modkey, "Control" }, "Right", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
@@ -316,16 +318,16 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    
+
     -- CLOSE WINDOW
     awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-   
+
     -- TOGGLE FLOATING
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
-    
-    -- MINIMIZE WINDOW          
+
+    -- MINIMIZE WINDOW
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
@@ -333,7 +335,7 @@ clientkeys = gears.table.join(
             c.minimized = true
         end ,
         {description = "minimize", group = "client"}),
-    
+
     -- MAXIMIZE WINDOW
     awful.key({ modkey,           }, "m",
         function (c)
@@ -343,9 +345,6 @@ clientkeys = gears.table.join(
         {description = "(un)maximize", group = "client"})
 )
 
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
@@ -358,16 +357,6 @@ for i = 1, 9 do
                         end
                   end,
                   {description = "view tag #"..i, group = "tag"}),
-        -- Toggle tag display.
-        awful.key({ modkey, "Control" }, "#" .. i + 9,
-                  function ()
-                      local screen = awful.screen.focused()
-                      local tag = screen.tags[i]
-                      if tag then
-                         awful.tag.viewtoggle(tag)
-                      end
-                  end,
-                  {description = "toggle tag #" .. i, group = "tag"}),
         -- Move client to tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
@@ -378,20 +367,49 @@ for i = 1, 9 do
                           end
                      end
                   end,
-                  {description = "move focused client to tag #"..i, group = "tag"}),
-        -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:toggle_tag(tag)
-                          end
-                      end
-                  end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
+                  {description = "move focused client to tag #"..i, group = "tag"})
     )
 end
+
+-- FRANZ WORKSPACE KEYBINDINGS
+
+globalkeys = gears.table.join(globalkeys,
+    awful.key({ modkey }, "q", function () local screen = awful.screen.focused()
+                local tag = screen.tags[10] if tag then tag:view_only() end end),
+    awful.key({ modkey, "Shift" }, "q", function () if client.focus then
+                local tag = client.focus.screen.tags[10] if tag then
+                client.focus:move_to_tag(tag) end end end)
+)
+
+-- NOTION WORKSPACE KEYBINDINGS
+
+globalkeys = gears.table.join(globalkeys,
+    awful.key({ modkey }, "w", function () local screen = awful.screen.focused()
+                local tag = screen.tags[11] if tag then tag:view_only() end end),
+    awful.key({ modkey, "Shift" }, "w", function () if client.focus then
+                local tag = client.focus.screen.tags[11] if tag then
+                client.focus:move_to_tag(tag) end end end)
+)
+
+-- TELEGRAM WORKSPACE KEYBINDINGS
+
+globalkeys = gears.table.join(globalkeys,
+    awful.key({ modkey }, "a", function () local screen = awful.screen.focused()
+                local tag = screen.tags[12] if tag then tag:view_only() end end),
+    awful.key({ modkey, "Shift" }, "a", function () if client.focus then
+                local tag = client.focus.screen.tags[12] if tag then
+                client.focus:move_to_tag(tag) end end end)
+)
+
+-- SLACK WORKSPACE KEYBINDINGS
+
+globalkeys = gears.table.join(globalkeys,
+    awful.key({ modkey }, "s", function () local screen = awful.screen.focused()
+                local tag = screen.tags[13] if tag then tag:view_only() end end),
+    awful.key({ modkey, "Shift" }, "s", function () if client.focus then
+                local tag = client.focus.screen.tags[13] if tag then
+                client.focus:move_to_tag(tag) end end end)
+)
 
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
@@ -441,11 +459,13 @@ awful.rules.rules = {
         class = {
           "Arandr",
           "Blueman-manager",
+          "Guake",
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
           "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+          "Wrapper-2.0",
           "Wpa_gui",
           "veromix",
           "xtightvncviewer"},
@@ -474,6 +494,14 @@ awful.rules.rules = {
     { rule = { class = "Slack" },
     properties = { screen = 1, tag = "slack" } },
 
+    { rule = { class = "TelegramDesktop" },
+    properties = { screen = 1, tag = "telegram" } },
+
+    { rule = { class = "Notion" },
+    properties = { screen = 1, tag = "to do" } },
+
+    { rule = { class = "Franz" },
+    properties = { screen = 1, tag = "home" } },
 }
 
 -- {{{ Signals
