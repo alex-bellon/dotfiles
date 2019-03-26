@@ -8,6 +8,7 @@ ZSH_THEME="punctual"
 ###################
 
 alias c="clear"
+alias car="cat"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
 alias ls="ls -a --color=auto"
@@ -31,6 +32,7 @@ alias graphics="cd ~/Classes/CS378H"
 alias isss="cd ~/GitHub/isss-challenges"
 alias netsec="cd ~/Classes/CS361S"
 alias notes="cd ~/GitHub/notes"
+alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
 alias tl="cd ~/GitHub/ctf-tools"
 alias wiki="cd ~/GitHub/wikipedia"
@@ -41,6 +43,7 @@ alias wiki="cd ~/GitHub/wikipedia"
 
 alias defaults="vim ~/.Xdefaults"
 alias gconfig="vim ~/.gitconfig"
+alias in="vim ~/Dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
 alias rc="vim ~/.config/awesome/rc.lua"
 alias resources="vim ~/.Xresources"
@@ -110,17 +113,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+eval $(thefuck --alias fuck)
+eval $(thefuck --alias FUCK)
 
-# The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/home/alex/Repos/gcloud/google-cloud-sdk/path.zsh.inc' ]; then source '/home/alex/Repos/gcloud/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-#if [ -f '/home/alex/Repos/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/alex/Repos/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-#export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-#export PATH=$PATH:/usr/local/bin
-#export GOPATH=$HOME
-#export ANDROID_HOME="$HOME/Repos/android-cli"

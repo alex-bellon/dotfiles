@@ -291,8 +291,9 @@ globalkeys = gears.table.join(
 
 
     -- MENUBAR
-    awful.key({ modkey }, "d", function() awful.spawn.with_shell("rofi -combi-modi window,drun,ssh, -show combi") end,
+    awful.key({ modkey }, "d", function() awful.spawn.with_shell("rofi -combi-modi window,drun,ssh -show combi") end,
               {description = "show the menubar", group = "launcher"})
+    
 )
 
 clientkeys = gears.table.join(
@@ -309,7 +310,7 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
 
     -- CLOSE WINDOW
-    awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end,
+    awful.key({ modkey, "Control"  }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
 
     -- TOGGLE FLOATING
@@ -456,6 +457,7 @@ awful.rules.rules = {
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wrapper-2.0",
           "Wpa_gui",
+          "Ulauncher",
           "veromix",
           "xtightvncviewer"},
 

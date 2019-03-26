@@ -4,7 +4,12 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S atom automake calcurse cmatrix feh Firefox flameshot gimp git rxvt-unicode-256color python3 npm mpv rofi stow thunar thunar-archive-plugin vim w3m zsh
+sudo pacman -S atom automake calcurse cmatrix feh Firefox flameshot gimp git rxvt-unicode-256color python3 npm mpv rofi stow thefuck thunar thunar-archive-plugin vim w3m zsh
+
+# yay
+yay -S ffsend-bin
+
+# slack desktop, notion.so, franz, telegram, leonflix, 
 
 # Background
 echo "Downloading background"
@@ -19,6 +24,8 @@ cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git
 cd gimp-cc-themes
 cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
+
+#Leonflix
 
 # Materia Theme
 echo "Installing Materia theme"
@@ -40,8 +47,6 @@ sudo pacman -S python-pywal
 
 # rclone
 curl https://rclone.org/install.sh | sudo bash
-
-# Install Telegram
 
 # youtube_dl
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
