@@ -231,8 +231,6 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 
-    awful.key({ modkey, }, "l", function () awful.spawn.with_shell("lock") end ),
-
     -- SWITCH WORKSPACES
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -293,14 +291,15 @@ globalkeys = gears.table.join(
 
 
     -- MENUBAR
-    -- awful.key({ modkey }, "d", function() menubar.show() end,
-    --           {description = "show the menubar", group = "launcher"})
     awful.key({ modkey }, "d", function() awful.spawn.with_shell("rofi -combi-modi window,drun,ssh, -show combi") end,
               {description = "show the menubar", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
 
+    awful.key({ modkey, }, "l", function () awful.spawn.with_shell("lock") end ),
+    awful.key({ modkey, }, "p", function () awful.spawn.with_shell("flameshot gui") end ),
+    
     -- FULLSCREEN
     awful.key({ modkey,           }, "f",
         function (c)

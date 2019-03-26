@@ -100,7 +100,7 @@ plugins=(
   colored-man-pages
   #fzf
   git
-  vi-mode
+  #vi-mode
   #zsh-autosuggestions
 )
 

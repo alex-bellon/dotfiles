@@ -7,6 +7,9 @@ function run {
   fi
 }
 
-#run atom
+run Franz
+run Telegram
+run slack
+run notion-app
 feh --bg-fill ~/Pictures/wallpaper.png
 wal -i /home/alex/Pictures/wallpaper.png
