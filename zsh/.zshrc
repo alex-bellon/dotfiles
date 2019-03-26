@@ -17,6 +17,7 @@ alias ls="ls -a --color=auto"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
+alias spr="sudo pacman -R"
 alias sps="sudo pacman -S"
 alias udpate="sudo pacman -Syu"
 alias x="bye"
@@ -118,3 +119,4 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 eval $(thefuck --alias fuck)
 eval $(thefuck --alias FUCK)
 
+unalias grv

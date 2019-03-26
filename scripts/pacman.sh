@@ -4,10 +4,10 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S atom automake bat calcurse colordiff cmatrix entr fd feh figlet fzf Firefox flameshot gimp git rxvt-unicode-256color python3 npm mpv rofi stow thefuck thunar thunar-archive-plugin tig vim w3m zathura zathura-pdf-mupdf zsh
+sudo pacman -S atom automake bat calcurse chafa colordiff cmatrix entr fd feh figlet fzf Firefox flameshot gimp git hexyl rxvt-unicode-256color python3 mpv npm nnn rofi stow thefuck thunar thunar-archive-plugin tig vim w3m zathura zathura-pdf-mupdf zsh
 
 # yay
-yay -S ffsend-bin
+yay -S ffsend-bin grv spotify
 
 # slack desktop, notion.so, franz, telegram, leonflix, 
 
