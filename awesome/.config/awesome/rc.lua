@@ -22,6 +22,32 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- BATTERY WIDGET
+local battery_widget = require("battery-widget")
+local BAT0 = battery_widget {
+    ac = "AC",
+    adapter = "BAT0",
+    ac_prefix = " CHR: ",
+    battery_prefix = " ",
+    percent_colors = {
+        { 25, "red"   },
+        { 50, "orange"},
+        {999, "green" },
+    },
+    listen = true,
+    timeout = 10,
+    widget_text = "${AC_BAT}${color_on}${percent}% ${color_off}",
+    widget_font = "Hack 8",
+    tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
+    alert_threshold = 5,
+    alert_timeout = 0,
+    alert_title = "Low battery !",
+    alert_text = "${AC_BAT}${time_est}"
+}
+
+-- CALENDAR WIDGET
+local calendar = require("calendar")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -103,6 +129,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+calendar({}):attach(mytextclock)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -202,17 +229,14 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            -- mykeyboardlayout,
-            wibox.widget.systray(),
+            BAT0,
             mytextclock,
-            -- s.mylayoutbox,
         },
     }
 end)
@@ -298,7 +322,7 @@ globalkeys = gears.table.join(
 
 clientkeys = gears.table.join(
 
-    awful.key({ modkey, }, "l", function () awful.spawn.with_shell("lock") end ),
+    awful.key({ modkey, }, "l", function () awful.spawn.with_shell("gnome-screensaver-command -l") end ),
     awful.key({ modkey, }, "p", function () awful.spawn.with_shell("flameshot gui") end ),
     
     -- FULLSCREEN
