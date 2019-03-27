@@ -13,3 +13,4 @@ run slack
 run notion-app
 feh --bg-fill ~/Pictures/wallpaper.png
 wal -i /home/alex/Pictures/wallpaper.png
+xfce4-panel -q
