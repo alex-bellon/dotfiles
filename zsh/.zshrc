@@ -8,8 +8,7 @@ ZSH_THEME="punctual"
 ###################
 
 alias c="clear"
-alias car="bat"
-alias cat="bat"
+alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
