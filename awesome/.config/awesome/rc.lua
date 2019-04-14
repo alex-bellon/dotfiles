@@ -27,16 +27,11 @@ local battery_widget = require("battery-widget")
 local BAT0 = battery_widget {
     ac = "AC",
     adapter = "BAT0",
-    ac_prefix = " CHR: ",
-    battery_prefix = " ",
-    percent_colors = {
-        { 25, "red"   },
-        { 50, "orange"},
-        {999, "green" },
-    },
+    ac_prefix = "⚡ ",
+    battery_prefix = "",
     listen = true,
     timeout = 10,
-    widget_text = "${AC_BAT}${color_on}${percent}% ${color_off}",
+    widget_text = "${AC_BAT}${percent}% | ",
     widget_font = "Hack 8",
     tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
     alert_threshold = 5,
@@ -47,6 +42,10 @@ local BAT0 = battery_widget {
 
 -- CALENDAR WIDGET
 local calendar = require("calendar")
+
+--- WIFI WIDGET
+local net_widgets = require("net_widgets")
+net_wireless = net_widgets.wireless({interface="wlp1s0"})
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
