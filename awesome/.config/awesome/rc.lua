@@ -148,29 +148,6 @@ local taglist_buttons = gears.table.join(
                     awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
                 )
 
-local tasklist_buttons = gears.table.join(
-                     awful.button({ }, 1, function (c)
-                                              if c == client.focus then
-                                                  c.minimized = true
-                                              else
-                                                  c:emit_signal(
-                                                      "request::activate",
-                                                      "tasklist",
-                                                      {raise = true}
-                                                  )
-                                              end
-                                          end),
-                     awful.button({ }, 3, function()
-                                              awful.menu.client_list({ theme = { width = 250 } })
-                                          end),
-                     awful.button({ }, 4, function ()
-                                              awful.client.focus.byidx(1)
-                                          end),
-                     awful.button({ }, 5, function ()
-                                              awful.client.focus.byidx(-1)
-                                          end))
-
-
 local function set_wallpaper(s)
     -- Wallpaper
     if beautiful.wallpaper then
@@ -193,19 +170,12 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9",
-      "home", "to do", "telegram", "slack" }, s, awful.layout.layouts[1])
-    --  10       11        12         13
+      "@", "[ ]", ">", "#" }, s, awful.layout.layouts[1])
+    --  10     11     12       13
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    -- s.mylayoutbox = awful.widget.layoutbox(s)
-    -- s.mylayoutbox:buttons(gears.table.join(
-    --                        awful.button({ }, 1, function () awful.layout.inc( 1) end),
-    --                        awful.button({ }, 3, function () awful.layout.inc(-1) end),
-    --                        awful.button({ }, 4, function () awful.layout.inc( 1) end),
-    --                        awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+    
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
         screen  = s,
@@ -506,16 +476,16 @@ awful.rules.rules = {
     },
 
     { rule = { class = "Slack" },
-    properties = { screen = 1, tag = "slack" } },
+    properties = { screen = 1, tag = "#" } },
 
     { rule = { class = "TelegramDesktop" },
-    properties = { screen = 1, tag = "telegram" } },
+    properties = { screen = 1, tag = ">" } },
 
     { rule = { class = "Notion" },
-    properties = { screen = 1, tag = "to do" } },
+    properties = { screen = 1, tag = "[ ]" } },
 
     { rule = { class = "Franz" },
-    properties = { screen = 1, tag = "home" } },
+    properties = { screen = 1, tag = "@" } },
 }
 
 -- {{{ Signals
