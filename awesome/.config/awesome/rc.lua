@@ -170,7 +170,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9",
-      "@", "[ ]", ">", "#" }, s, awful.layout.layouts[1])
+      "@", "[ ]", ">", "#", "?" }, s, awful.layout.layouts[1])
     --  10     11     12       13
 
     -- Create a promptbox for each screen
@@ -284,7 +284,7 @@ globalkeys = gears.table.join(
 
 
     -- MENUBAR
-    awful.key({ modkey }, "d", function() awful.spawn.with_shell("rofi -combi-modi window,drun,ssh -show combi") end,
+    awful.key({ modkey }, "j", function() awful.spawn.with_shell("rofi -combi-modi window,drun,ssh -show combi") end,
               {description = "show the menubar", group = "launcher"})
     
 )
@@ -394,6 +394,16 @@ globalkeys = gears.table.join(globalkeys,
                 client.focus:move_to_tag(tag) end end end)
 )
 
+-- DISCORD WORKSPACE KEYBINDINGS
+
+globalkeys = gears.table.join(globalkeys,
+    awful.key({ modkey }, "d", function () local screen = awful.screen.focused()
+                local tag = screen.tags[14] if tag then tag:view_only() end end),
+    awful.key({ modkey, "Shift" }, "d", function () if client.focus then
+                local tag = client.focus.screen.tags[14] if tag then
+                client.focus:move_to_tag(tag) end end end)
+)
+
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
@@ -486,6 +496,9 @@ awful.rules.rules = {
 
     { rule = { class = "Franz" },
     properties = { screen = 1, tag = "@" } },
+    
+    { rule = { class = "Discord" },
+    properties = { screen = 1, tag = "?" } },
 }
 
 -- {{{ Signals

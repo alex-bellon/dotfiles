@@ -1,0 +1,271 @@
+
+# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
+# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
+# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
+
+################
+# i3 CONSTANTS #
+################
+
+#### MOD = ALT
+set $mod Mod1
+
+#### FONT
+font pango:Source Sans Pro, Hack 8
+
+#### RELOAD CONFIG
+bindsym $mod+Shift+c reload
+
+#### RESTART i3
+bindsym $mod+Shift+r restart
+
+#### EXIT i3
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#### DRAG FLOATING WINDOWS
+floating_modifier $mod
+
+###############
+# ON START UP #
+###############
+
+#### CHANGE CAPS LOCK TO ESCAPE
+# xmodmap ~/.Xmodmap
+
+#### LOAD WALLPAPER
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+
+#### SET COLORS
+exec --no-startup-id wal -c
+exec --no-startup-id wal -c
+exec --no-startup-id wal -i ~/Pictures/wallpaper.png
+
+#### SET LOCKSCREEN
+exec --no-startup-id mantablockscreen -i ~/Pictures/wallpaper.png
+
+#### MOUNT LAB MACHINE
+exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine
+
+#### SET VOLUME TO 0
+exec --no-startup-id pactl set-sink-volume 0 0% #set volume to 0
+exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+#### MAKE SPECIAL WORKSPACES
+assign [class="Telegram"] Telegram
+assign [class="telegram"] Telegram
+assign [class="franz"] Home
+assign [class="Franz"] Home
+assign [class="slack"] Slack
+assign [class="Slack"] Slack
+assign [class="spotify"] Spotify
+assign [class="Spotify"] Spotify
+assign [class="notion-app"] Notion
+assign [class="discord"] Discord
+assign [class="Discord"] Discord
+
+#### STARTUP TODOIST, EMAIL, CALENDAR
+# exec --no-startup-id ~/Dotfiles/i3/home.sh
+exec --no-startup-id franz
+exec --no-startup-id "slack"
+exec --no-startup-id "telegram"
+exec --no-startup-id "notion"
+exec --no-startup-id "discord"
+
+#########################
+# WINDOW CUSOTMIZATIONS #
+#########################
+
+#### BORDER WIDTH
+for_window [class="^.*"] border pixel 4
+
+#### GAP WIDTH
+gaps inner 15
+gaps outer 0
+
+#### HIDE BORDERS ON FULLSCREEN
+hide_edge_borders both
+
+#### HIDE GAPS WITH ONLY ONE WINDOW
+smart_gaps on
+
+#### WINDOW BORDERS
+# class                 border  backgr. text    indicator
+#client.focused          #551a8b #f18b6d #ffffff #f18b6d
+#client.focused_inactive #551a8b #93d8f4 #ffffff #93d8f4
+#client.unfocused        #333333 #93d8f4 #888888 #93d8f4
+
+##################
+# MEDIA CONTROLS #
+##################
+
+#### VOLUME
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+
+#### BRIGHTNESS
+bindsym Control+Up exec xbacklight -inc 5 # increase screen brightness
+bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
+
+#####################
+# PROGRAM SHORTCUTS #
+#####################
+
+bindsym $mod+l exec "gnome-screensaver-command -l" #lock screen
+bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
+bindsym $mod+Return exec urxvt #terminal
+
+bindsym $mod+Control+b exec firefox
+bindsym $mod+Control+d exec "discord"
+bindsym $mod+Control+f exec "thunar ~/Downloads"
+bindsym $mod+Control+p exec "flameshot gui"
+bindsym $mod+Control+s exec "slack"
+bindsym $mod+Control+t exec "telegram"
+bindsym $mod+Control+x exec "shutdown -h now" 
+
+#####################
+# WINDOW MANAGEMENT #
+#####################
+
+#### SHIFT FOCUS
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+#### MOVE WINDOWS
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#### KILL FOCUSED WINDOW
+bindsym $mod+Control+q kill
+
+#### FULLSCREEN
+bindsym $mod+f fullscreen toggle
+
+#### CHANGE LAYOUT
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
+
+#### TOGGLE TILING/FLOATING
+bindsym $mod+Shift+space floating toggle
+
+#### SWITCH TO WORKSPACE (normal)
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+` workspace 10
+
+#### WORKSAPCE KEYBINDINGS
+bindsym $mod+q workspace Home
+bindsym $mod+w workspace Notion
+bindsym $mod+e workspace Spotify
+
+bindsym $mod+a workspace Telegram
+bindsym $mod+s workspace Slack
+bindsym $mod+d workspace Discord
+
+#### CYCLE THROUGH WORKSPACEs
+bindsym Control+$mod+Right workspace next
+
+#### MOVED FOCUSED WINDOW TO WORKSPACE
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $mod+Shift+q move container to workspace Home
+bindsym $mod+Shift+w move container to workspace Notion
+bindsym $mod+Shift+e move container to workspace Spotify
+
+bindsym $mod+Shift+a move container to workspace Telegram
+bindsym $mod+Shift+s move container to workspace Slack
+bindsym $mod+Shift+d move container to workspace Discord
+
+#### RESIZE MODE
+#bindsym $mod+c mode "resize"
+
+#mode "resize" {
+
+        bindsym $mod+period resize shrink width 5 px or 5 ppt
+        #bindsym Down resize grow height 5 px or 5 ppt
+        #bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym $mod+comma resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape
+        #bindsym Return mode "default"
+        #bindsym Escape mode "default"
+#}
+
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $hl i3wm.color6
+set_from_resource $bl i3wm.color3
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bgclient.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
+
+#################
+# i3 STATUS BAR #
+#################
+
+bar {
+        colors {
+            background $bg
+            statusline #ffffff
+            separator $fg
+
+            #loc               border  backgd  text
+            focused_workspace  $bg $bg #ffffff
+            active_workspace   $bg $bg #ffffff
+            inactive_workspace $bg $bg #cccccc
+            urgent_workspace   $bg $fg #cccccc
+            binding_mode       $bg $bg #cccccc
+        }
+        status_command i3status
+        #status_command i3blocks
+        tray_output primary
+}

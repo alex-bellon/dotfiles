@@ -43,6 +43,7 @@ alias wiki="cd ~/GitHub/wikipedia"
 # DOTFILE ALIASES #
 ###################
 
+alias config="vim ~/.config/i3/config"
 alias defaults="vim ~/.Xdefaults"
 alias gconfig="vim ~/.gitconfig"
 alias in="vim ~/Dotfiles/scripts/pacman.sh"
