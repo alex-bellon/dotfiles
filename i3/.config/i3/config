@@ -36,15 +36,15 @@ floating_modifier $mod
 # xmodmap ~/.Xmodmap
 
 #### LOAD WALLPAPER
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 #### SET COLORS
 exec --no-startup-id wal -c
 exec --no-startup-id wal -c
-exec --no-startup-id wal -i ~/Pictures/wallpaper.png
+exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
 #### SET LOCKSCREEN
-exec --no-startup-id mantablockscreen -i ~/Pictures/wallpaper.png
+exec --no-startup-id betterlockscreen -u ~/Pictures/wallpaper.jpg
 
 #### MOUNT LAB MACHINE
 exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine
@@ -128,7 +128,7 @@ bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
 # PROGRAM SHORTCUTS #
 #####################
 
-bindsym $mod+l exec "gnome-screensaver-command -l" #lock screen
+bindsym $mod+l exec "betterlockscreen --lock dimblur" 
 bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
 bindsym $mod+Return exec urxvt #terminal
 
@@ -215,19 +215,8 @@ bindsym $mod+Shift+s move container to workspace Slack
 bindsym $mod+Shift+d move container to workspace Discord
 
 #### RESIZE MODE
-#bindsym $mod+c mode "resize"
-
-#mode "resize" {
-
-        bindsym $mod+period resize shrink width 5 px or 5 ppt
-        #bindsym Down resize grow height 5 px or 5 ppt
-        #bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym $mod+comma resize grow width 5 px or 5 ppt
-
-        # back to normal: Enter or Escape
-        #bindsym Return mode "default"
-        #bindsym Escape mode "default"
-#}
+bindsym $mod+comma resize shrink width 5 px or 5 ppt
+bindsym $mod+period resize grow width 5 px or 5 ppt
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
