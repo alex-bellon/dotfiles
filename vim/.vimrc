@@ -14,10 +14,6 @@ syntax on
 " Mappings
 map <C-t> :NERDTreeToggle<CR>
 
-" highlight whitespace characters
-set list
-set listchars=tab:>-,trail:.,extends:#,nbsp:.
-
 " set crosshair colors
 "highlight CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=black guibg=darkred guifg=gray
 "highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white

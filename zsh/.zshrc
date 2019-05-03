@@ -36,8 +36,10 @@ alias netsec="cd ~/Classes/CS361S"
 alias notes="cd ~/GitHub/notes"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
+alias ta="cd ~/Classes/CS361-TA"
 alias tl="cd ~/GitHub/ctf-tools"
 alias wiki="cd ~/GitHub/wikipedia"
+alias wp="cd ~/GitHub/ctf-writeups-private"
 
 ###################
 # DOTFILE ALIASES #
@@ -60,7 +62,7 @@ alias zshrc="vim ~/.zshrc"
 ###############
 
 alias gp="git push"
-alias gr="git-summary"
+alias gr="~/Repos/git-summary/git-summary"
 alias gs="git status"
 alias gy="git pull"
 
