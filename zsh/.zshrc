@@ -1,5 +1,4 @@
 export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
-#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_THEME="punctual"
 
@@ -93,7 +92,6 @@ alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 #update colors and lockscreen with new wallpaper
 theme() {
     wal -i ~/Pictures/$1
-#    mantablockscreen -i ~/Pictures/$1
 #    #python3 ~/Repos/wal_steam.py -w
 }
 
@@ -109,10 +107,13 @@ plugins=(
   #fzf
   git
   #vi-mode
-  #zsh-autosuggestions
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -122,3 +123,5 @@ eval $(thefuck --alias fuck)
 eval $(thefuck --alias FUCK)
 
 unalias grv
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
