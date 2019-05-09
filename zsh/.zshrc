@@ -114,6 +114,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+. ~/.oh-my-zsh/custom/plugins/z/z.sh
 
 export VISUAL=vim
 export EDITOR="$VISUAL"

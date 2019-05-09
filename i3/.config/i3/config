@@ -77,7 +77,9 @@ assign [class="Discord"] chat
 #### STARTUP TODOIST, EMAIL, CALENDAR
 # exec --no-startup-id ~/Dotfiles/i3/home.sh
 exec --no-startup-id station
-exec --no-startup-id "telegram &"
+exec --no-startup-id Station
+exec --no-startup-id "telegram"
+exec --no-startup-id "Telegram"
 exec --no-startup-id "discord"
 
 #########################
@@ -135,11 +137,12 @@ bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
 bindsym $mod+Return exec urxvt #terminal
 
+bindsym $mod+Control+a exec "atom"
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+d exec "discord"
 bindsym $mod+Control+f exec "thunar ~/Downloads"
 bindsym $mod+Control+p exec "flameshot gui"
-bindsym $mod+Control+t exec "telegram &"
+bindsym $mod+Control+t exec "Telegram &"
 bindsym $mod+Control+x exec "shutdown -h now"
 
 #####################
