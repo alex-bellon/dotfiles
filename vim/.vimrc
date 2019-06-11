@@ -9,6 +9,7 @@ set number
 set numberwidth=5
 set pastetoggle=<F2>
 set nofoldenable
+set clipboard=unnamed
 syntax on
 
 " Mappings
