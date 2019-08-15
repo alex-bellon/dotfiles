@@ -6,6 +6,7 @@ ZSH_THEME="punctual"
 # COMMAND ALIASES #
 ###################
 
+alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias c="clear"
 alias car="cat"
 alias f="fzf"

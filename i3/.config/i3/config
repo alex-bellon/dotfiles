@@ -126,8 +126,8 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume alsa_output.pci-000
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5% #decrease sound volume
 
 #### BRIGHTNESS
-bindsym Control+Up exec xbacklight -inc 5 # increase screen brightness
-bindsym Control+Down exec xbacklight -dec 5 # decrease screen brightness
+bindsym Control+Up exec xbacklight -inc 10 # increase screen brightness
+bindsym Control+Down exec xbacklight -dec 10 # decrease screen brightness
 
 #####################
 # PROGRAM SHORTCUTS #
