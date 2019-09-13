@@ -76,10 +76,6 @@ assign [class="Discord"] chat
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
 # exec --no-startup-id ~/Dotfiles/i3/home.sh
-exec --no-startup-id station
-exec --no-startup-id Station
-exec --no-startup-id "telegram"
-exec --no-startup-id "Telegram"
 exec --no-startup-id "discord"
 
 #########################
@@ -92,14 +88,6 @@ for_window [class="^.*"] border pixel 4
 #### GAP WIDTH
 gaps inner 15
 gaps outer 0
-
-#### NO GAPS FOR CHAT
-workspace chat gaps inner 0
-workspace chat gaps outer 0
-for_window [class="telegram"] border pixel 0
-for_window [class="Telegram"] border pixel 0
-for_window [class="discord"] border pixel 0
-for_window [class="Discord"] border pixel 0
 
 #### HIDE BORDERS ON FULLSCREEN
 hide_edge_borders both
