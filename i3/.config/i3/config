@@ -127,8 +127,11 @@ bindsym $mod+Return exec urxvt #terminal
 
 bindsym $mod+Control+a exec "atom"
 bindsym $mod+Control+b exec firefox
+bindsym $mod+Control+s exec "atom ~/Classes/"
 bindsym $mod+Control+d exec "discord"
 bindsym $mod+Control+f exec "thunar ~/Downloads"
+bindsym $mod+Control+g exec "thunar ~/GitHub"
+bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
 bindsym $mod+Control+t exec "Telegram &"
 bindsym $mod+Control+x exec "shutdown -h now"
