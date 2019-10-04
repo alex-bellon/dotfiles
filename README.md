@@ -10,6 +10,8 @@
 
 The dotfiles I use to customize my Linux setup. Includes files for i3, urxvt, zsh, vim, tmux, rofi, Firefox
 
+![](Pictures/screenshot.png)
+
 ## Technical Information
 ```
      Distro: Linux Mint 18.3 Sylvia 
