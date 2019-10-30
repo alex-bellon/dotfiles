@@ -65,8 +65,8 @@ set $workspace9 "9"
 set $workspace10 "10"
 
 #### MAKE SPECIAL WORKSPACES
-assign [class="Telegram"] chat
-assign [class="telegram"] chat
+assign [class="TelegramDesktop"] chat
+assign [class="telegramdesktop"] chat
 assign [class="station"] home
 assign [class="Station"] home
 assign [class="spotify"] music
@@ -93,7 +93,7 @@ gaps outer 0
 hide_edge_borders both
 
 #### HIDE GAPS WITH ONLY ONE WINDOW
-smart_gaps on
+#smart_gaps on
 
 #### WINDOW BORDERS
 # class                 border  backgr. text    indicator
@@ -133,8 +133,12 @@ bindsym $mod+Control+f exec "thunar ~/Downloads"
 bindsym $mod+Control+g exec "thunar ~/GitHub"
 bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
-bindsym $mod+Control+t exec "Telegram &"
+bindsym $mod+Control+t exec "telegram &"
 bindsym $mod+Control+x exec "shutdown -h now"
+
+bindsym $mod+g exec "atom ~/GitHub/"
+bindsym $mod+m exec "atom ~/Classes/M343K/homework && zathura ~/Classes/M343K/intro-to-abstract-algebra.pdf"
+bindsym $mod+n exec "zathura ~/Classes/M328K/number-theory.pdf"
 
 #####################
 # WINDOW MANAGEMENT #
