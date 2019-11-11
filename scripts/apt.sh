@@ -4,7 +4,12 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install calcurse vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight atom scrot cmatrix python3 Firefox npm mpv thunar thunar-archive-plugin w3m
+sudo apt-get install calcurse vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight scrot cmatrix python3 firefox npm mpv thunar thunar-archive-plugin w3m zsh-syntax-highlighting python3-pip python3-setuptools
+
+# Atom
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-update
+sudo apt-get install atom
 
 # Background
 echo "Downloading background"
@@ -16,6 +21,7 @@ cd ~/Repos/
 git clone https://github.com/jsamr/bootiso.git
 cd bootiso/
 chmod +x bootiso
+cd
 
 # Brave Browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key add -
@@ -33,11 +39,15 @@ sudo chmod +x /usr/local/bin/cht.sh
 sudo curl -sSL https://get.docker.com/ | sh
 sudo apt-get update && sudo apt-get upgrade
 
+# thef*ck
+sudo pip3 install thefuck --user
+
 # GIMP Theme
 cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git
 cd gimp-cc-themes
 cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
+cd
 
 # GTK Theme things
 sudo apt-get install lxappearance gtk-chtheme qt4-qtconfig
@@ -55,6 +65,7 @@ cd i3lock-color
 autoreconf -i && ./configure && make
 cd x86_64-pc-linux-gnu
 sudo cp i3lock /usr/local/bin/i3lock
+cd
 
 #i3-quickterm
 pip3 install --user i3ipc
@@ -62,6 +73,7 @@ cd ~/Repos
 git clone https://github.com/lbonn/i3-quickterm.git
 cd i3-quickterm
 sudo cp i3-quickterm /usr/local/bin/i3_quickterm
+cd
 
 # Materia Theme
 echo "Installing Materia theme"
@@ -69,6 +81,7 @@ cd ~/Repos/
 wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
 cd materia-theme-master
 sudo ./install.sh
+cd
 
 # Mantablockscreen
 echo "Installing Mantablockscreen"
@@ -76,6 +89,7 @@ cd ~/Repos/
 git clone https://github.com/reorr/mantablockscreen
 cd mantablockscreen
 ./mantablockscreen -i ~/Pictures/background.png
+cd
 
 # Neofetch
 echo "Installing neofetch"
@@ -83,9 +97,7 @@ cd ~/Repos/
 git clone https://github.com/dylanaraps/neofetch
 cd neofetch
 make install
-
-# Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cd
 
 # Paper Icons
 echo "Installing Paper icons"
@@ -102,10 +114,15 @@ curl https://rclone.org/install.sh | sudo bash
 
 # Install Telegram
 
+# vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
 # wal_steam
 echo "Installing wal_steam"
 cd ~/Repos/
 git clone https://github.com/kotajacob/wal_steam.git
+cd
 
 # youtube_dl
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
@@ -113,6 +130,9 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #stow everything
 stow Firefox
@@ -127,3 +147,4 @@ stow tmux
 stow vim
 stow X
 stow zsh
+
