@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S atom automake bat calcurse chafa colordiff cmatrix entr fd feh figlet fzf Firefox flameshot gimp git hexyl rxvt-unicode-256color python3 mpv npm nnn rofi stow thefuck thunar thunar-archive-plugin tig vim w3m zathura zathura-pdf-mupdf zsh
+sudo pacman -S atom automake bat calcurse chafa colordiff cmatrix entr fd feh figlet fzf firefox flameshot gcc gimp git hexyl rxvt-unicode-256color python3 python-pip python-setuptools mpv npm nnn rofi stow thefuck thunar thunar-archive-plugin tig vim w3m yay zathura zathura-pdf-mupdf zsh
 
 # yay
 yay -S ffsend-bin grv spotify
