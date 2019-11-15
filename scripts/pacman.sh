@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S atom automake bat calcurse chafa colordiff cmatrix entr fd feh figlet fzf firefox flameshot gcc gimp git hexyl rxvt-unicode-256color python3 python-pip python-setuptools mpv npm nnn rofi stow thefuck thunar thunar-archive-plugin tig vim w3m yay zathura zathura-pdf-mupdf zsh
+sudo pacman -S atom arandr automake bat bc calcurse chafa colordiff cmatrix discord entr fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick rxvt-unicode-256color python3 python-pip python-setuptools mpv npm nnn rofi stow telegram-desktop thefuck thunar thunar-archive-plugin tig vim w3m xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
 
 # yay
 yay -S ffsend-bin grv spotify
@@ -14,6 +14,16 @@ yay -S ffsend-bin grv spotify
 # Background
 echo "Downloading background"
 wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/wallpaper.png
+
+# betterlockscreen
+
+#    i3lock-color - i3lock fork with additional features( >= 2.11-c )
+#    imagemagick - To apply effects to images
+#    xdpyinfo, xrandr, bc and feh - To find screen resolution, set custom blur level and wallpaper handling.
+
+git clone https://github.com/pavanjadhaw/betterlockscreen ~/Repos/betterlockscreen
+cd ~/Repos/betterlockscreen
+cp betterlockscreen ~/.local/bin/
 
 # cheat.sh
 curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh

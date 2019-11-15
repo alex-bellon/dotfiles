@@ -65,18 +65,15 @@ set $workspace9 "9"
 set $workspace10 "10"
 
 #### MAKE SPECIAL WORKSPACES
-assign [class="TelegramDesktop"] chat
-assign [class="telegramdesktop"] chat
-assign [class="station"] home
-assign [class="Station"] home
+assign [class="telegram-desktop"] chat
 assign [class="spotify"] music
 assign [class="Spotify"] music
 assign [class="discord"] chat
 assign [class="Discord"] chat
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
-# exec --no-startup-id ~/Dotfiles/i3/home.sh
 exec --no-startup-id "discord"
+exec --no-startup-id "telegram-desktop"
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -185,7 +182,7 @@ bindsym $mod+` workspace 10
 #### WORKSAPCE KEYBINDINGS
 bindsym $mod+q workspace home
 bindsym $mod+w workspace chat
-bindsym $mod+e workspace music
+bindsym $mod+e workspace slack
 
 #### CYCLE THROUGH WORKSPACEs
 bindsym Control+$mod+Right workspace next
@@ -204,7 +201,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 bindsym $mod+Shift+q move container to workspace home
 bindsym $mod+Shift+w move container to workspace chat
-bindsym $mod+Shift+e move container to workspace music
+bindsym $mod+Shift+e move container to workspace slack
 
 #### RESIZE MODE
 bindsym $mod+comma resize shrink width 15 px or 5 ppt
