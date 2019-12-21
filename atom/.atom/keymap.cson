@@ -1,0 +1,3 @@
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-shift-down': 'editor:add-selection-below'
+  'ctrl-shift-up': 'editor:add-selection-above'

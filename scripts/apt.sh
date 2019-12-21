@@ -42,6 +42,12 @@ sudo apt-get update && sudo apt-get upgrade
 # thef*ck
 sudo pip3 install thefuck --user
 
+# Git Summary
+cd ~/Repos
+git clone https://github.com/MirkoLedda/git-summary.git
+cd git-summary
+sudo cp git-summary /usr/local/bin/git-summary
+
 # GIMP Theme
 cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git

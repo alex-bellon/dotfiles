@@ -4,10 +4,10 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S atom arandr autoconf automake bat bc calcurse chafa colordiff cmatrix discord entr fakeroot fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick make rxvt-unicode-256color otf-fira-code patch python3 python-pip python-setuptools mpv npm nnn rofi stow telegram-desktop thefuck thunar thunar-archive-plugin tig ttf-fira-code vim w3m xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
+sudo pacman -S atom arandr autoconf automake bat bc calcurse chafa colordiff cmatrix cura discord entr fakeroot fcrackzip fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick make rxvt-unicode-256color otf-fira-code patch python3 python-pip python-setuptools mpv npm nnn rofi steam stow telegram-desktop thefuck thunar thunar-archive-plugin tig tree ttf-fira-code vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
 
 # yay
-yay -S bless ffsend-bin grv slack-desktop-dark spotify zijiang-pos58-driver
+yay -S bless ffsend-bin grv minecraft-launcher slack-desktop-dark spotify zijiang-pos58-driver
 
 # slack desktop, notion.so, franz, telegram, leonflix, 
 
@@ -34,6 +34,12 @@ cd ~/Repos
 git clone https://github.com/draekko/gimp-cc-themes.git
 cd gimp-cc-themes
 cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
+
+# Git Summary
+cd ~/Repos
+git clone https://github.com/MirkoLedda/git-summary.git
+cd git-summary
+sudo cp git-summary /usr/local/bin/git-summary
 
 #Leonflix
 
