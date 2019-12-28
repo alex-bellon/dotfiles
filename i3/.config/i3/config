@@ -135,8 +135,6 @@ bindsym $mod+Control+x exec "shutdown -h now"
 
 bindsym $mod+b exec "atom ~/GitHub/notes"
 bindsym $mod+g exec "atom ~/GitHub/"
-bindsym $mod+m exec "atom ~/Classes/M343K/homework && zathura ~/Classes/M343K/intro-to-abstract-algebra.pdf"
-bindsym $mod+n exec "atom ~/Classes/M328K/homework && zathura ~/Classes/M328K/number-theory.pdf"
 
 #####################
 # WINDOW MANAGEMENT #

@@ -30,8 +30,6 @@ alias ..="cd .."
 # DIRECTORY ALIASES #
 #####################
 
-alias algebra="cd ~/Classes/M343K"
-alias algo="cd ~/Classes/CS331"
 alias ccdc="cd ~/GitHub/CCDC"
 alias class="cd ~/Classes/"
 alias cs101="cd ~/GitHub/cs101"
@@ -39,9 +37,7 @@ alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
 alias isss="cd ~/GitHub/isss-challenges/2019/fall"
-alias networks="cd ~/Classes/CS356"
 alias notes="cd ~/GitHub/notes"
-alias number="cd ~/Classes/M328K"
 alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
