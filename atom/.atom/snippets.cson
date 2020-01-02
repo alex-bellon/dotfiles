@@ -1,4 +1,22 @@
 '.text.tex.latex':
+  'bold':
+    'prefix': 'b'
+    'body': '\\\\textbf{$1}'
+  'curly brackets':
+    'prefix': 'cb'
+    'body': '\\\\\{$1\\\\\}'
+  'italic':
+    'prefix': 'i'
+    'body': '\\\\textit{$1}'
   'item bold':
     'prefix': 'ib'
     'body': '\\\\item \\\\textbf{$1}'
+  'math':
+    'prefix': 'm'
+    'body': '\$$1\$'
+  'number group':
+    'prefix': 'n'
+    'body': '\$\\\\mathbb{$1}\$'
+  'set':
+    'prefix': 's'
+    'body': '\\\\{\$ $1 \\\\\mid $2 \\\\in \\\\mathbb{$3}\$\\\\}'
