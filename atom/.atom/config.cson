@@ -1,0 +1,36 @@
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+    enableAutoConfirmSingleSuggestion: false
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "wrap-guide"
+      "xml-formatter"
+      "spell-check"
+      "atom-latex"
+      "status-bar"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Fira Code"
+    fontSize: 19
+    showIndentGuide: true
+    softWrap: true
+  "exception-reporting":
+    userId: "889045ba-9475-4f88-97f9-5ca8f5d7da49"
+  latex:
+    buildOnSave: true
+    opener: "pdf-view"
+  "pdf-view":
+    fitToWidthOnOpen: true
+    nightMode: true
+    paneToUseInSynctex: "right"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false

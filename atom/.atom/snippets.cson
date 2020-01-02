@@ -1,0 +1,4 @@
+'.text.tex.latex':
+  'item bold':
+    'prefix': 'ib'
+    'body': '\\\\item \\\\textbf{$1}'
