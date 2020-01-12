@@ -31,7 +31,7 @@ alias ..="cd .."
 #####################
 
 alias ccdc="cd ~/GitHub/CCDC"
-alias class="cd ~/Classes/"
+alias cl="cd ~/Classes/"
 alias cs101="cd ~/GitHub/cs101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
@@ -128,8 +128,8 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-eval $(thefuck --alias fuck)
-eval $(thefuck --alias FUCK)
+#eval $(thefuck --alias fuck)
+#eval $(thefuck --alias FUCK)
 
 unalias grv
 

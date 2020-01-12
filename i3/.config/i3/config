@@ -133,8 +133,10 @@ bindsym $mod+Control+p exec "flameshot gui"
 bindsym $mod+Control+t exec "telegram &"
 bindsym $mod+Control+x exec "shutdown -h now"
 
+bindsym $mod+a exec "atom ~/GitHub/algebra && zathura ~/GitHub/algebra/algebra.pdf"
 bindsym $mod+b exec "atom ~/GitHub/notes"
 bindsym $mod+g exec "atom ~/GitHub/"
+
 
 #####################
 # WINDOW MANAGEMENT #

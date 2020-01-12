@@ -7,7 +7,6 @@
     disabledPackages: [
       "wrap-guide"
       "xml-formatter"
-      "spell-check"
       "atom-latex"
       "status-bar"
     ]
@@ -18,7 +17,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 19
+    fontSize: 20
     showIndentGuide: true
     softWrap: true
   "exception-reporting":
@@ -30,6 +29,29 @@
     fitToWidthOnOpen: true
     nightMode: true
     paneToUseInSynctex: "right"
+  "spell-check":
+    addKnownWords: true
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.rst"
+      "text.restructuredtext"
+      "text.tex.latex"
+    ]
+    knownWords: [
+      "algeabraic"
+      "leadsto"
+      "mathbb"
+      "textbf"
+      "textit"
+      "indices"
+      "monic"
+      "subring"
+      "abelian"
+    ]
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
