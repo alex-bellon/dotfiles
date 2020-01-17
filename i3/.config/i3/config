@@ -70,10 +70,12 @@ assign [class="spotify"] music
 assign [class="Spotify"] music
 assign [class="discord"] chat
 assign [class="Discord"] chat
+assign [class="Slack"] slack
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
 exec --no-startup-id "discord"
 exec --no-startup-id "telegram-desktop"
+exec --no-startup-id "slack"
 
 #########################
 # WINDOW CUSOTMIZATIONS #
