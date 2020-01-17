@@ -65,7 +65,7 @@ set $workspace9 "9"
 set $workspace10 "10"
 
 #### MAKE SPECIAL WORKSPACES
-assign [class="telegram-desktop"] chat
+assign [class="TelegramDesktop"] chat
 assign [class="spotify"] music
 assign [class="Spotify"] music
 assign [class="discord"] chat
@@ -130,7 +130,7 @@ bindsym $mod+Control+f exec "thunar ~/Downloads"
 bindsym $mod+Control+g exec "thunar ~/GitHub"
 bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
-bindsym $mod+Control+t exec "telegram &"
+bindsym $mod+Control+t exec "telegram-desktop &"
 bindsym $mod+Control+x exec "shutdown -h now"
 
 bindsym $mod+a exec "atom ~/GitHub/algebra && zathura ~/GitHub/algebra/algebra.pdf"

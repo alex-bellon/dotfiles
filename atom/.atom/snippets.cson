@@ -11,6 +11,9 @@
   'curly brackets':
     'prefix': 'cb'
     'body': '\\\\\{$1\\\\\}'
+  'inverse':
+    'prefix': 'inv'
+    'body': '^{-1}'
   'italic':
     'prefix': 'i'
     'body': '\\\\textit{$1}'
@@ -20,9 +23,30 @@
   'math':
     'prefix': 'm'
     'body': '\$$1\$'
+  'mathcal':
+    'prefix': 'mc'
+    'body': '\\\\mathcal{$1}'
   'number group':
     'prefix': 'n'
     'body': '\$\\\\mathbb{$1}\$'
+  'pi':
+    'prefix': 'pi'
+    'body': '\$\\\\pi\$'
+  'Pi':
+    'prefix': 'Pi'
+    'body': '\$\\\\Pi\$'
+  'phi':
+    'prefix': 'phi'
+    'body': '\$\\\\phi\$'
+  'Phi':
+    'prefix': 'Phi'
+    'body': '\$\\\\Phi\$'
+  'psi':
+    'prefix': 'psi'
+    'body': '\$\\\\psi\$'
+  'Psi':
+    'prefix': 'Psi'
+    'body': '\$\\\\Psi\$'
   'root':
     'prefix': 'rt'
     'body': '\$\\\\sqrt[$1]{$2}\$'

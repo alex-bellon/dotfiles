@@ -7,7 +7,6 @@
     disabledPackages: [
       "wrap-guide"
       "xml-formatter"
-      "atom-latex"
       "status-bar"
     ]
     telemetryConsent: "no"
@@ -51,6 +50,11 @@
       "monic"
       "subring"
       "abelian"
+      "frac"
+      "coset"
+      "cosets"
+      "mathcal"
+      "surjective"
     ]
   "tree-view":
     hideVcsIgnoredFiles: true
