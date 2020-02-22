@@ -8,6 +8,8 @@
       "wrap-guide"
       "xml-formatter"
       "status-bar"
+      "language-gfm"
+      "markdown-writer"
     ]
     telemetryConsent: "no"
     themes: [
@@ -16,7 +18,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 20
+    fontSize: 21
     showIndentGuide: true
     softWrap: true
   "exception-reporting":
@@ -55,6 +57,15 @@
       "cosets"
       "mathcal"
       "surjective"
+      "usepackage{fancyhdr"
+      "usepackage"
+      "documentclass"
+      "ciphertexts"
+      "ciphertext"
+      "overline"
+      "bigcap"
+      "leqslant"
+      "pseudorandom"
     ]
   "tree-view":
     hideVcsIgnoredFiles: true

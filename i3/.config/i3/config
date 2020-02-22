@@ -132,12 +132,15 @@ bindsym $mod+Control+m exec "mailspring"
 bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
 bindsym $mod+Control+t exec "telegram-desktop &"
-bindsym $mod+Control+x exec "shutdown -h now"
+#bindsym $mod+Control+x exec "shutdown -h now"
+bindsym $mod+Control+z exec "zathura"
 
-bindsym $mod+a exec "atom ~/GitHub/algebra && zathura ~/GitHub/algebra/algebra.pdf"
-bindsym $mod+c exec "atom ~/Classes/"
-bindsym $mod+b exec "atom ~/GitHub/notes"
+bindsym $mod+a exec "atom ~/Classes/M373K-algebra/ && zathura ~/Classes/M373K-algebra/algebra.pdf"
+bindsym $mod+c exec "atom ~/Classes/CS346-cryptography/ && zathura ~/Classes/CS346-cryptography/introduction-to-modern-cryptography.pdf"
+bindsym $mod+n exec "atom ~/GitHub/notes"
 bindsym $mod+g exec "atom ~/GitHub/"
+bindsym $mod+p exec "atom ~/Classes/CS345-programming-languages/"
+bindsym $mod+t exec "atom ~/Classes/M367K-topology/"
 
 #####################
 # WINDOW MANAGEMENT #

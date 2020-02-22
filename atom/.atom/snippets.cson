@@ -1,3 +1,13 @@
+'.text.md':
+  'bold':
+    'prefix': 'b'
+    'body': '**$1**'
+  'checkbox':
+    'prefix': 'cb'
+    'body': '- [ ] $1'
+  'italics':
+    'prefix': 'i'
+    'body': '*$1*'
 '.text.tex.latex':
   'alpha':
     'prefix': 'alpha'
@@ -56,3 +66,18 @@
   'square root':
     'prefix': 'srt'
     'body': '\$\\\\sqrt{$1}\$'
+  'complex':
+    'prefix': 'C'
+    'body': '\\\\mathbb{C}'
+  'natural':
+    'prefix': 'N'
+    'body': '\\\\mathbb{N}'
+  'integers ':
+    'prefix': 'Z'
+    'body': '\\\\mathbb{Z}'
+  'rational':
+    'prefix': 'Q'
+    'body': '\\\\mathbb{Q}'
+  'real':
+    'prefix': 'R'
+    'body': '\\\\mathbb{R}'
