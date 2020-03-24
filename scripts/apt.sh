@@ -2,14 +2,14 @@
 
 mkdir ~/Repos
 
+# Add PPAs
+sudo add-apt-repository ppa:webupd8team/atom
+sudo add-apt-repository ppa:snwh/ppa
+sudo apt-get update
+
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install calcurse vim i3 gimp git stow i3status zsh feh rxvt-unicode-256color tmux rofi automake xbacklight scrot cmatrix python3 firefox npm mpv thunar thunar-archive-plugin w3m zsh-syntax-highlighting python3-pip python3-setuptools
-
-# Atom
-sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-update
-sudo apt-get install atom
+sudo apt-get install atom automake calcurse cmatrix feh firefox gimp git gtk-chtheme i3 i3status lxappearance mpv npm paper-icon-theme python3 python3-pip python3-setuptools qt4-qtconfig rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim w3m xbacklight zsh zsh-syntax-highlighting
 
 # Background
 echo "Downloading background"
@@ -55,32 +55,6 @@ cd gimp-cc-themes
 cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
 cd
 
-# GTK Theme things
-sudo apt-get install lxappearance gtk-chtheme qt4-qtconfig
-
-# i3 dependencies
-# add PPA
-# clone i3-gaps repo
-
-# i3lock-color
-echo "Installing i3lock-color"
-sudo apt-get install libev-dev libxcb-composite0 libxcb-composite0-dev libxcb-xinerama0 libxcb-randr0 libxcb-xinerama0-dev libxcb-xkb-dev libxcb-image0-dev libxcb-util-dev libxkbcommon-x11-dev libjpeg-turbo8-dev libpam0g-dev #dependecies
-cd ~/Repos/
-git clone https://github.com/PandorasFox/i3lock-color.git
-cd i3lock-color
-autoreconf -i && ./configure && make
-cd x86_64-pc-linux-gnu
-sudo cp i3lock /usr/local/bin/i3lock
-cd
-
-#i3-quickterm
-pip3 install --user i3ipc
-cd ~/Repos
-git clone https://github.com/lbonn/i3-quickterm.git
-cd i3-quickterm
-sudo cp i3-quickterm /usr/local/bin/i3_quickterm
-cd
-
 # Materia Theme
 echo "Installing Materia theme"
 cd ~/Repos/
@@ -104,12 +78,6 @@ git clone https://github.com/dylanaraps/neofetch
 cd neofetch
 make install
 cd
-
-# Paper Icons
-echo "Installing Paper icons"
-sudo add-apt-repository ppa:snwh/ppa
-sudo apt-get update
-sudo apt-get install paper-icon-theme
 
 # pywal
 echo "Installing pywal"
@@ -140,9 +108,42 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# =======================
+#       i3 things :)
+# =======================
+
+if  [[ $1 = "-i" ]]; then
+    echo "Installing i3 packages"
+    
+    # i3-gaps
+    sudo add-apt-repository ppa:simon-monette/i3-gaps
+    sudo apt-get update
+    sudo apt-get install i3-gaps
+
+    # i3lock-color
+    echo "Installing i3lock-color"
+    sudo apt-get install libev-dev libxcb-composite0 libxcb-composite0-dev libxcb-xinerama0 libxcb-randr0 libxcb-xinerama0-dev libxcb-xkb-dev libxcb-image0-dev libxcb-util-dev libxkbcommon-x11-dev libjpeg-turbo8-dev libpam0g-dev #dependecies
+    cd ~/Repos/
+    git clone https://github.com/PandorasFox/i3lock-color.git
+    cd i3lock-color
+    autoreconf -i && ./configure && make
+    cd x86_64-pc-linux-gnu
+    sudo cp i3lock /usr/local/bin/i3lock
+    cd
+
+    #i3-quickterm
+    pip3 install --user i3ipc
+    cd ~/Repos
+    git clone https://github.com/lbonn/i3-quickterm.git
+    cd i3-quickterm
+    sudo cp i3-quickterm /usr/local/bin/i3_quickterm
+    cd
+
+    stow i3
+fi
+
 #stow everything
 stow Firefox
-stow i3
 stow neofetch
 stow oh-my-zsh
 stow rofi
@@ -153,4 +154,3 @@ stow tmux
 stow vim
 stow X
 stow zsh
-
