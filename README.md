@@ -10,14 +10,14 @@
 
 The dotfiles I use to customize my Linux setup. Includes files for i3, urxvt, zsh, vim, tmux, rofi, Firefox
 
-![](Pictures/screenshot.png)
+![](screenshots/Apr-06-2020-13:57.png)
 
 ## Technical Information
 ```
-     Distro: Linux Mint 18.3 Sylvia 
-   Terminal: urxvt + tmux
+     Distro: Manjaro 19.0.2 Kyria
+   Terminal: urxvt
       Shell: zsh + Oh-My-Zsh
-         WM: i3-gaps
+         WM: i3-gaps-rounded
       Icons: Paper (snwh.org/paper)
   GTK Theme: Materia-Dark-Compact (github.com/nana-4/materia-theme)
     Browser: Firefox
