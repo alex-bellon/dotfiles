@@ -30,6 +30,8 @@ alias ..="cd .."
 # DIRECTORY ALIASES #
 #####################
 
+alias tamu="cd ~/GitHub/ctf-writeups-private/working/TAMUctf"
+
 alias alg="cd ~/Classes/M373K-algebra"
 alias ccdc="cd ~/GitHub/CCDC"
 alias cl="cd ~/Classes/"

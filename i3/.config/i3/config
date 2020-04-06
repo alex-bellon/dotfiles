@@ -32,8 +32,14 @@ floating_modifier $mod
 # ON START UP #
 ###############
 
+#### ADD ROUNDED CORNERS
+border_radius 5
+
 #### CHANGE CAPS LOCK TO ESCAPE
 #xmodmap ~/.Xmodmap
+
+#### START COMPTON
+exec compton -b --config ~/.compton.conf
 
 #### LOAD WALLPAPER
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
@@ -84,7 +90,7 @@ exec --no-startup-id "telegram-desktop"
 #########################
 
 #### BORDER WIDTH
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 0
 
 #### GAP WIDTH
 gaps inner 15
@@ -137,7 +143,7 @@ bindsym $mod+Control+z exec "zathura"
 
 bindsym $mod+a exec "atom ~/Classes/M373K-algebra/ && zathura ~/Classes/M373K-algebra/algebra.pdf"
 bindsym $mod+c exec "atom ~/Classes/CS346-cryptography/ && zathura ~/Classes/CS346-cryptography/introduction-to-modern-cryptography.pdf"
-bindsym $mod+n exec "atom ~/GitHub/notes"
+bindsym $mod+n exec "atom ~/GitHub/brain"
 bindsym $mod+g exec "atom ~/GitHub/"
 bindsym $mod+p exec "atom ~/Classes/CS345-programming-languages/"
 bindsym $mod+t exec "atom ~/Classes/M367K-topology/"
@@ -170,7 +176,7 @@ bindsym $mod+f fullscreen toggle
 #bindsym $mod+e layout toggle split
 
 #### TOGGLE TILING/FLOATING
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 #### SWITCH TO WORKSPACE (normal)
 bindsym $mod+1 workspace 1
