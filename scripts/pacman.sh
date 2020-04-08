@@ -4,16 +4,16 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S acpi atom arandr autoconf automake bat bc bison calcurse chafa colordiff cmatrix cura discord dunst entr fakeroot fcrackzip fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick make moreutils rxvt-unicode-256color otf-fira-code patch python3 python-pip python-setuptools mpv npm nnn steam stow telegram-desktop thefuck thunar thunar-archive-plugin tig tree ttf-fira-code ttf-comfortaa vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
+sudo pacman -S acpi atom arandr autoconf automake bat bc bison calcurse chafa colordiff cmatrix cura discord dunst entr fakeroot fcrackzip fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick make moreutils rxvt-unicode otf-fira-code patch python3 python-pip python-setuptools mpv npm nnn steam stow telegram-desktop thefuck thunar thunar-archive-plugin tig tree ttf-fira-code ttf-comfortaa vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
 
 # yay
-yay -S bless ffsend-bin grv minecraft-launcher nerd-fonts-noto-sans-mono nerd-fonts-hermit otf-fantasque-sans-mono slack-desktop-dark rofi-git spotify ttf-iosevka zijiang-pos58-driver
+yay -S bless ffsend-bin grv minecraft-launcher nerd-fonts-noto-sans-mono nerd-fonts-hermit otf-fantasque-sans-mono slack-desktop-dark rofi-git spotify ttf-iosevka vundle-git zijiang-pos58-driver
 
 # slack desktop, notion.so, franz, telegram, leonflix, 
 
 # Background
 echo "Downloading background"
-wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/wallpaper.png
+wget https://cs.utexas.edu/~abellon/images/wallpaper.jpg -o ~/Pictures/wallpaper.jpg
 
 # betterlockscreen
 
@@ -71,15 +71,23 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# theme urxvt
+wal -i ~/Pictures/wallpaper.jpg
+
+# change shell
+chsh -s /bin/zsh
+
 #stow everything
-stow awesome
+cd ~/Dotfiles
+
 stow Firefox
 stow neofetch
 stow oh-my-zsh
 stow rofi
 stow Telegram
-stow Thunar
-stow tmux
 stow vim
 stow X
 stow zsh
+
+# update xmodmap
+xmodmap ~/.Xmodmap
