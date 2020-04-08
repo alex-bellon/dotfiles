@@ -1,5 +1,8 @@
 set nocompatible              " be iMproved, required
+
 filetype on                 " required
+syntax on
+
 set laststatus=2
 set scrolloff=2
 set expandtab
@@ -10,7 +13,8 @@ set numberwidth=5
 set pastetoggle=<F2>
 set nofoldenable
 set clipboard=unnamed
-syntax on
+
+highlight Comment cterm=italic
 
 " Mappings
 map <C-t> :NERDTreeToggle<CR>

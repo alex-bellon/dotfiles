@@ -9,7 +9,7 @@ sudo apt-get update
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install atom automake calcurse cmatrix feh firefox gimp git gtk-chtheme i3 i3status lxappearance mpv npm paper-icon-theme python3 python3-pip python3-setuptools qt4-qtconfig rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim w3m xbacklight zsh zsh-syntax-highlighting
+sudo apt-get install atom automake calcurse cmatrix feh firefox gimp git gtk-chtheme i3 i3status lxappearance moreutils mpv npm paper-icon-theme python3 python3-pip python3-setuptools qt4-qtconfig rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim w3m xbacklight zsh zsh-syntax-highlighting
 
 # Background
 echo "Downloading background"

@@ -76,14 +76,16 @@ assign [class="discord"] chat
 assign [class="Discord"] chat
 assign [class="TelegramDesktop"] chat
 assign [class="Slack"] slack
-assign [class="spotify"] music
-assign [class="Spotify"] music
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
+exec --no-startup-id "spotify"
 exec --no-startup-id "discord"
 exec --no-startup-id "mailspring"
 exec --no-startup-id "slack"
 exec --no-startup-id "telegram-desktop"
+
+for_window [class="Spotify"] resize set 1000px 123px
+for_window [class="Spotify"] move scratchpad
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -125,8 +127,11 @@ bindsym Control+Down exec xbacklight -dec 10 # decrease screen brightness
 # PROGRAM SHORTCUTS #
 #####################
 
+bindsym $mod+s scratchpad show
+
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
-bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
+# bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
+bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
 bindsym $mod+Return exec urxvt #terminal
 
 bindsym $mod+Control+a exec "atom"

@@ -105,7 +105,7 @@ alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 #update colors and lockscreen with new wallpaper
 theme() {
     wal -i ~/Pictures/$1
-#    #python3 ~/Repos/wal_steam.py -w
+    spicetify update
 }
 
 #ls every time you cd

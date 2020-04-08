@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S atom arandr autoconf automake bat bc calcurse chafa colordiff cmatrix cura discord entr fakeroot fcrackzip fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick make rxvt-unicode-256color otf-fira-code patch python3 python-pip python-setuptools mpv npm nnn rofi steam stow telegram-desktop thefuck thunar thunar-archive-plugin tig tree ttf-fira-code vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
+sudo pacman -S atom arandr autoconf automake bat bc calcurse chafa colordiff cmatrix cura discord entr fakeroot fcrackzip fd feh figlet fzf firefox flameshot gcc gimp git hexyl i3status i3lock-color imagemagick make moreutils rxvt-unicode-256color otf-fira-code patch python3 python-pip python-setuptools mpv npm nnn rofi steam stow telegram-desktop thefuck thunar thunar-archive-plugin tig tree ttf-fira-code vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
 
 # yay
 yay -S bless ffsend-bin grv minecraft-launcher slack-desktop-dark spotify zijiang-pos58-driver
