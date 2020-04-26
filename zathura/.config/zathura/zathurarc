@@ -11,7 +11,7 @@ set incremental-search true
 # invert colors
 map <C-i> recolor
 
-set page-padding 1
+#set page-padding 1
 
 # zoom
 map <C-=> zoom in

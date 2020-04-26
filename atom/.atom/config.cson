@@ -22,7 +22,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 17
+    fontSize: 16
     showIndentGuide: true
     softWrap: true
   "editor-background":
@@ -31,8 +31,8 @@
       opacity: 0
       overlayColor: "#101010"
       style: '''
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
       '''
       url: "/home/alex/Pictures/wallpaper.jpg"
     text:
