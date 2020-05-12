@@ -132,6 +132,7 @@ bindsym $mod+s scratchpad show
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 # bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
+bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
 bindsym $mod+Return exec urxvt #terminal
 
 bindsym $mod+Control+a exec "atom"
@@ -150,7 +151,6 @@ bindsym $mod+a exec "atom ~/Classes/M373K-algebra/ && zathura ~/Classes/M373K-al
 bindsym $mod+c exec "atom ~/Classes/CS346-cryptography/ && zathura ~/Classes/CS346-cryptography/introduction-to-modern-cryptography.pdf"
 bindsym $mod+n exec "atom ~/GitHub/brain"
 bindsym $mod+g exec "atom ~/GitHub/"
-bindsym $mod+p exec "atom ~/Classes/CS345-programming-languages/"
 bindsym $mod+t exec "atom ~/Classes/M367K-topology/"
 
 #####################
