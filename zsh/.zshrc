@@ -1,4 +1,8 @@
-export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
+export ZSH=~/.oh-my-zsh #point to where oh my zsh is
+export PATH="${PATH}:/Users/alexandrabellon/Library/Python/3.7/bin"
+export PYTHONPATH="${PYTHONPATH}:/Users/alexandrabellon/Library/Python/3.7/bin"
+
+wal -i ~/Documents/wallpaper.jpg > /dev/null
 
 ZSH_THEME="punctual"
 
@@ -12,13 +16,12 @@ alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias ls="ls -a --color=auto"
+alias ls="ls -a"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
 alias spr="sudo pacman -R"
 alias sps="sudo pacman -S"
-alias sudo="sudo --askpass"
 alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
@@ -110,7 +113,7 @@ theme() {
 }
 
 #ls every time you cd
-cd() { builtin cd "$@" && ls -a --color=auto; }
+cd() { builtin cd "$@" && ls -a; }
 
 ###########
 # PLUGINS #
@@ -130,14 +133,11 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 . ~/.oh-my-zsh/custom/plugins/z/z.sh
 
-export SUDO_ASKPASS="${HOME}/.config/rofi/custom/askpass.sh"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 #eval $(thefuck --alias fuck)
 #eval $(thefuck --alias FUCK)
-
-unalias grv
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
