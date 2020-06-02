@@ -1,38 +1,39 @@
 # Programs
-cmd - return : open /Applications/iTerm.app
-cmd - j : open /Applications/"Alfred 4".app
+alt - return : open -n /Applications/iTerm.app
+lctrl + alt - f : open /System/Library/CoreServices/Finder.app
+lctrl + alt - b : open /Applications/Firefox.app
 
 # Focus
-cmd - left : yabai -m window --focus west
-cmd - down : yabai -m window --focus south
-cmd - up : yabai -m window --focus north
-cmd - right : yabai -m window --focus east
+alt - left : yabai -m window --focus west
+alt - down : yabai -m window --focus south
+alt - up : yabai -m window --focus north
+alt - right : yabai -m window --focus east
 
 # Move
-shift + cmd - left : yabai -m window --warp west
-shift + cmd - down : yabai -m window --warp south
-shift + cmd - up : yabai -m window --warp north
-shift + cmd - right : yabai -m window --warp east
+shift + alt - left : yabai -m window --warp west
+shift + alt - down : yabai -m window --warp south
+shift + alt - up : yabai -m window --warp north
+shift + alt - right : yabai -m window --warp east
 
 # Move focus container to workspace
-shift + cmd - 1 : yabai -m window --space 1
-shift + cmd - 2 : yabai -m window --space 2
-shift + cmd - 3 : yabai -m window --space 3
-shift + cmd - 4 : yabai -m window --space 4
-shift + cmd - 5 : yabai -m window --space 5
-shift + cmd - 6 : yabai -m window --space 6
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
 
 # Change workspace
-cmd - 0x12 : yabai -m space --focus 1
-cmd - 0x13 : yabai -m space --focus 2
-cmd - 0x14 : yabai -m space --focus 3
-cmd - 0x15 : yabai -m space --focus 4
-cmd - 0x17 : yabai -m space --focus 5
-cmd - 0x16 : yabai -m space --focus 6
+alt - 0x12 : yabai -m space --focus 1
+alt - 0x13 : yabai -m space --focus 2
+alt - 0x14 : yabai -m space --focus 3
+alt - 0x15 : yabai -m space --focus 4
+alt - 0x17 : yabai -m space --focus 5
+alt - 0x16 : yabai -m space --focus 6
 
 # Resize windows
-cmd - 0x2B : yabai -m window --resize left:-25:0; yabai -m window --resize right:-25:0 # comma, left
-cmd - 0x2F : yabai -m window --resize right:25:0; yabai -m window --resize left:25:0 # period, right
+alt - 0x2B : yabai -m window --resize left:-25:0; yabai -m window --resize right:-25:0 # comma, left
+alt - 0x2F : yabai -m window --resize right:25:0; yabai -m window --resize left:25:0 # period, right
 
 lctrl - j : \
     yabai -m window --resize bottom:0:20 ; \
@@ -43,14 +44,14 @@ lctrl - k : \
     yabai -m window --resize bottom:0:-20
 
 # Equalize size of windows
-cmd - b: yabai -m space --balance
+alt - b: yabai -m space --balance
 
 # Float / Unfloat window
-cmd - f : yabai -m window --toggle float
+shift + alt - f : yabai -m window --toggle float
 
 # Restart Yabai
-shift + cmd - r : brew service restart yabai
+shift + alt - r : brew service restart yabai
 
 # Make window native fullscreen
-cmd - f         : yabai -m window --toggle zoom-fullscreen
-shift + cmd - f : yabai -m window --toggle native-fullscreen
+alt - f         : yabai -m window --toggle zoom-fullscreen
+ctrl + alt - f : yabai -m window --toggle native-fullscreen
