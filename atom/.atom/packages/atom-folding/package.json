@@ -1,0 +1,70 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball",
+  "_id": "atom-folding@0.0.9",
+  "_inBundle": false,
+  "_integrity": "sha512-CXaVXIQzauB7ADX5sCqU6lVQjargvSTeFOddM8pVulxaWoOkbrW+InZv2Y2WWjzfIyW6bueQgcSP7s+jY2wJhg==",
+  "_location": "/atom-folding",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball",
+  "_shasum": "9f91dc550d64f2e887a887c2aaba4ec1828ee3bd",
+  "_spec": "https://www.atom.io/api/packages/atom-folding/versions/0.0.9/tarball",
+  "_where": "/private/var/folders/6f/8dbmzh7x0yb6hh4f110_k9y00000gn/T/apm-install-dir-202059-6396-yl7emd.e7g2",
+  "author": {
+    "name": "Benjamin Gray"
+  },
+  "bugs": {
+    "url": "https://github.com/Aerijo/atom-folding/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "foldTrailingWhitespace": {
+      "description": "Global config to exclude trailing whitespace from the folding range",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "consumedServices": {
+    "folding.provider": {
+      "versions": {
+        "0.0.0": "consumeFoldProvider"
+      }
+    }
+  },
+  "deprecated": false,
+  "description": "Custom code folding support for Atom",
+  "devDependencies": {
+    "@types/atom": "latest",
+    "tslint": "latest",
+    "typescript": "latest"
+  },
+  "engines": {
+    "atom": ">=1.34.0 <2.0.0"
+  },
+  "homepage": "https://github.com/Aerijo/atom-folding#readme",
+  "keywords": [
+    "folding"
+  ],
+  "license": "MIT",
+  "main": "./dist/main",
+  "name": "atom-folding",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aerijo/atom-folding.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "version": "0.0.9"
+}

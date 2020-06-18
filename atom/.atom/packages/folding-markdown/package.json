@@ -1,0 +1,72 @@
+{
+  "_from": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball",
+  "_id": "folding-markdown@0.1.4",
+  "_inBundle": false,
+  "_integrity": "sha512-T2wyk3SjFWUr29sJs7iyUcW2HM1e6tN78TMvoM4IhU2Gyg9v6UrCwTDGlrBu9jynWYKme1zfVN7KuHwm0sWG4Q==",
+  "_location": "/folding-markdown",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball",
+  "_shasum": "0e1f42c2afdef7818d0f99b1ac0a2d9f96db7b3b",
+  "_spec": "https://www.atom.io/api/packages/folding-markdown/versions/0.1.4/tarball",
+  "_where": "/private/var/folders/6f/8dbmzh7x0yb6hh4f110_k9y00000gn/T/apm-install-dir-202059-6373-6ehldv.4vdsd",
+  "activationHooks": [
+    "source.gfm:root-scope-used",
+    "text.md:root-scope-used"
+  ],
+  "author": {
+    "name": "Benjamin Gray"
+  },
+  "bugs": {
+    "url": "https://github.com/Aerijo/folding-markdown/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "foldTrailingSectionWhitespace": {
+      "description": "Enable to fold everything up until the next section, including trailing whitespace.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "dependencies": {
+    "atom-package-deps": "5.0.0"
+  },
+  "deprecated": false,
+  "description": "Code folding support for markdown",
+  "engines": {
+    "atom": ">=1.34.0 <2.0.0"
+  },
+  "homepage": "https://github.com/Aerijo/folding-markdown#readme",
+  "keywords": [
+    "markdown",
+    "folding"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "folding-markdown",
+  "package-deps": [
+    "atom-folding"
+  ],
+  "providedServices": {
+    "folding.provider": {
+      "versions": {
+        "0.0.0": "provideFolding"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aerijo/folding-markdown.git"
+  },
+  "version": "0.1.4"
+}

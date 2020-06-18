@@ -1,4 +1,7 @@
 'atom-workspace atom-text-editor:not([mini])':
-  'ctrl-shift-down': 'editor:add-selection-below'
-  'ctrl-shift-up': 'editor:add-selection-above'
-  'ctrl-h': 'atom-hide-tabs:toggle'
+  'cmd-shift-down': 'editor:add-selection-below'
+  'cmd-shift-up': 'editor:add-selection-above'
+  'cmd-h': 'atom-hide-tabs:toggle'
+
+'atom-text-editor':
+  'cmd-shift-M': 'markdown-preview:toggle'

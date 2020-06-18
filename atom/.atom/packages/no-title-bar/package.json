@@ -1,0 +1,97 @@
+{
+  "_from": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball",
+  "_id": "no-title-bar@1.11.9",
+  "_inBundle": false,
+  "_integrity": "sha512-0jpJiJSmocGOygKSzrMmou5Eq0ZCHBWnZI2Ep/1dysIne/0Mzu9c6Bc+7yp0XE78eJ5Fbs3C9IeRt8fNMufeYg==",
+  "_location": "/no-title-bar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball",
+  "_shasum": "9718184724d8d158cb97df9c4cf8df8b6b019e81",
+  "_spec": "https://www.atom.io/api/packages/no-title-bar/versions/1.11.9/tarball",
+  "_where": "/private/var/folders/6f/8dbmzh7x0yb6hh4f110_k9y00000gn/T/apm-install-dir-202053-67647-1ak0kan.r2fnk",
+  "author": {
+    "name": "lexicalunit",
+    "email": "lexicalunit@lexicalunit.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lexicalunit/no-title-bar/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "trafficLightsPadding": {
+      "description": "A padding width, in pixels, to accommodate the window traffic lights.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 80
+    },
+    "automaticTrafficLightsPadding": {
+      "description": "Use the width of your left dock as the width for the traffic lights padding.",
+      "type": "boolean",
+      "default": false
+    },
+    "automaticTrafficLightsPaddingOffset": {
+      "description": "An offset adjustment width, in pixels, when using automatic padding.",
+      "type": "integer",
+      "default": 0
+    },
+    "enableLiberalWindowDragging": {
+      "description": "Liberally allow window dragging from any \"empty\" space.",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Provides support for a hidden Atom title bar.",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "engines": {
+    "atom": ">=1.20.0 <2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "globals": {
+      "atom": "true",
+      "MutationObserver": true
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    }
+  },
+  "homepage": "https://github.com/lexicalunit/no-title-bar#readme",
+  "keywords": [
+    "title-bar",
+    "title bar",
+    "titlebar"
+  ],
+  "license": "MIT",
+  "main": "lib/no-title-bar",
+  "name": "no-title-bar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexicalunit/no-title-bar.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "eslint . && apm test"
+  },
+  "version": "1.11.9"
+}

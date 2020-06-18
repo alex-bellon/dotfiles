@@ -22,7 +22,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 15
+    scrollPastEnd: true
     showIndentGuide: true
     softWrap: true
   "editor-background":
@@ -31,8 +31,8 @@
       opacity: 0
       overlayColor: "#101010"
       style: '''
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
       '''
       url: "/home/alex/Pictures/wallpaper.jpg"
     text:
@@ -50,6 +50,16 @@
     paneToUseInSynctex: "right"
   "spell-check":
     addKnownWords: true
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.rst"
+      "text.restructuredtext"
+      "text.md"
+    ]
     knownWords: [
       "algeabraic"
       "leadsto"
@@ -74,6 +84,31 @@
       "bigcap"
       "leqslant"
       "pseudorandom"
+      "vulns"
+      "gitignore"
+      "npm"
+      "Semver"
+      "Operations"
+      "Filesystem"
+      "Node.js"
+      "semver"
+      "Node.js"
+      "Typosquatting"
+      "un-sanboxed"
+      "Micropackages"
+      "vuln"
+      "Node.js"
+      "install`](https://doc.rust-lang.org/cargo/commands/cargo-install.html)"
+      "[`cargo"
+      "Cargo.toml"
+      "lockfile"
+      "[Version"
+      "selection"
+      "Cargo](https://aturon.github.io/tech/2018/07/25/cargo-version"
+      "in"
+      "Cargo.toml"
+      "Bruteforce"
+      "lockfiles"
     ]
   "tree-view": {}
   welcome:
