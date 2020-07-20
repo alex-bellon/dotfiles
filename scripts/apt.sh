@@ -143,6 +143,8 @@ if  [[ $1 = "-i" ]]; then
 fi
 
 #stow everything
+cd ~/Dotfiles
+
 stow Firefox
 stow neofetch
 stow oh-my-zsh
