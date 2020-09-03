@@ -1,8 +1,4 @@
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export PATH="${PATH}:/Users/alexandrabellon/Library/Python/3.7/bin"
-export PYTHONPATH="${PYTHONPATH}:/Users/alexandrabellon/Library/Python/3.7/bin"
-
-wal -i ~/Documents/wallpaper.jpg > /dev/null
 
 ZSH_THEME="punctual"
 
@@ -28,7 +24,7 @@ alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
 alias timezone="cp /usr/share/zoneinfo/America/Chicago /etc/localtime"
-alias udpate="sudo pacman -Syu"
+alias udpdate="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
 
@@ -36,7 +32,11 @@ alias ..="cd .."
 # DIRECTORY ALIASES #
 #####################
 
-alias tamu="cd ~/GitHub/ctf-writeups-private/working/TAMUctf"
+# Classes
+alias chem="cd ~/Classes/CH301-chemistry"
+alias con="cd ~/Classes/CS349-contemporary-issues"
+alias jazz="cd ~/Classes/MUS307-jazz-appreciation"
+alias con="cd ~/Classes/CS358H-quantum"
 
 alias ccdc="cd ~/GitHub/CCDC"
 alias cl="cd ~/Classes/"
@@ -44,7 +44,7 @@ alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
-alias isss="cd ~/GitHub/isss-challenges/2020/spring"
+alias isss="cd ~/GitHub/isss-challenges/2020/fall"
 alias notes="cd ~/GitHub/notes"
 alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
 alias rp="cd ~/Repos/"
@@ -102,9 +102,6 @@ alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 #############
 # FUNCTIONS #
 #############
-
-#ls every time you cd
-cd() { builtin cd "$@" && ls -a; }
 
 # auto extract archive files (stolen from https://github.com/ajvb/configfiles)
 extract () {
