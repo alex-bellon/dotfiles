@@ -2,6 +2,8 @@ export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
 
 ZSH_THEME="punctual"
 
+wal -i ~/Pictures/wallpaper.jpg > /dev/null
+
 ###################
 # COMMAND ALIASES #
 ###################
@@ -48,7 +50,6 @@ alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
 alias site="cd ~/GitHub/website"
 alias tl="cd ~/GitHub/ctf-tools"
-alias top="cd ~/Classes/M367K-topology"
 alias wiki="cd ~/GitHub/wikipedia"
 alias wp="cd ~/GitHub/ctf-writeups-private"
 
