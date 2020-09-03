@@ -78,14 +78,11 @@ assign [class="TelegramDesktop"] chat
 assign [class="Slack"] slack
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
-exec --no-startup-id "spotify"
+exec --no-startup-id "Firefox"
 exec --no-startup-id "discord"
 exec --no-startup-id "mailspring"
 exec --no-startup-id "slack"
 exec --no-startup-id "telegram-desktop"
-
-for_window [class="Spotify"] resize set 1000px 123px
-for_window [class="Spotify"] move scratchpad
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -130,8 +127,8 @@ bindsym Control+Down exec xbacklight -dec 10 # decrease screen brightness
 bindsym $mod+s scratchpad show
 
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
-# bindsym $mod+j exec "rofi -combi-modi window,drun,ssh, -show combi"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
+bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
 bindsym $mod+Return exec urxvt #terminal
 
 bindsym $mod+Control+a exec "atom"
@@ -146,12 +143,8 @@ bindsym $mod+Control+t exec "telegram-desktop &"
 #bindsym $mod+Control+x exec "shutdown -h now"
 bindsym $mod+Control+z exec "zathura"
 
-bindsym $mod+a exec "atom ~/Classes/M373K-algebra/ && zathura ~/Classes/M373K-algebra/algebra.pdf"
-bindsym $mod+c exec "atom ~/Classes/CS346-cryptography/ && zathura ~/Classes/CS346-cryptography/introduction-to-modern-cryptography.pdf"
 bindsym $mod+n exec "atom ~/GitHub/brain"
 bindsym $mod+g exec "atom ~/GitHub/"
-bindsym $mod+p exec "atom ~/Classes/CS345-programming-languages/"
-bindsym $mod+t exec "atom ~/Classes/M367K-topology/"
 
 #####################
 # WINDOW MANAGEMENT #

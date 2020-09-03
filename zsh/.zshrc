@@ -1,4 +1,8 @@
-export ZSH=/home/alex/.oh-my-zsh #point to where oh my zsh is
+export ZSH=~/.oh-my-zsh #point to where oh my zsh is
+export PATH="${PATH}:/Users/alexandrabellon/Library/Python/3.7/bin"
+export PYTHONPATH="${PYTHONPATH}:/Users/alexandrabellon/Library/Python/3.7/bin"
+
+wal -i ~/Documents/wallpaper.jpg > /dev/null
 
 ZSH_THEME="punctual"
 
@@ -14,7 +18,7 @@ alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias ls="ls -a --color=auto"
+alias ls="ls -a"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
@@ -34,10 +38,8 @@ alias ..="cd .."
 
 alias tamu="cd ~/GitHub/ctf-writeups-private/working/TAMUctf"
 
-alias alg="cd ~/Classes/M373K-algebra"
 alias ccdc="cd ~/GitHub/CCDC"
 alias cl="cd ~/Classes/"
-alias cr="cd ~/Classes/CS346-cryptography"
 alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
@@ -45,7 +47,6 @@ alias gh="cd ~/GitHub"
 alias isss="cd ~/GitHub/isss-challenges/2020/spring"
 alias notes="cd ~/GitHub/notes"
 alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
-alias pl="cd ~/Classes/CS345-programming-languages"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
 alias site="cd ~/GitHub/website"
@@ -87,7 +88,6 @@ alias charles="~/Repos/charles/bin/charles"
 alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
 alias metasploit="msfconsole"
-alias notion="~/Repos/notion-app/notion-app"
 alias python="python3"
 alias taizen="~/Repos/taizen/target/release/taizen"
 alias telegram="~/Repos/Telegram/Telegram"
@@ -103,14 +103,30 @@ alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 # FUNCTIONS #
 #############
 
-#update colors and lockscreen with new wallpaper
-theme() {
-    wal -i ~/Pictures/$1
-    spicetify update
-}
-
 #ls every time you cd
-cd() { builtin cd "$@" && ls -a --color=auto; }
+cd() { builtin cd "$@" && ls -a; }
+
+# auto extract archive files (stolen from https://github.com/ajvb/configfiles)
+extract () {
+ if [ -f $1 ] ; then
+     case $1 in
+         *.tar.bz2)   tar xvjf $1 && cd $(echo $1 | sed 's/.tar.bz2//')    ;;
+         *.tar.gz)    tar xvzf $1 && cd $(echo $1 | sed 's/.tar.gz//')    ;;
+         *.bz2)       bunzip2 $1 && cd $(echo $1 | sed 's/.bz2//')    ;;
+         *.rar)       unrar x $1 && cd $(echo $1 | sed 's/.rar//')    ;;
+         *.gz)        gunzip $1 && cd $(echo $1 | sed 's/.gz//')    ;;
+         *.tar)       tar xvf $1 && cd $(echo $1 | sed 's/.tar//')    ;;
+         *.tbz2)      tar xvjf $1 && cd $(echo $1 | sed 's/.tbz2//')    ;;
+         *.tgz)       tar xvzf $1 && cd $(echo $1 | sed 's/.tgz//')    ;;
+         *.zip)       unzip $1 && cd $(echo $1 | sed 's/.zip//')    ;;
+         *.Z)         uncompress $1 && cd $(echo $1 | sed 's/.Z//')    ;;
+         *.7z)        7z x $1 && cd $(echo $1 | sed 's/.7z//')    ;;
+         *)           echo "don't know how to extract '$1'..." ;;
+     esac
+ else
+     echo "'$1' is not a valid file!"
+ fi
+}
 
 ###########
 # PLUGINS #
@@ -136,7 +152,5 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 #eval $(thefuck --alias fuck)
 #eval $(thefuck --alias FUCK)
-
-unalias grv
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

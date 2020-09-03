@@ -1,0 +1,9 @@
+.DS_Store*
+
+atom/.atom/.apm/
+atom/.atom/.atom-socket-secret-alexandrabellon-1.47.0
+atom/.atom/.node-gyp/
+atom/.atom/blob-store/
+atom/.atom/compile-cache/
+atom/.atom/github.cson
+atom/.atom/storage/
