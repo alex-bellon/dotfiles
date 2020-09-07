@@ -1,5 +1,7 @@
 .DS_Store*
 
+oh-my-zsh/.oh-my-zsh/cache
+
 atom/.atom/.apm/
 atom/.atom/.atom-socket-secret-alexandrabellon-1.47.0
 atom/.atom/.node-gyp/
