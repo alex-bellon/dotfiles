@@ -3,6 +3,7 @@ export ZSH=~/.oh-my-zsh #point to where oh my zsh is
 ZSH_THEME="punctual"
 
 wal -i ~/Pictures/wallpaper.jpg > /dev/null
+xmodmap ~/.Xmodmap
 
 ###################
 # COMMAND ALIASES #
@@ -151,3 +152,5 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 #eval $(thefuck --alias FUCK)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(thefuck --alias)

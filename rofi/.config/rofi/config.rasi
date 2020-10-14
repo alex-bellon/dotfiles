@@ -1,3 +1,5 @@
 configuration {
+    combi-modi: "drun,ssh,Test:~/.config/rofi/custom/bookmarks.sh";
+    modi: "combi";
 	theme: "~/.cache/wal/colors-rofi-dark.rasi";
 }
