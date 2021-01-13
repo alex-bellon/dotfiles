@@ -9,8 +9,8 @@
       "xml-formatter"
       "status-bar"
       "language-gfm"
-      "markdown-writer"
       "editor-background"
+      "about"
     ]
     packagesWithKeymapsDisabled: [
       "atom-hide-tabs"
@@ -31,12 +31,6 @@
       opacity: 0
       overlayColor: "#101010"
       style: '''
-                                                                                                                                
-                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-                                                                                                        
-                                                                                                        
       '''
       url: "/home/alex/Pictures/wallpaper.jpg"
     text:
