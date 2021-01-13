@@ -2,3 +2,5 @@
   'ctrl-shift-down': 'editor:add-selection-below'
   'ctrl-shift-up': 'editor:add-selection-above'
   'ctrl-h': 'atom-hide-tabs:toggle'
+  'ctrl-up': 'editor:move-line-up'
+  'ctrl-down': 'editor:move-line-down'
