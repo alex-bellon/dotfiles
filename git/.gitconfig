@@ -6,7 +6,7 @@
 [push]
     default = matching
 [user]
-    email = alexrbellon@gmail.com
-    name = alex-bellon
+	email = alexrbellon@gmail.com
+	name = alex-bellon
 [pull]
 	rebase = false

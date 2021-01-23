@@ -30,8 +30,7 @@
       customOverlayColor: true
       opacity: 0
       overlayColor: "#101010"
-      style: '''
-      '''
+      style: "      "
       url: "/home/alex/Pictures/wallpaper.jpg"
     text:
       blur: 50
