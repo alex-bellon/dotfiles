@@ -33,7 +33,7 @@ floating_modifier $mod
 ###############
 
 #### ADD ROUNDED CORNERS
-# border_radius 5
+border_radius 5
 
 #### CHANGE CAPS LOCK TO ESCAPE
 exec xmodmap ~/.Xmodmap
