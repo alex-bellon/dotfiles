@@ -129,7 +129,7 @@ bindsym $mod+s scratchpad show
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
 bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
-bindsym $mod+Return exec urxvt #terminal
+bindsym $mod+Return exec kitty #terminal
 
 bindsym $mod+Control+a exec "atom"
 bindsym $mod+Control+b exec firefox
