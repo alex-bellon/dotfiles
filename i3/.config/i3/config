@@ -36,7 +36,7 @@ floating_modifier $mod
 # border_radius 5
 
 #### CHANGE CAPS LOCK TO ESCAPE
-xmodmap ~/.Xmodmap
+exec xmodmap ~/.Xmodmap
 
 #### START COMPTON
 exec compton -b --config ~/.compton.conf
