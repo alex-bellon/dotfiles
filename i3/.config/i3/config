@@ -72,10 +72,11 @@ set $workspace10 "10"
 
 #### MAKE SPECIAL WORKSPACES
 assign [class="Mailspring"] home
-assign [class="discord"] chat
-assign [class="Discord"] chat
-assign [class="TelegramDesktop"] chat
+assign [class="discord"] discord
+assign [class="Discord"] discord
+assign [class="TelegramDesktop"] telegram
 assign [class="Slack"] slack
+assign [class="spotify"] music
 
 #### STARTUP TODOIST, EMAIL, CALENDAR
 exec --no-startup-id "Firefox"
@@ -124,8 +125,6 @@ bindsym Control+Down exec xbacklight -dec 10 # decrease screen brightness
 # PROGRAM SHORTCUTS #
 #####################
 
-bindsym $mod+s scratchpad show
-
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
 bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
@@ -151,10 +150,10 @@ bindsym $mod+g exec "atom ~/GitHub/"
 #####################
 
 #### SHIFT FOCUS
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 #### MOVE WINDOWS
 bindsym $mod+Shift+Left move left
@@ -186,17 +185,19 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+` workspace 10
+bindsym $mod+0 workspace 10
 
 #### WORKSAPCE KEYBINDINGS
 bindsym $mod+q workspace home
-bindsym $mod+w workspace chat
+bindsym $mod+w workspace discord
 bindsym $mod+e workspace slack
+bindsym $mod+t workspace telegram
+bindsym $mod+s workspace music
 
-#### CYCLE THROUGH WORKSPACEs
+#### CYCLE THROUGH WORKSPACES
 bindsym Control+$mod+Right workspace next
 
-#### MOVED FOCUSED WINDOW TO WORKSPACE
+#### MOVE FOCUSED WINDOW TO WORKSPACE
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -209,8 +210,15 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 bindsym $mod+Shift+q move container to workspace home
-bindsym $mod+Shift+w move container to workspace chat
+bindsym $mod+Shift+w move container to workspace discord
 bindsym $mod+Shift+e move container to workspace slack
+bindsym $mod+Shift+t move container to workspace telegram
+bindsym $mod+Shift+s move container to workspace music
+
+#### MOVE WORKSPACES BETWEEN MONITORS
+
+bindsym $mod+Left move workspace to output HDMI-1
+bindsym $mod+Right move workspace to output HDMI-0
 
 #### RESIZE MODE
 bindsym $mod+comma resize shrink width 15 px or 5 ppt
@@ -224,7 +232,8 @@ bindsym $mod+apostrophe resize grow height 15 px or 5 ppt
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
 set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bg i3wm.color2 #444444
+set $bg #444444
 set_from_resource $hl i3wm.color6
 set_from_resource $bl i3wm.color3
 
@@ -243,16 +252,16 @@ client.background       $bg
 
 bar {
         colors {
-            background $bg
+            background #444444
             statusline #ffffff
             separator $fg
 
             #loc               border  backgd  text
             focused_workspace  $bg $bg #ffffff
             active_workspace   $bg $bg #ffffff
-            inactive_workspace $bg $bg #cccccc
-            urgent_workspace   $bg $fg #cccccc
-            binding_mode       $bg $bg #cccccc
+            inactive_workspace $bg $bg #aaaaaa
+            urgent_workspace   $bg $fg #aaaaaa
+            binding_mode       $bg $bg #aaaaaa
         }
         status_command i3status
         tray_output primary
