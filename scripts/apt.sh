@@ -9,11 +9,17 @@ sudo apt-get update
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install atom automake calcurse cmatrix feh firefox gimp git gtk-chtheme i3 i3status lxappearance moreutils mpv npm paper-icon-theme python3 python3-pip python3-setuptools qt4-qtconfig rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim w3m xbacklight zsh zsh-syntax-highlighting
+sudo apt-get install atom automake calcurse cmatrix compton feh firefox gimp git gtk-chtheme i3wm i3status lxappearance moreutils mpv npm paper-icon-theme python3 python3-pip python3-setuptools qt4-qtconfig rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim w3m xbacklight zsh zsh-syntax-highlighting
 
 # Background
 echo "Downloading background"
 wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/background.png
+
+# betterlockscreen
+cd ~/Repos/
+git clone https://github.com/pavanjadhaw/betterlockscreen
+cd betterlockscreen
+cp betterlockscreen ~/.local/bin/
 
 # BootISO
 echo "Installing BootISO"
@@ -22,14 +28,6 @@ git clone https://github.com/jsamr/bootiso.git
 cd bootiso/
 chmod +x bootiso
 cd
-
-# Brave Browser
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key add -
-
-UBUNTU_CODENAME=$( (grep DISTRIB_CODENAME /etc/upstream-release/lsb-release || grep DISTRIB_CODENAME /etc/lsb-release) 2>/dev/null | cut -d'=' -f2 )
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-$UBUNTU_CODENAME.list
-sudo apt update
-sudo apt install brave-browser brave-keyring
 
 # cheat.sh
 curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
@@ -61,14 +59,6 @@ cd ~/Repos/
 wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
 cd materia-theme-master
 sudo ./install.sh
-cd
-
-# Mantablockscreen
-echo "Installing Mantablockscreen"
-cd ~/Repos/
-git clone https://github.com/reorr/mantablockscreen
-cd mantablockscreen
-./mantablockscreen -i ~/Pictures/background.png
 cd
 
 # Neofetch
@@ -115,23 +105,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 if  [[ $1 = "-i" ]]; then
     echo "Installing i3 packages"
     
-    # i3-gaps
-    sudo add-apt-repository ppa:simon-monette/i3-gaps
-    sudo apt-get update
-    sudo apt-get install i3-gaps
+    # i3-gaps rounded
+    cd ~/Repos
+    git clone https://github.com/terroo/i3-radius
+    cd i3-radius
+    ./build.sh
 
-    # i3lock-color
-    echo "Installing i3lock-color"
-    sudo apt-get install libev-dev libxcb-composite0 libxcb-composite0-dev libxcb-xinerama0 libxcb-randr0 libxcb-xinerama0-dev libxcb-xkb-dev libxcb-image0-dev libxcb-util-dev libxkbcommon-x11-dev libjpeg-turbo8-dev libpam0g-dev #dependecies
-    cd ~/Repos/
-    git clone https://github.com/PandorasFox/i3lock-color.git
-    cd i3lock-color
-    autoreconf -i && ./configure && make
-    cd x86_64-pc-linux-gnu
-    sudo cp i3lock /usr/local/bin/i3lock
-    cd
-
-    #i3-quickterm
+    # i3-quickterm
     pip3 install --user i3ipc
     cd ~/Repos
     git clone https://github.com/lbonn/i3-quickterm.git
