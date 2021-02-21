@@ -34,11 +34,6 @@ alias ..="cd .."
 #####################
 
 # Classes
-alias chem="cd ~/Classes/CH301-chemistry"
-alias con="cd ~/Classes/CS349-contemporary-issues"
-alias jazz="cd ~/Classes/MUS307-jazz-appreciation"
-alias quant="cd ~/Classes/CS358H-quantum"
-
 alias ccdc="cd ~/GitHub/CCDC"
 alias cl="cd ~/Classes/"
 alias cs101="cd ~/GitHub/CS101"
