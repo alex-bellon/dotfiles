@@ -1,4 +1,5 @@
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
+export TERM=xterm-256color
 
 ZSH_THEME="punctual"
 
@@ -61,7 +62,6 @@ alias pm="vim ~/Dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
 alias rc="vim ~/.config/awesome/rc.lua"
 alias resources="vim ~/.Xresources"
-alias tmux="vim ~/.tmux.conf"
 alias vimrc="vim ~/.vimrc"
 alias vundle="vim +PluginInstall +qall"
 alias zshrc="vim ~/.zshrc"

@@ -22,7 +22,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 17
+    fontSize: 16
     showIndentGuide: true
     softWrap: true
   "editor-background":
@@ -72,6 +72,7 @@
       "leqslant"
       "pseudorandom"
     ]
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
