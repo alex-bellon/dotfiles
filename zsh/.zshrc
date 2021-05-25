@@ -1,4 +1,5 @@
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
+export TERM=xterm-256color
 
 ZSH_THEME="punctual"
 

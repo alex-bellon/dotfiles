@@ -22,9 +22,15 @@
 '.text.tex.latex':
   'alpha':
     'prefix': 'alpha'
+    'body': '\\\\alpha'
+  'alpha math':
+    'prefix': 'alphamath'
     'body': '\$\\\\alpha\$'
   'beta':
     'prefix': 'beta'
+    'body': '\\\\beta'
+  'beta math':
+    'prefix': 'betamath'
     'body': '\$\\\\beta\$'
   'bold':
     'prefix': 'b'
@@ -35,6 +41,12 @@
   'curly brackets':
     'prefix': 'cb'
     'body': '\\\\\{$1\\\\\}'
+  'finite field':
+    'prefix': 'ff'
+    'body': '\\\\mathbb{F}_{$1}'
+  'formula':
+    'prefix': 'formula'
+    'body': '\\\\[\n\t$1\n\\\\]'
   'inverse':
     'prefix': 'inv'
     'body': '^{-1}'
@@ -65,6 +77,9 @@
   'Phi':
     'prefix': 'Phi'
     'body': '\$\\\\Phi\$'
+  'power':
+    'prefix': 'power'
+    'body': '^{$1}'
   'psi':
     'prefix': 'psi'
     'body': '\$\\\\psi\$'
@@ -78,7 +93,7 @@
     'prefix': 'proof'
     'body': '\\\\begin{proof}\n\t$1\n\\\\end{proof}'
   'root':
-    'prefix': 'rt'
+    'prefix': 'root'
     'body': '\$\\\\sqrt[$1]{$2}\$'
   'set':
     'prefix': 's'
@@ -87,8 +102,11 @@
     'prefix': 'srt'
     'body': '\$\\\\sqrt{$1}\$'
   'varepsilon':
-    'prefix': 've'
+    'prefix': 'varepsilon'
     'body': '\\\\varepsilon'
+  'varphi':
+    'prefix': 'varphi'
+    'body': '\\\\varphi'
   'x in':
     'prefix': 'xin'
     'body': '\$x \\\\in $1\$'
