@@ -138,7 +138,7 @@ bindsym Control+Down exec xbacklight -dec 10 # decrease screen brightness
 # PROGRAM SHORTCUTS #
 #####################
 
-bindsym $mod+s scratchpad show
+#bindsym $mod+s scratchpad show
 
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
