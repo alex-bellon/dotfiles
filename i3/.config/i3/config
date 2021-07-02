@@ -74,7 +74,6 @@ set $workspace9 "9"
 set $workspace10 "10"
 
 #### MAKE SPECIAL WORKSPACES
-assign [class="Mailspring"] home
 assign [class="discord"] discord
 assign [class="Discord"] discord
 assign [class="TelegramDesktop"] telegram
@@ -86,12 +85,15 @@ assign [class="Zoom"] zoom
 #### STARTUP TODOIST, EMAIL, CALENDAR
 exec --no-startup-id "Firefox"
 exec --no-startup-id "discord"
-exec --no-startup-id "mailspring"
-exec --no-startup-id "slack"
 exec --no-startup-id "telegram-desktop"
+exec --no-startup-id "ds4drv --hidraw"
 
 #### ALWAYS FLOAT
 for_window [class="origin.exe"] floating enable
+for_window [class="steam.exe"] floating enable
+for_window [class="steam"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Pogostuck"] floating enable
 
 
 #########################

@@ -94,7 +94,7 @@
     'body': '\\\\begin{proof}\n\t$1\n\\\\end{proof}'
   'root':
     'prefix': 'root'
-    'body': '\$\\\\sqrt[$1]{$2}\$'
+    'body': '\\\\sqrt[$1]{$2}'
   'set':
     'prefix': 's'
     'body': '\\\\{\$ $1 \\\\\mid $2 \\\\in \\\\mathbb{$3}\$\\\\}'
