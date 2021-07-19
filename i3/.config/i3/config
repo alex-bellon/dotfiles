@@ -232,8 +232,8 @@ bindsym $mod+Shift+d move container to workspace pin
 
 #### MOVE WORKSPACES BETWEEN MONITORS
 
-bindsym $mod+Left move workspace to output HDMI-1
-bindsym $mod+Right move workspace to output HDMI-0
+bindsym $mod+Left move workspace to output HDMI-0
+bindsym $mod+Right move workspace to output HDMI-1
 
 #### RESIZE MODE
 bindsym $mod+comma resize shrink width 15 px or 5 ppt
