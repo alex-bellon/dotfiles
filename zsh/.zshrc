@@ -1,3 +1,5 @@
+if [ "$TMUX" = "" ]; then tmux; fi
+
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
 export TERM='rxvt-unicode'
 export COLORTERM='rxvt-unicode-256color'
@@ -123,9 +125,7 @@ extract () {
 
 plugins=(
   colored-man-pages
-  #fzf
   git
-  #vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -138,9 +138,6 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
-
-#eval $(thefuck --alias fuck)
-#eval $(thefuck --alias FUCK)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
