@@ -1,9 +1,9 @@
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM=xterm-256color
+export TERM='rxvt-unicode'
+export COLORTERM='rxvt-unicode-256color'
 
 ZSH_THEME="punctual"
 
-wal -i ~/Pictures/wallpaper.jpg > /dev/null
 xmodmap ~/.Xmodmap
 
 ###################
@@ -26,7 +26,7 @@ alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
 alias timezone="cp /usr/share/zoneinfo/America/Chicago /etc/localtime"
-alias udpdate="sudo pacman -Syu"
+alias update="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
 
@@ -35,13 +35,11 @@ alias ..="cd .."
 #####################
 
 # Classes
-alias ccdc="cd ~/GitHub/CCDC"
 alias cl="cd ~/Classes/"
 alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
-alias isss="cd ~/GitHub/isss-challenges/2021/spring"
 alias notes="cd ~/GitHub/notes"
 alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
 alias rp="cd ~/Repos/"
@@ -56,13 +54,11 @@ alias wp="cd ~/GitHub/ctf-writeups-private"
 ###################
 
 alias config="vim ~/.config/i3/config"
-alias defaults="vim ~/.Xdefaults"
 alias gconfig="vim ~/.gitconfig"
 alias pm="vim ~/Dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
 alias rc="vim ~/.config/awesome/rc.lua"
 alias resources="vim ~/.Xresources"
-alias tmux="vim ~/.tmux.conf"
 alias vimrc="vim ~/.vimrc"
 alias vundle="vim +PluginInstall +qall"
 alias zshrc="vim ~/.zshrc"
@@ -93,7 +89,6 @@ alias telegram="~/Repos/Telegram/Telegram"
 # SSH ALIASES #
 ###############
 
-alias cancer="ssh abellon@cancer.cs.utexas.edu"
 alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 
 #############
