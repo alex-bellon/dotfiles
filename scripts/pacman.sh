@@ -9,25 +9,14 @@ sudo pacman -S acpi atom arandr autoconf automake bat bc bison calcurse chafa co
 # yay
 yay -S betterlockscreen bless compton-tryone-git ffsend-bin grv i3-gaps-rounded minecraft-launcher nerd-fonts-noto-sans-mono nerd-fonts-hermit otf-fantasque-sans-mono slack-desktop-dark rofi-git spotify ttf-iosevka vundle-git zijiang-pos58-driver
 
-# slack desktop, notion.so, franz, telegram, leonflix, 
-
 # Background
 echo "Downloading background"
 wget https://cs.utexas.edu/~abellon/images/wallpaper.jpg -o ~/Pictures/wallpaper.jpg
 
 # betterlockscreen
-
-#    i3lock-color - i3lock fork with additional features( >= 2.11-c )
-#    imagemagick - To apply effects to images
-#    xdpyinfo, xrandr, bc and feh - To find screen resolution, set custom blur level and wallpaper handling.
-
 git clone https://github.com/pavanjadhaw/betterlockscreen ~/Repos/betterlockscreen
 cd ~/Repos/betterlockscreen
 cp betterlockscreen ~/.local/bin/
-
-# cheat.sh
-curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
-sudo chmod +x /usr/local/bin/cht.sh
 
 # GIMP Theme
 cd ~/Repos
@@ -40,8 +29,6 @@ cd ~/Repos
 git clone https://github.com/MirkoLedda/git-summary.git
 cd git-summary
 sudo cp git-summary /usr/local/bin/git-summary
-
-#Leonflix
 
 # Materia Theme
 echo "Installing Materia theme"
@@ -57,22 +44,10 @@ sudo pacman -S neofetch
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# pywal
-echo "Installing pywal"
-sudo pacman -S python-pywal
-
 # rclone
 curl https://rclone.org/install.sh | sudo bash
-
-# youtube_dl
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
-
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# theme urxvt
-wal -i ~/Pictures/wallpaper.jpg
 
 # change shell
 chsh -s /bin/zsh
