@@ -3,7 +3,6 @@ export TERM=xterm-256color
 
 ZSH_THEME="punctual"
 
-wal -i ~/Pictures/wallpaper.jpg > /dev/null
 xmodmap ~/.Xmodmap
 
 ###################
