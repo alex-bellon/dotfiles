@@ -1,5 +1,11 @@
+if [ "$TMUX" = "" ]; then tmux; fi
+
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM=xterm-256color
+export TERM='rxvt-unicode'
+export COLORTERM='rxvt-unicode-256color'
+
+bindkey  "^[[1~"   beginning-of-line # Home
+bindkey  "^[[4~"   end-of-line # End
 
 ZSH_THEME="punctual"
 
@@ -9,7 +15,6 @@ xmodmap ~/.Xmodmap
 # COMMAND ALIASES #
 ###################
 
-alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias c="clear"
 alias car="cat"
 alias f="fzf"
@@ -34,19 +39,21 @@ alias ..="cd .."
 #####################
 
 # Classes
-alias ccdc="cd ~/GitHub/CCDC"
+alias aero="cd ~/GitHub/aero"
+alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
 alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
-alias isss="cd ~/GitHub/isss-challenges/2021/spring"
 alias notes="cd ~/GitHub/notes"
-alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
+alias phd="cd ~/GitHub/phd"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
 alias site="cd ~/GitHub/website"
+alias til="cd ~/GitHub/til"
 alias tl="cd ~/GitHub/ctf-tools"
+alias tslim="cd ~/GitHub/tslim-re"
 alias wiki="cd ~/GitHub/wikipedia"
 alias wp="cd ~/GitHub/ctf-writeups-private"
 
@@ -79,19 +86,15 @@ alias gy="git pull"
 # PROG ALIASES #
 ################
 
-alias charles="~/Repos/charles/bin/charles"
-alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
 alias metasploit="msfconsole"
 alias python="python3"
-alias taizen="~/Repos/taizen/target/release/taizen"
 alias telegram="~/Repos/Telegram/Telegram"
 
 ###############
 # SSH ALIASES #
 ###############
 
-alias cancer="ssh abellon@cancer.cs.utexas.edu"
 alias kali="cd ~/Vagrant/Kali/; vagrant up; vagrant ssh"
 
 #############
@@ -142,9 +145,5 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-#eval $(thefuck --alias fuck)
-#eval $(thefuck --alias FUCK)
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(thefuck --alias)
