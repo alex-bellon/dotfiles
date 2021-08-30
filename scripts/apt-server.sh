@@ -7,37 +7,11 @@ sudo apt-get update
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install automake calcurse cmatrix compton curl feh firefox gimp git gtk-chtheme i3wm i3status lxappearance moreutils mpv npm python3 python3-pip python3-setuptools rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim xbacklight zsh zsh-syntax-highlighting
+sudo apt-get install automake calcurse cmatrix compton curl feh firefox gimp git gtk-chtheme lxappearance moreutils mpv npm python3 python3-pip python3-setuptools rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim xbacklight zsh zsh-syntax-highlighting
 
 # Background
 echo "Downloading background"
 wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/background.png
-
-# betterlockscreen
-cd ~/Repos/
-git clone https://github.com/pavanjadhaw/betterlockscreen
-cd betterlockscreen
-cp betterlockscreen ~/.local/bin/
-
-# Docker
-sudo curl -sSL https://get.docker.com/ | sh
-sudo apt-get update && sudo apt-get upgrade
-
-# thef*ck
-sudo pip3 install thefuck --user
-
-# Git Summary
-cd ~/Repos
-git clone https://github.com/MirkoLedda/git-summary.git
-cd git-summary
-sudo cp git-summary /usr/local/bin/git-summary
-
-# GIMP Theme
-cd ~/Repos
-git clone https://github.com/draekko/gimp-cc-themes.git
-cd gimp-cc-themes
-cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
-cd
 
 # Materia Theme
 echo "Installing Materia theme"
