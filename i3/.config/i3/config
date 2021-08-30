@@ -87,6 +87,8 @@ exec --no-startup-id "telegram-desktop"
 
 #### ALWAYS FLOAT
 for_window [class="origin.exe"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="Zoom"] floating enable
 
 
 #########################

@@ -4,6 +4,9 @@ export ZSH=~/.oh-my-zsh #point to where oh my zsh is
 export TERM='rxvt-unicode'
 export COLORTERM='rxvt-unicode-256color'
 
+bindkey  "^[[1~"   beginning-of-line # Home
+bindkey  "^[[4~"   end-of-line # End
+
 ZSH_THEME="punctual"
 
 xmodmap ~/.Xmodmap
@@ -37,6 +40,8 @@ alias ..="cd .."
 #####################
 
 # Classes
+alias aero="cd ~/GitHub/aero"
+alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
 alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
@@ -44,10 +49,13 @@ alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
 alias notes="cd ~/GitHub/notes"
 alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
+alias phd="cd ~/GitHub/phd"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
 alias site="cd ~/GitHub/website"
+alias til="cd ~/GitHub/til"
 alias tl="cd ~/GitHub/ctf-tools"
+alias tslim="cd ~/GitHub/tslim-re"
 alias wiki="cd ~/GitHub/wikipedia"
 alias wp="cd ~/GitHub/ctf-writeups-private"
 
