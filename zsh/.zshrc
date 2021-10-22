@@ -6,6 +6,7 @@ export COLORTERM='rxvt-unicode-256color'
 
 bindkey  "^[[1~"   beginning-of-line # Home
 bindkey  "^[[4~"   end-of-line # End
+bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
@@ -42,6 +43,15 @@ alias ..="cd .."
 #####################
 
 # Classes
+alias faculty="cd ~/Classes/CSE292"
+alias internet="cd ~/Classes/CSE291-3"
+alias usable="cd ~/Classes/CSE291-6"
+alias sys="cd ~/Classes/CSE229A"
+alias sec="cd ~/Classes/CSE229C"
+alias pl="cd ~/Classes/CSE239B"
+alias emb="cd ~/Classes/CSE290"
+alias sysnet="cd ~/Classes/CSE294"
+
 alias aero="cd ~/GitHub/aero"
 alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"

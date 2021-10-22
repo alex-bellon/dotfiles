@@ -14,6 +14,9 @@
   'link':
     'prefix': 'l'
     'body': '[$1]($2)'
+  'notes':
+    'prefix': 'notes'
+    'body': '# [$1]($2)\n### $3\n#### Read $4\n\n- $5 \n\n### Sources to check out\n-'
   'writeup':
     'prefix': 'writeup'
     'body': '# $1\n* **Event:** $2\n* **Problem Type:** $3\n* **Point Value / Difficulty:** $4\n* **(Optional) Tools Required / Used:**\n\n\n## Steps\n#### Step 1\n$5'

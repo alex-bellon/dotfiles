@@ -18,6 +18,7 @@ highlight Comment cterm=italic
 
 " Mappings
 map <C-t> :NERDTreeToggle<CR>
+imap <C -BS> <C- W>
 
 " set crosshair colors
 "highlight CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=black guibg=darkred guifg=gray
