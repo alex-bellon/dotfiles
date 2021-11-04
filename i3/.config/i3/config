@@ -14,7 +14,7 @@
 set $mod Mod1
 
 #### FONT
-font pango:Source Sans Pro, Hack 8
+font pango:Fira Code 8, Hack 8
 
 #### RELOAD CONFIG
 bindsym $mod+Shift+c reload
