@@ -35,6 +35,9 @@ mouse_warping none
 # ON START UP #
 ###############
 
+default_orientation vertical
+for_window [class="^"] split toggle
+
 #### ADD ROUNDED CORNERS
 border_radius 5
 
