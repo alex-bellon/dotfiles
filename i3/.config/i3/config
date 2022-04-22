@@ -14,7 +14,7 @@
 set $mod Mod1
 
 #### FONT
-font pango:Source Sans Pro, Hack 8
+font pango:Fira Code 8, Hack 8
 
 #### RELOAD CONFIG
 bindsym $mod+Shift+c reload
@@ -34,6 +34,9 @@ mouse_warping none
 ###############
 # ON START UP #
 ###############
+
+default_orientation vertical
+for_window [class="^"] split toggle
 
 #### ADD ROUNDED CORNERS
 border_radius 5
