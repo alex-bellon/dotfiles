@@ -1,8 +1,8 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM='rxvt-unicode'
-export COLORTERM='rxvt-unicode-256color'
+export TERM='tmux'
+export COLORTERM='tmux-256color'
 
 bindkey  "^[[1~"   beginning-of-line # Home
 bindkey  "^[[4~"   end-of-line # End
@@ -43,14 +43,13 @@ alias ..="cd .."
 #####################
 
 # Classes
-alias faculty="cd ~/Classes/CSE292"
-alias internet="cd ~/Classes/CSE291-3"
-alias usable="cd ~/Classes/CSE291-6"
 alias sys="cd ~/Classes/CSE229A"
 alias sec="cd ~/Classes/CSE229C"
 alias pl="cd ~/Classes/CSE239B"
 alias emb="cd ~/Classes/CSE290"
-alias sysnet="cd ~/Classes/CSE294"
+
+alias crypto="cd ~/Classes/crypto"
+alias security="cd ~/Classes/security"
 
 alias aero="cd ~/GitHub/aero"
 alias brain="cd ~/GitHub/brain"
@@ -160,4 +159,5 @@ export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
