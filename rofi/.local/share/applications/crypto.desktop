@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Crypto
+GenericName=Crypto
+Exec=bash -c '/usr/bin/kitty /home/alex/Classes/crypto/homework'
+Icon=kitty
+Type=Application
+StartupNotify=false
