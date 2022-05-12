@@ -10,3 +10,5 @@
 	name = alex-bellon
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master

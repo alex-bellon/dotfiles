@@ -22,3 +22,39 @@ URxvt.keysym.C-plus:      resize-font:bigger
 URxvt.keysym.C-equal:     resize-font:reset
 URxvt.keysym.C-question:  resize-font:show
 
+! special
+urxvt.foreground:   #c7ccd1
+urxvt.background:   #101010
+urxvt.cursorColor:  #c7ccd1
+
+! black
+urxvt.color0:       #1c2023
+urxvt.color8:       #747c84
+
+! red
+urxvt.color1:       #c7ae95
+urxvt.color9:       #c7ae95
+
+! green
+urxvt.color2:       #95c7ae
+urxvt.color10:      #95c7ae
+
+! yellow
+urxvt.color3:       #aec795
+urxvt.color11:      #aec795
+
+! blue
+urxvt.color4:       #ae95c7
+urxvt.color12:      #ae95c7
+
+! magenta
+urxvt.color5:       #c795ae
+urxvt.color13:      #c795ae
+
+! cyan
+urxvt.color6:       #95aec7
+urxvt.color14:      #95aec7
+
+! white
+urxvt.color7:       #c7ccd1
+urxvt.color15:      #f3f4f5

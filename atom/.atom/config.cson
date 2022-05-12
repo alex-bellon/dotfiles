@@ -1,46 +1,52 @@
 "*":
+  "atom-latex":
+    clean_after_build: true
+    hide_log_if_success: true
+    preview_after_build: "Do nothing"
   "autocomplete-plus":
-    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+    confirmCompletion: "tab"
     enableAutoConfirmSingleSuggestion: false
+    enableBuiltinProvider: false
+    includeCompletionsFromAllBuffers: false
   core:
+    audioBeep: false
     autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
-      "xml-formatter"
-      "status-bar"
-      "language-gfm"
-      "editor-background"
-      "about"
+      "latex"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".obsidian"
+      ".stfolder"
+      ".gitignore"
     ]
     packagesWithKeymapsDisabled: [
-      "atom-hide-tabs"
+      "maximize-active-pane"
     ]
     telemetryConsent: "no"
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
   editor:
-    fontFamily: "Fira Code"
-    fontSize: 16
+    fontFamily: "Hack, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontSize: 18
+    scrollPastEnd: true
     showIndentGuide: true
     softWrap: true
-  "editor-background":
-    image:
-      customOverlayColor: true
-      opacity: 0
-      overlayColor: "#101010"
-      style: "      "
-      url: "/home/alex/Pictures/wallpaper.jpg"
-    text:
-      blur: 50
-      color: "#aa0000"
-      opacity: 0
+    tabType: "soft"
   "exception-reporting":
-    userId: "889045ba-9475-4f88-97f9-5ca8f5d7da49"
+    userId: "7e504487-6cd6-491b-baec-3a8f1c357659"
   latex:
     buildOnSave: true
-    opener: "pdf-view"
+    openResultInBackground: false
+    opener: "zathura"
   "pdf-view":
     fitToWidthOnOpen: true
     nightMode: true
@@ -72,7 +78,12 @@
       "leqslant"
       "pseudorandom"
     ]
+  "status-bar":
+    fullWidth: false
+    isVisible: false
   "tree-view":
-    hideVcsIgnoredFiles: true
+    alwaysOpenExisting: true
+    autoReveal: true
+    hideIgnoredNames: true
   welcome:
     showOnStartup: false

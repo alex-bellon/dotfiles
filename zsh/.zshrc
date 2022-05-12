@@ -1,15 +1,19 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM='rxvt-unicode'
-export COLORTERM='rxvt-unicode-256color'
+export TERM='tmux'
+export COLORTERM='tmux-256color'
 
 bindkey  "^[[1~"   beginning-of-line # Home
 bindkey  "^[[4~"   end-of-line # End
+bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
 xmodmap ~/.Xmodmap
+
+xset s off
+xset -dpms
 
 ###################
 # COMMAND ALIASES #
@@ -20,7 +24,9 @@ alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias ls="ls -a"
+alias la="ls -a"
+alias ll="ls -lh"
+alias lla="ls -lha"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
@@ -30,7 +36,7 @@ alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
 alias timezone="cp /usr/share/zoneinfo/America/Chicago /etc/localtime"
-alias udpdate="sudo pacman -Syu"
+alias update="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
 
@@ -39,6 +45,14 @@ alias ..="cd .."
 #####################
 
 # Classes
+alias security="cd ~/Classes/security"
+alias crypto="cd ~/Classes/crypto"
+
+alias sys="cd ~/Classes/syslunch"
+alias sec="cd ~/Classes/seclunch"
+alias pl="cd ~/Classes/pl"
+alias emb="cd ~/Classes/embsyslunch"
+
 alias aero="cd ~/GitHub/aero"
 alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
@@ -62,7 +76,6 @@ alias wp="cd ~/GitHub/ctf-writeups-private"
 ###################
 
 alias config="vim ~/.config/i3/config"
-alias defaults="vim ~/.Xdefaults"
 alias gconfig="vim ~/.gitconfig"
 alias pm="vim ~/Dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
@@ -129,9 +142,7 @@ extract () {
 
 plugins=(
   colored-man-pages
-  #fzf
   git
-  #vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
 )

@@ -15,7 +15,7 @@ The dotfiles I use to customize my Linux setup. Includes files for i3, urxvt, zs
 ## Technical Information
 ```
      Distro: Manjaro 19.0.2 Kyria
-   Terminal: urxvt
+   Terminal: kitty
       Shell: zsh + Oh-My-Zsh
          WM: i3-gaps-rounded
       Icons: Paper (snwh.org/paper)

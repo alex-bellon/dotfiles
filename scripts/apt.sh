@@ -3,13 +3,11 @@
 mkdir ~/Repos
 
 # Add PPAs
-sudo add-apt-repository ppa:webupd8team/atom
-sudo add-apt-repository ppa:snwh/ppa
 sudo apt-get update
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install atom automake calcurse cmatrix compton feh firefox gimp git gtk-chtheme i3wm i3status lxappearance moreutils mpv npm paper-icon-theme python3 python3-pip python3-setuptools qt4-qtconfig rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim w3m xbacklight zsh zsh-syntax-highlighting
+sudo apt-get install automake calcurse cmatrix compton curl feh firefox gimp git gtk-chtheme i3wm i3status lxappearance moreutils mpv npm python3 python3-pip python3-setuptools rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim xbacklight zsh zsh-syntax-highlighting
 
 # Background
 echo "Downloading background"
@@ -20,18 +18,6 @@ cd ~/Repos/
 git clone https://github.com/pavanjadhaw/betterlockscreen
 cd betterlockscreen
 cp betterlockscreen ~/.local/bin/
-
-# BootISO
-echo "Installing BootISO"
-cd ~/Repos/
-git clone https://github.com/jsamr/bootiso.git
-cd bootiso/
-chmod +x bootiso
-cd
-
-# cheat.sh
-curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
-sudo chmod +x /usr/local/bin/cht.sh
 
 # Docker
 sudo curl -sSL https://get.docker.com/ | sh
@@ -69,28 +55,12 @@ cd neofetch
 make install
 cd
 
-# pywal
-echo "Installing pywal"
-sudo pip3 install pywal
-
 # rclone
 curl https://rclone.org/install.sh | sudo bash
-
-# Install Telegram
 
 # vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
-
-# wal_steam
-echo "Installing wal_steam"
-cd ~/Repos/
-git clone https://github.com/kotajacob/wal_steam.git
-cd
-
-# youtube_dl
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
 
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -129,7 +99,6 @@ stow Firefox
 stow neofetch
 stow oh-my-zsh
 stow rofi
-stow Steam
 stow Telegram
 stow Thunar
 stow tmux
