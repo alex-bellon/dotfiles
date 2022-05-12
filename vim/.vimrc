@@ -18,7 +18,7 @@ highlight Comment cterm=italic
 
 " Mappings
 map <C-t> :NERDTreeToggle<CR>
-imap <C -BS> <C- W>
+imap <C-BS> <C-W>
 
 let g:lightline = {
       \ 'colorscheme': 'wal',
