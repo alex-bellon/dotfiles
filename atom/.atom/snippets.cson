@@ -20,6 +20,7 @@
   'writeup':
     'prefix': 'writeup'
     'body': '# $1\n* **Event:** $2\n* **Problem Type:** $3\n* **Point Value / Difficulty:** $4\n* **(Optional) Tools Required / Used:**\n\n\n## Steps\n#### Step 1\n$5'
+    
 
 
 '.text.tex.latex':

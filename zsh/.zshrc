@@ -1,8 +1,8 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM='rxvt-unicode'
-export COLORTERM='rxvt-unicode-256color'
+export TERM='tmux'
+export COLORTERM='tmux-256color'
 
 bindkey  "^[[1~"   beginning-of-line # Home
 bindkey  "^[[4~"   end-of-line # End
@@ -163,4 +163,8 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+<<<<<<< HEAD
 source /usr/share/nvm/init-nvm.sh
+=======
+
+>>>>>>> 823a9dfe615c7523ab69890cc3f52a38c0d55599
