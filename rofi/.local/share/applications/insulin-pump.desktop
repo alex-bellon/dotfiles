@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Insulin Pump Notes
+StartupWMClass=Atom
+GenericName=Insulin Pump
+Exec=/usr/bin/atom ~/GitHub/phd/insulin-pump/notes.md
+Icon=org.gnome.gedit
+Type=Application
+StartupNotify=false

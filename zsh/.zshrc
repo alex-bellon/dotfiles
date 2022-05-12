@@ -163,8 +163,3 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-<<<<<<< HEAD
-source /usr/share/nvm/init-nvm.sh
-=======
-
->>>>>>> 823a9dfe615c7523ab69890cc3f52a38c0d55599

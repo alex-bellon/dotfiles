@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Aerosec Notes
+StartupWMClass=Atom
+GenericName=Aerosec
+Exec=/usr/bin/atom ~/GitHub/phd/aerosec/notes.md
+Icon=org.gnome.gedit
+Type=Application
+StartupNotify=false
