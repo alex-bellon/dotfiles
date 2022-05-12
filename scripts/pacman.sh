@@ -4,7 +4,7 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S acpi atom arandr autoconf automake bat bc bison calcurse chafa colordiff cmatrix cura discord dunst entr fakeroot fcrackzip fd feh figlet filezilla fzf firefox flameshot gcc gimp git hexyl i3status imagemagick kitty make moreutils neofetch patch pavucontrol python3 python-pip python-pywal python-setuptools mpv npm nnn steam stow telegram-desktop texlive-most thefuck thunar thunar-archive-plugin tig tmux tree ttf-fira-code ttf-comfortaa vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
+sudo pacman -S acpi atom arandr autoconf automake bat bc bison calcurse chafa colordiff cmatrix cura discord dunst entr fakeroot fcrackzip fd feh figlet filezilla fzf firefox flameshot gcc gimp git hexyl i3status imagemagick kitty lxappearance make materia-gtk-theme moreutils neofetch patch pavucontrol python3 python-pip python-pywal python-setuptools mpv npm nnn steam stow syncthing telegram-desktop texlive-most thefuck thunar thunar-archive-plugin tig tmux tree ttf-fira-code ttf-comfortaa vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
 
 # yay
 yay -S betterlockscreen bless compton-tryone-git ffsend-bin grv i3-gaps-rounded-git minecraft-launcher nerd-fonts-noto-sans-mono nerd-fonts-hermit obsidian otf-fantasque-sans-mono rofi-git slack-desktop spotify ttf-iosevka vundle-git zijiang-pos58-driverzoom

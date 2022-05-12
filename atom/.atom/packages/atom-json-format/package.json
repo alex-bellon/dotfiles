@@ -1,0 +1,66 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball",
+  "_id": "atom-json-format@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Ackgp9UcMRi0PVRkbmxAF1vQDXTVO0eZHKJeWSxE00J8tmhMifsLyVVPEF7lFkZxbKzAWVDqP5bH3Sf/UxoHfA==",
+  "_location": "/atom-json-format",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball",
+  "_shasum": "d09f59af3bc565abeb0483d269c972af1efd3389",
+  "_spec": "https://www.atom.io/api/packages/atom-json-format/versions/0.2.0/tarball",
+  "_where": "/tmp/apm-install-dir-2021112-182049-1yv7ysh.tl01k",
+  "bugs": {
+    "url": "https://github.com/matEhickey/atom-json-format/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Pretty formatter for JSON contents  ",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/matEhickey/atom-json-format#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./lib/atom-json-format",
+  "name": "atom-json-format",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matEhickey/atom-json-format.git"
+  },
+  "scripts": {
+    "test": "atom --test spec/*"
+  },
+  "version": "0.2.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        ".eslintrc.js",
+        "lib/atom-json-format.js"
+      ],
+      ".json": [
+        "package-lock.json",
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

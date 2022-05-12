@@ -12,6 +12,9 @@ ZSH_THEME="punctual"
 
 xmodmap ~/.Xmodmap
 
+xset s off
+xset -dpms
+
 ###################
 # COMMAND ALIASES #
 ###################
@@ -43,14 +46,13 @@ alias ..="cd .."
 #####################
 
 # Classes
-alias faculty="cd ~/Classes/CSE292"
-alias internet="cd ~/Classes/CSE291-3"
-alias usable="cd ~/Classes/CSE291-6"
-alias sys="cd ~/Classes/CSE229A"
-alias sec="cd ~/Classes/CSE229C"
-alias pl="cd ~/Classes/CSE239B"
-alias emb="cd ~/Classes/CSE290"
-alias sysnet="cd ~/Classes/CSE294"
+alias security="cd ~/Classes/security"
+alias crypto="cd ~/Classes/crypto"
+
+alias sys="cd ~/Classes/syslunch"
+alias sec="cd ~/Classes/seclunch"
+alias pl="cd ~/Classes/pl"
+alias emb="cd ~/Classes/embsyslunch"
 
 alias aero="cd ~/GitHub/aero"
 alias brain="cd ~/GitHub/brain"
@@ -161,3 +163,4 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source /usr/share/nvm/init-nvm.sh

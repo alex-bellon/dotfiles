@@ -13,12 +13,20 @@ set numberwidth=5
 set pastetoggle=<F2>
 set nofoldenable
 set clipboard=unnamed
+set backspace=indent,eol,start
 
 highlight Comment cterm=italic
 
 " Mappings
 map <C-t> :NERDTreeToggle<CR>
-imap <C -BS> <C- W>
+
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
 
 let g:lightline = {
       \ 'colorscheme': 'wal',
