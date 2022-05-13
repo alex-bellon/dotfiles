@@ -14,7 +14,7 @@
 set $mod Mod1
 
 #### FONT
-font pango:Fira Code 8, Hack 8
+font pango:Source Sans Pro, Hack 8
 
 #### RELOAD CONFIG
 bindsym $mod+Shift+c reload
@@ -34,9 +34,6 @@ mouse_warping none
 ###############
 # ON START UP #
 ###############
-
-default_orientation vertical
-for_window [class="^"] split toggle
 
 #### ADD ROUNDED CORNERS
 border_radius 5
@@ -147,6 +144,9 @@ bindsym $mod+minus exec --no-startup-id pactl set-sink-volume alsa_output.pci-00
 #### BRIGHTNESS
 bindsym $mod+Control+Up exec brightnessctl set +10% # increase screen brightness
 bindsym $mod+Control+Down exec brightnessctl set 10%- # decrease screen brightness
+
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 #####################
 # PROGRAM SHORTCUTS #
