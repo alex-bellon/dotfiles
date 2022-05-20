@@ -2,7 +2,7 @@
 Name=Helium Notes
 StartupWMClass=Atom
 GenericName=Helium
-Exec=/usr/bin/atom ~/GitHub/phd/helium/notes.md
+Exec=/usr/bin/atom -a ~/GitHub/phd/helium/notes.md
 Icon=org.gnome.gedit
 Type=Application
 StartupNotify=false
