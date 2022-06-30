@@ -35,6 +35,7 @@
     ]
     telemetryConsent: "no"
   editor:
+    autoIndentOnPaste: false
     fontFamily: "Hack, Menlo, Consolas, DejaVu Sans Mono, monospace"
     fontSize: 18
     scrollPastEnd: true
@@ -77,13 +78,84 @@
       "bigcap"
       "leqslant"
       "pseudorandom"
+      "pacman"
+      "exfiltrates"
+      "SendMy"
+      "repo"
+      "cd"
+      "mkdir"
+      "sudo"
+      "https"
+      "gcc"
+      "cmake"
+      "html"
+      "README.md"
+      "README"
+      "md"
+      "github"
+      "dev"
+      "NUM"
+      "uart"
+      "ptr"
+      "broadcasted"
+      "AirTag"
+      "app"
+      "BT"
+      "hotspots"
+      "ACK"
+      "GPS"
+      "Heltec"
+      "MobiCom"
+      "Deian"
+      "Chez"
+      "metatype"
+      "codebase"
+      "Ghidra"
+      "Aerosec"
+      "plugin"
+      "unhandled"
+      "syscalls"
+      "espressif"
+      "IDF"
+      "idf.py"
+      "idf"
+      "crypto"
+      "Deian's"
+      "malware"
+      "ghidra"
+      "ghidra"
+      "ghidra"
+      "CMU"
+      "FMC"
+      "Jython"
+      "Varnode"
+      "pCode"
+      "qemu"
+      "HALucinator"
+      "qemuscript"
+      "csv"
+      "config"
+      "gdb"
+      "py"
+      "rehosting"
+      "java"
+      "halucinator/halucinator"
+      "proxychains"
+      "API"
+      "CDU"
+      "FMCs"
+      "Upgradability"
+      "ACARS"
+      "fmc"
+      "png"
     ]
   "status-bar":
     fullWidth: false
     isVisible: false
+  "toggle-gutter":
+    showGutters: false
   "tree-view":
-    alwaysOpenExisting: true
-    autoReveal: true
+    focusOnReveal: false
     hideIgnoredNames: true
   welcome:
     showOnStartup: false

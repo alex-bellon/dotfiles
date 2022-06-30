@@ -4,6 +4,7 @@
   'ctrl-h': 'atom-hide-tabs:toggle'
   'ctrl-up': 'editor:move-line-up'
   'ctrl-down': 'editor:move-line-down'
+  'ctrl-g': 'toggle-gutter:gutter'
 
 # Default Keymaps for Markdown Writer
 # https://atom.io/packages/markdown-writer

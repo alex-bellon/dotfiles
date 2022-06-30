@@ -15,6 +15,11 @@ xmodmap ~/.Xmodmap
 xset s off
 xset -dpms
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+source /usr/bin/virtualenvwrapper.sh
+
 ###################
 # COMMAND ALIASES #
 ###################
@@ -24,9 +29,7 @@ alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias la="ls -a"
-alias ll="ls -lh"
-alias lla="ls -lha"
+alias s="exa --group-directories-first"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
