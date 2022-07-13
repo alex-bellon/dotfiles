@@ -10,15 +10,15 @@
 
 (after! org
   (setq org-todo-keywords
-        '((sequence "TODO" "EVENT" "WAIT" "VERIF" "|" "DONE" "CANC" "MOVED"))))
+        '((sequence "TODO" "EVENT" "PROG" "WAIT" "MOVE" "|" "DONE" "CANC")))
+  (setq org-todo-keyword-faces
+        '(("PROG" . "yellow") ("WAIT" . "yellow") ("MOVE" . "orange")
+        ("CANC" . (:foreground "blue" :weight bold)))))
 
 (require 'org-journal)
 (setq org-journal-dir "~/GitHub/planner/day/"
       org-journal-file-format "%Y/%m/%d.org")
 
-; Trying to fix overlap issue of C-c ! for inactive timestamp
-;(define-key flycheck-mode-map (kbd "C-c ! !") 'org-time-stamp-inactive)
-
-;(setq org-directory "~/GitHub/planner")
-;(setq org-agenda-files (directory-files-recursively "~/GitHub/planner/day/" "org"))
+(setq org-directory "~/GitHub/planner")
+(setq org-agenda-files (directory-files-recursively "~/GitHub/planner/day/" "org"))
 
