@@ -16,7 +16,7 @@
     destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
-      "latex"
+      "atom-latex"
     ]
     ignoredNames: [
       ".git"

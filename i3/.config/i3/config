@@ -14,7 +14,7 @@
 set $mod Mod1
 
 #### FONT
-font pango:Source Sans Pro, Hack 8
+font pango:Hack 12,Source Sans Pro, Hack 8
 
 #### RELOAD CONFIG
 bindsym $mod+Shift+c reload
@@ -234,7 +234,7 @@ bindsym $mod+Shift+z move container to workspace 19:zoom
 #### MOVE WORKSPACES BETWEEN MONITORS
 
 bindsym $mod+Left move workspace to output HDMI-1
-bindsym $mod+Right move workspace to output HDMI-2
+bindsym $mod+Right move workspace to output HDMI-0
 
 #### RESIZE MODE
 bindsym $mod+comma resize shrink width 15 px or 5 ppt
@@ -282,4 +282,5 @@ bar {
         status_command i3status
         tray_output primary
         strip_workspace_numbers yes
+        font pango:DejaVu Sans Mono 10
 }
