@@ -20,7 +20,6 @@ highlight Comment cterm=italic
 " Mappings
 map <C-t> :NERDTreeToggle<CR>
 noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
 
 vmap <C-c> "+yi
 vmap <C-x> "+c

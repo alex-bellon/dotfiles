@@ -90,6 +90,15 @@ assign [class="Zoom"] 19:zoom
 exec --no-startup-id "Firefox"
 exec --no-startup-id "slack"
 exec --no-startup-id "telegram-desktop"
+exec --no-startup-id "ds4drv --hidraw"
+
+#### ALWAYS FLOAT
+for_window [class="origin.exe"] floating enable
+for_window [class="steam.exe"] floating enable
+for_window [class="steam"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Pogostuck"] floating enable
+
 
 #### ALWAYS FLOAT
 for_window [class="origin.exe"] floating enable
@@ -143,12 +152,10 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 # PROGRAM SHORTCUTS #
 #####################
 
-#bindsym $mod+s scratchpad show
-
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
 bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
-bindsym $mod+Return exec kitty #terminal
+bindsym $mod+Return exec kitty -1 #terminal
 
 bindsym $mod+Control+a exec "atom"
 bindsym $mod+Control+b exec firefox

@@ -15,19 +15,21 @@ xmodmap ~/.Xmodmap
 xset s off
 xset -dpms
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+#source /usr/bin/virtualenvwrapper.sh
+
 ###################
 # COMMAND ALIASES #
 ###################
 
-alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias c="clear"
 alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias la="ls -a"
-alias ll="ls -lh"
-alias lla="ls -lha"
+alias s="exa --group-directories-first"
 alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
@@ -62,7 +64,6 @@ alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
 alias notes="cd ~/GitHub/notes"
-alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
 alias phd="cd ~/GitHub/phd"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
@@ -101,12 +102,9 @@ alias gy="git pull"
 # PROG ALIASES #
 ################
 
-alias charles="~/Repos/charles/bin/charles"
-alias eclipse="~/eclipse/eclipse"
 alias matrix="cmatrix"
 alias metasploit="msfconsole"
 alias python="python3"
-alias taizen="~/Repos/taizen/target/release/taizen"
 alias telegram="~/Repos/Telegram/Telegram"
 
 ###############

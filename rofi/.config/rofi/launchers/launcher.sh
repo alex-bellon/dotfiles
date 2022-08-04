@@ -15,4 +15,4 @@
 style="blurry"
 
 # rofi -no-lazy-grab -show drun -theme Repos/rofi/launchers-git/"$style".rasi
-rofi -no-lazy-grab -combi-modi drun,ssh, -show combi -theme .config/rofi/launchers/"$style".rasi
+rofi -no-lazy-grab -combi-modi drun,ssh, -show combi -theme ~/.config/rofi/launchers/"$style".rasi
