@@ -14,7 +14,7 @@
 set $mod Mod1
 
 #### FONT
-font pango:Source Sans Pro, Hack 8
+font pango:Hack 12,Source Sans Pro, Hack 8
 
 #### RELOAD CONFIG
 bindsym $mod+Shift+c reload
@@ -289,4 +289,5 @@ bar {
         status_command i3status
         tray_output primary
         strip_workspace_numbers yes
+        font pango:DejaVu Sans Mono 10
 }
