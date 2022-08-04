@@ -1,8 +1,6 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM='tmux'
-export COLORTERM='tmux-256color'
 
 bindkey  "^[[1~"   beginning-of-line # Home
 bindkey  "^[[4~"   end-of-line # End
@@ -30,7 +28,6 @@ alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
 alias s="exa --group-directories-first"
-alias nf="neofetch"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
 alias spr="sudo pacman -R"
@@ -38,7 +35,6 @@ alias sps="sudo pacman -S"
 alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
-alias timezone="cp /usr/share/zoneinfo/America/Chicago /etc/localtime"
 alias update="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
@@ -48,9 +44,6 @@ alias ..="cd .."
 #####################
 
 # Classes
-alias security="cd ~/Classes/security"
-alias crypto="cd ~/Classes/crypto"
-
 alias sys="cd ~/Classes/syslunch"
 alias sec="cd ~/Classes/seclunch"
 alias pl="cd ~/Classes/pl"
@@ -59,11 +52,9 @@ alias emb="cd ~/Classes/embsyslunch"
 alias aero="cd ~/GitHub/aero"
 alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
-alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
-alias notes="cd ~/GitHub/notes"
 alias phd="cd ~/GitHub/phd"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
@@ -82,10 +73,7 @@ alias config="vim ~/.config/i3/config"
 alias gconfig="vim ~/.gitconfig"
 alias pm="vim ~/Dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
-alias rc="vim ~/.config/awesome/rc.lua"
-alias resources="vim ~/.Xresources"
 alias vimrc="vim ~/.vimrc"
-alias vundle="vim +PluginInstall +qall"
 alias zshrc="vim ~/.zshrc"
 
 ###############
@@ -102,10 +90,8 @@ alias gy="git pull"
 # PROG ALIASES #
 ################
 
-alias matrix="cmatrix"
 alias metasploit="msfconsole"
 alias python="python3"
-alias telegram="~/Repos/Telegram/Telegram"
 
 ###############
 # SSH ALIASES #

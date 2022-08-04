@@ -71,8 +71,8 @@ set $workspace11 "11:home"
 set $workspace12 "12:discord"
 set $workspace13 "13:slack"
 set $workspace14 "14:zathura"
-set $workspace15 "15:telegram"
-set $workspace16 "16:atom"
+set $workspace15 "15:chat"
+set $workspace16 "16:editor"
 set $workspace17 "17:music"
 set $workspace18 "18:pin"
 set $workspace19 "19:zoom"
@@ -80,30 +80,12 @@ set $workspace19 "19:zoom"
 #### MAKE SPECIAL WORKSPACES
 assign [class="discord"] 12:discord
 assign [class="Discord"] 12:discord
-assign [class="TelegramDesktop"] 15:telegram
 assign [class="Slack"] 13:slack
 assign [class="spotify"] 17:music
 assign [class="zoom"] 19:zoom
 assign [class="Zoom"] 19:zoom
 
-#### STARTUP TODOIST, EMAIL, CALENDAR
-exec --no-startup-id "Firefox"
-exec --no-startup-id "slack"
-exec --no-startup-id "telegram-desktop"
 exec --no-startup-id "ds4drv --hidraw"
-
-#### ALWAYS FLOAT
-for_window [class="origin.exe"] floating enable
-for_window [class="steam.exe"] floating enable
-for_window [class="steam"] floating enable
-for_window [class="Steam"] floating enable
-for_window [class="Pogostuck"] floating enable
-
-
-#### ALWAYS FLOAT
-for_window [class="origin.exe"] floating enable
-for_window [class="zoom"] floating enable
-for_window [class="Zoom"] floating enable
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -118,12 +100,6 @@ gaps outer 0
 
 #### HIDE BORDERS ON FULLSCREEN
 hide_edge_borders both
-
-#### WINDOW BORDERS
-# class                 border  backgr. text    indicator
-#client.focused          #551a8b #f18b6d #ffffff #f18b6d
-#client.focused_inactive #551a8b #93d8f4 #ffffff #93d8f4
-#client.unfocused        #333333 #93d8f4 #888888 #93d8f4
 
 ##################
 # MEDIA CONTROLS #
@@ -144,7 +120,6 @@ bindsym $mod+minus exec --no-startup-id pactl set-sink-volume alsa_output.pci-00
 #### BRIGHTNESS
 bindsym $mod+Control+Up exec brightnessctl set +10% # increase screen brightness
 bindsym $mod+Control+Down exec brightnessctl set 10%- # decrease screen brightness
-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
@@ -154,22 +129,15 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
-bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
 bindsym $mod+Return exec kitty -1 #terminal
 
-bindsym $mod+Control+a exec "atom"
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+d exec "discord"
 bindsym $mod+Control+f exec "thunar ~/Downloads"
 bindsym $mod+Control+g exec "thunar ~/GitHub"
-bindsym $mod+Control+m exec "mailspring"
 bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
-bindsym $mod+Control+t exec "telegram-desktop &"
 bindsym $mod+Control+z exec "zathura"
-
-bindsym $mod+n exec "atom ~/GitHub/brain"
-bindsym $mod+g exec "atom ~/GitHub/"
 
 #####################
 # WINDOW MANAGEMENT #
@@ -207,8 +175,8 @@ bindsym $mod+q workspace 11:home
 bindsym $mod+w workspace 12:discord
 bindsym $mod+e workspace 13:slack
 bindsym $mod+r workspace 14:zathura
-bindsym $mod+t workspace 15:telegram
-bindsym $mod+a workspace 16:atom
+bindsym $mod+t workspace 15:chat
+bindsym $mod+a workspace 16:editor
 bindsym $mod+s workspace 17:music
 bindsym $mod+d workspace 18:pin
 bindsym $mod+z workspace 19:zoom
@@ -232,14 +200,13 @@ bindsym $mod+Shift+q move container to workspace 11:home
 bindsym $mod+Shift+w move container to workspace 12:discord
 bindsym $mod+Shift+e move container to workspace 13:slack
 bindsym $mod+Shift+r move container to workspace 14:zathura
-bindsym $mod+Shift+t move container to workspace 15:telegram
-bindsym $mod+Shift+a move container to workspace 16:atom
+bindsym $mod+Shift+t move container to workspace 15:chat
+bindsym $mod+Shift+a move container to workspace 16:editor
 bindsym $mod+Shift+s move container to workspace 17:music
 bindsym $mod+Shift+d move container to workspace 18:pin
 bindsym $mod+Shift+z move container to workspace 19:zoom
 
 #### MOVE WORKSPACES BETWEEN MONITORS
-
 bindsym $mod+Left move workspace to output HDMI-1
 bindsym $mod+Right move workspace to output HDMI-0
 

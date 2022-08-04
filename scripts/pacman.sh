@@ -4,10 +4,10 @@ mkdir ~/Repos
 
 # Common Programs
 echo "Installing programs with pacman"
-sudo pacman -S acpi atom arandr autoconf automake bat bc bison calcurse chafa colordiff cmatrix cura discord dunst entr fakeroot fcrackzip fd feh figlet filezilla fzf firefox flameshot gcc gimp git hexyl i3status imagemagick kitty lxappearance make materia-gtk-theme moreutils neofetch patch pavucontrol python3 python-pip python-pywal python-setuptools mpv npm nnn steam stow syncthing telegram-desktop texlive-most thefuck thunar thunar-archive-plugin tig tmux tree ttf-fira-code ttf-comfortaa vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
+sudo pacman -S acpi atom arandr autoconf automake bat bc calcurse colordiff discord dunst fakeroot fcrackzip fd feh filezilla fzf firefox flameshot gcc gimp git i3status imagemagick kitty lxappearance make materia-gtk-theme moreutils neofetch patch pavucontrol python3 python-pip python-pywal python-setuptools mpv npm nnn steam stow syncthing texlive-most thunar thunar-archive-plugin tig tmux tree ttf-fira-code ttf-comfortaa vim w3m wine xorg-xbacklight xorg-xev xorg-xmodmap yay zathura zathura-pdf-mupdf zsh
 
 # yay
-yay -S betterlockscreen bless compton-tryone-git ffsend-bin grv i3-gaps-rounded-git minecraft-launcher nerd-fonts-noto-sans-mono nerd-fonts-hermit obsidian otf-fantasque-sans-mono rofi-git slack-desktop spotify ttf-iosevka vundle-git zijiang-pos58-driverzoom
+yay -S betterlockscreen bless compton-tryone-git ffsend-bin grv i3-gaps-rounded-git minecraft-launcher nerd-fonts-noto-sans-mono nerd-fonts-hermit otf-fantasque-sans-mono rofi-git slack-desktop spotify ttf-iosevka zijiang-pos58-driverzoom
 
 # Background
 echo "Downloading background"
@@ -49,15 +49,11 @@ chsh -s /bin/zsh
 #stow everything
 cd ~/Dotfiles
 
-stow neofetch
-stow oh-my-zsh
 stow rofi
-stow Telegram
 stow vim
 stow X
 stow zsh
 stow tmux
-stow latex
 stow kitty
 stow dunst
 stow compton

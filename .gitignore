@@ -1,11 +1,3 @@
 .DS_Store*
 
 oh-my-zsh/.oh-my-zsh/cache
-
-atom/.atom/.*
-atom/.atom/blob-store/
-atom/.atom/compile-cache/
-atom/.atom/github.cson
-atom/.atom/storage/
-atom/.atom/nohup.out
-atom/.atom/config.cson
