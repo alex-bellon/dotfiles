@@ -13,7 +13,7 @@
         '((sequence "TODO" "EVENT" "PROG" "WAIT" "MOVE" "|" "DONE" "CANC")))
   (setq org-todo-keyword-faces
         '(("PROG" . "yellow") ("WAIT" . "yellow") ("MOVE" . "orange")
-        ("CANC" . (:foreground "blue" :weight bold)))))
+        ("CANC" . (:foreground "red" :weight bold)))))
 
 (require 'org-journal)
 (setq org-journal-dir "~/GitHub/planner/day/"
