@@ -19,7 +19,6 @@ highlight Comment cterm=italic
 
 " Mappings
 noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
 
 map <ESC>^[[1;5C <C-Right>
 map <ESC>^[[1;5D <C-Left>
@@ -28,7 +27,3 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
-
-let g:lightline = {
-      \ 'colorscheme': 'wal',
-\ }

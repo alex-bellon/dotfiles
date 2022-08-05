@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Mail UI Notes
-StartupWMClass=Atom
-GenericName=Mail UI
-Exec=/usr/bin/atom ~/GitHub/phd/email/notes.md
-Icon=org.gnome.gedit
-Type=Application
-StartupNotify=false
