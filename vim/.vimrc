@@ -18,8 +18,10 @@ set backspace=indent,eol,start
 highlight Comment cterm=italic
 
 " Mappings
-map <C-t> :NERDTreeToggle<CR>
 noremap! <C-BS> <C-w>
+
+map <ESC>^[[1;5C <C-Right>
+map <ESC>^[[1;5D <C-Left>
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
