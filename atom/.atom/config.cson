@@ -152,8 +152,7 @@
   "status-bar":
     fullWidth: false
     isVisible: false
-  "toggle-gutter":
-    showGutters: false
+  "toggle-gutter": {}
   "tree-view":
     focusOnReveal: false
     hideIgnoredNames: true
