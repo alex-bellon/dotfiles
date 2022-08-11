@@ -7,6 +7,7 @@
 
 (setq display-line-numbers-type t)
 (setq org-hide-emphasis-markers t)
+(setq org-startup-with-inline-images t)
 
 (after! org
   (setq org-todo-keywords
@@ -22,3 +23,5 @@
 (setq org-directory "~/GitHub/planner")
 (setq org-agenda-files (directory-files-recursively "~/GitHub/planner/day/" "org"))
 
+(map! :n "C-="    #'text-scale-increase
+      :n "C--"    #'text-scale-decrease)
