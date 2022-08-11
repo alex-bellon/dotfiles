@@ -221,9 +221,9 @@ bindsym $mod+apostrophe resize grow height 15 px or 5 ppt
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #444444
-set $bg #444444
+set_from_resource $fg i3wm.color7 #aaaaaa
+set_from_resource $bg i3wm.color2 #111111
+set $bg #111111
 set_from_resource $hl i3wm.color6
 set_from_resource $bl i3wm.color3
 
@@ -242,19 +242,19 @@ client.background       $bg
 
 bar {
         colors {
-            background #444444
-            statusline #ffffff
+            background #111111
+            statusline #cccccc
             separator $fg
 
             #loc               border  backgd  text
-            focused_workspace  $bg $bg #ffffff
-            active_workspace   $bg $bg #ffffff
-            inactive_workspace $bg $bg #aaaaaa
-            urgent_workspace   $bg $fg #aaaaaa
-            binding_mode       $bg $bg #aaaaaa
+            focused_workspace  $bg $bg #cccccc
+            active_workspace   $bg $bg #cccccc
+            inactive_workspace $bg $bg #cccccc
+            urgent_workspace   $bg $fg #666666
+            binding_mode       $bg $bg #666666
         }
         status_command i3status
-        tray_output primary
         strip_workspace_numbers yes
+        tray_output none
         font pango:DejaVu Sans Mono 10
 }
