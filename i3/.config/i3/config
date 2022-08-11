@@ -249,7 +249,7 @@ bar {
             #loc               border  backgd  text
             focused_workspace  $bg $bg #cccccc
             active_workspace   $bg $bg #cccccc
-            inactive_workspace $bg $bg #cccccc
+            inactive_workspace $bg $bg #555555
             urgent_workspace   $bg $fg #666666
             binding_mode       $bg $bg #666666
         }
