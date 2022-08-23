@@ -7,7 +7,7 @@ sudo apt-get update
 
 # Common Programs
 echo "Installing programs with apt"
-sudo apt-get install automake calcurse cmatrix compton curl feh firefox gimp git gtk-chtheme i3wm i3status lxappearance moreutils mpv npm python3 python3-pip python3-setuptools rofi rxvt-unicode-256color scrot stow thunar thunar-archive-plugin tmux vim xbacklight zsh zsh-syntax-highlighting
+sudo apt-get install automake calcurse cmatrix compton curl feh firefox gimp git gtk-chtheme i3wm i3status lxappearance moreutils mpv npm python3 python3-pip python3-setuptools rofi scrot stow thunar thunar-archive-plugin tmux vim xbacklight zsh zsh-syntax-highlighting
 
 # Background
 echo "Downloading background"
@@ -22,9 +22,6 @@ cp betterlockscreen ~/.local/bin/
 # Docker
 sudo curl -sSL https://get.docker.com/ | sh
 sudo apt-get update && sudo apt-get upgrade
-
-# thef*ck
-sudo pip3 install thefuck --user
 
 # Git Summary
 cd ~/Repos
@@ -57,10 +54,6 @@ cd
 
 # rclone
 curl https://rclone.org/install.sh | sudo bash
-
-# vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
 
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -95,12 +88,7 @@ fi
 #stow everything
 cd ~/Dotfiles
 
-stow Firefox
-stow neofetch
-stow oh-my-zsh
 stow rofi
-stow Telegram
-stow Thunar
 stow tmux
 stow vim
 stow X

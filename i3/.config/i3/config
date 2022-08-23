@@ -14,13 +14,13 @@
 set $mod Mod1
 
 #### FONT
-font pango:Source Sans Pro, Hack 8
+font pango:Hack 12,Source Sans Pro, Hack 8
 
 #### RELOAD CONFIG
 bindsym $mod+Shift+c reload
 
 #### RESTART i3
-bindsym $mod+Shift+r restart
+bindsym $mod+Control+r restart
 
 #### EXIT i3
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -42,7 +42,7 @@ border_radius 5
 exec xmodmap ~/.Xmodmap
 
 #### START COMPTON
-exec compton -b --config ~/.compton.conf
+exec compton -b -f --config ~/.compton.conf
 
 #### LOAD WALLPAPER
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
@@ -50,44 +50,42 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 #### SET LOCKSCREEN
 exec --no-startup-id betterlockscreen -u ~/Pictures/wallpaper.jpg
 
-#### MOUNT LAB MACHINE
-exec --no-startup-id sshfs -o allow_other abellon@cancer.cs.utexas.edu:/lusr/u/abellon/ ~/Lab-Machine
+#### START ALTTAB
+exec --no-startup-id alttab -d 3
 
 #### SET VOLUME TO 0
 exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo 0% #set volume to 0
 exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle # mute sound
 
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10"
+set $workspace1 "1:1"
+set $workspace2 "2:2"
+set $workspace3 "3:3"
+set $workspace4 "4:4"
+set $workspace5 "5:5"
+set $workspace6 "6:6"
+set $workspace7 "7:7"
+set $workspace8 "8:8"
+set $workspace9 "9:9"
+set $workspace10 "10:10"
+set $workspace11 "11:home"
+set $workspace12 "12:discord"
+set $workspace13 "13:slack"
+set $workspace14 "14:zathura"
+set $workspace15 "15:chat"
+set $workspace16 "16:editor"
+set $workspace17 "17:music"
+set $workspace18 "18:pin"
+set $workspace19 "19:zoom"
 
 #### MAKE SPECIAL WORKSPACES
-assign [class="Mailspring"] home
-assign [class="discord"] discord
-assign [class="Discord"] discord
-assign [class="TelegramDesktop"] telegram
-assign [class="Slack"] slack
-assign [class="spotify"] music
-assign [class="zoom"] zoom
-assign [class="Zoom"] zoom
+assign [class="discord"] 12:discord
+assign [class="Discord"] 12:discord
+assign [class="Slack"] 13:slack
+assign [class="spotify"] 17:music
+assign [class="zoom"] 19:zoom
+assign [class="Zoom"] 19:zoom
 
-#### STARTUP TODOIST, EMAIL, CALENDAR
-exec --no-startup-id "Firefox"
-exec --no-startup-id "discord"
-exec --no-startup-id "mailspring"
-exec --no-startup-id "slack"
-exec --no-startup-id "telegram-desktop"
-
-#### ALWAYS FLOAT
-for_window [class="origin.exe"] floating enable
-
+exec --no-startup-id "ds4drv --hidraw"
 
 #########################
 # WINDOW CUSOTMIZATIONS #
@@ -102,12 +100,6 @@ gaps outer 0
 
 #### HIDE BORDERS ON FULLSCREEN
 hide_edge_borders both
-
-#### WINDOW BORDERS
-# class                 border  backgr. text    indicator
-#client.focused          #551a8b #f18b6d #ffffff #f18b6d
-#client.focused_inactive #551a8b #93d8f4 #ffffff #93d8f4
-#client.unfocused        #333333 #93d8f4 #888888 #93d8f4
 
 ##################
 # MEDIA CONTROLS #
@@ -126,44 +118,30 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume alsa_output.pci-000
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5% #decrease sound volume
 
 #### BRIGHTNESS
-bindsym $mod+Control+Up exec xbacklight -inc 10 # increase screen brightness
-bindsym $mod+Control+Down exec xbacklight -dec 10 # decrease screen brightness
+bindsym $mod+Control+Up exec brightnessctl set +10% # increase screen brightness
+bindsym $mod+Control+Down exec brightnessctl set 10%- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 #####################
 # PROGRAM SHORTCUTS #
 #####################
 
-#bindsym $mod+s scratchpad show
-
 bindsym $mod+l exec "betterlockscreen --lock dimblur"
 bindsym $mod+j exec "~/.config/rofi/launchers/launcher.sh"
-bindsym $mod+p exec "~/.config/rofi/power/powermenu.sh"
-bindsym $mod+Return exec kitty #terminal
+bindsym $mod+Return exec kitty -1 #terminal
 
-bindsym $mod+Control+a exec "atom"
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+d exec "discord"
 bindsym $mod+Control+f exec "thunar ~/Downloads"
 bindsym $mod+Control+g exec "thunar ~/GitHub"
-bindsym $mod+Control+m exec "mailspring"
 bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
-bindsym $mod+Control+t exec "telegram-desktop &"
-#bindsym $mod+Control+x exec "shutdown -h now"
 bindsym $mod+Control+z exec "zathura"
-
-bindsym $mod+n exec "atom ~/GitHub/brain"
-bindsym $mod+g exec "atom ~/GitHub/"
 
 #####################
 # WINDOW MANAGEMENT #
 #####################
-
-#### SHIFT FOCUS
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
 
 #### MOVE WINDOWS
 bindsym $mod+Shift+Left move left
@@ -177,57 +155,60 @@ bindsym $mod+Control+q kill
 #### FULLSCREEN
 bindsym $mod+f fullscreen toggle
 
-#### CHANGE LAYOUT
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
-
 #### TOGGLE TILING/FLOATING
 bindsym $mod+Shift+f floating toggle
 
 #### SWITCH TO WORKSPACE (normal)
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 1:1
+bindsym $mod+2 workspace 2:2
+bindsym $mod+3 workspace 3:3
+bindsym $mod+4 workspace 4:4
+bindsym $mod+5 workspace 5:5
+bindsym $mod+6 workspace 6:6
+bindsym $mod+7 workspace 7:7
+bindsym $mod+8 workspace 8:8
+bindsym $mod+9 workspace 9:9
+bindsym $mod+0 workspace 10:10
 
 #### WORKSAPCE KEYBINDINGS
-bindsym $mod+q workspace home
-bindsym $mod+w workspace discord
-bindsym $mod+e workspace slack
-bindsym $mod+t workspace telegram
-bindsym $mod+s workspace music
-bindsym $mod+z workspace zoom
-bindsym $mod+d workspace pin
+bindsym $mod+q workspace 11:home
+bindsym $mod+w workspace 12:discord
+bindsym $mod+e workspace 13:slack
+bindsym $mod+r workspace 14:zathura
+bindsym $mod+t workspace 15:chat
+bindsym $mod+a workspace 16:editor
+bindsym $mod+s workspace 17:music
+bindsym $mod+d workspace 18:pin
+bindsym $mod+z workspace 19:zoom
 
 #### CYCLE THROUGH WORKSPACES
 bindsym Control+$mod+Right workspace next
 
 #### MOVE FOCUSED WINDOW TO WORKSPACE
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 1:1
+bindsym $mod+Shift+2 move container to workspace 2:2
+bindsym $mod+Shift+3 move container to workspace 3:3
+bindsym $mod+Shift+4 move container to workspace 4:4
+bindsym $mod+Shift+5 move container to workspace 5:5
+bindsym $mod+Shift+6 move container to workspace 6:6
+bindsym $mod+Shift+7 move container to workspace 7:7
+bindsym $mod+Shift+8 move container to workspace 8:8
+bindsym $mod+Shift+9 move container to workspace 9:9
+bindsym $mod+Shift+0 move container to workspace 10:10
 
-bindsym $mod+Shift+q move container to workspace home
-bindsym $mod+Shift+w move container to workspace discord
-bindsym $mod+Shift+e move container to workspace slack
-bindsym $mod+Shift+t move container to workspace telegram
-bindsym $mod+Shift+s move container to workspace music
-bindsym $mod+Shift+z move container to workspace zoom
-bindsym $mod+Shift+d move container to workspace pin
+bindsym $mod+Shift+q move container to workspace 11:home
+bindsym $mod+Shift+w move container to workspace 12:discord
+bindsym $mod+Shift+e move container to workspace 13:slack
+bindsym $mod+Shift+r move container to workspace 14:zathura
+bindsym $mod+Shift+t move container to workspace 15:chat
+bindsym $mod+Shift+a move container to workspace 16:editor
+bindsym $mod+Shift+s move container to workspace 17:music
+bindsym $mod+Shift+d move container to workspace 18:pin
+bindsym $mod+Shift+z move container to workspace 19:zoom
+
+#### MOVE WORKSPACES BETWEEN MONITORS
+bindsym $mod+Left move workspace to output HDMI-1
+bindsym $mod+Right move workspace to output HDMI-0
 
 #### RESIZE MODE
 bindsym $mod+comma resize shrink width 15 px or 5 ppt
@@ -240,9 +221,9 @@ bindsym $mod+apostrophe resize grow height 15 px or 5 ppt
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #444444
-set $bg #444444
+set_from_resource $fg i3wm.color7 #aaaaaa
+set_from_resource $bg i3wm.color2 #111111
+set $bg #111111
 set_from_resource $hl i3wm.color6
 set_from_resource $bl i3wm.color3
 
@@ -261,17 +242,19 @@ client.background       $bg
 
 bar {
         colors {
-            background #444444
-            statusline #ffffff
+            background #111111
+            statusline #cccccc
             separator $fg
 
             #loc               border  backgd  text
-            focused_workspace  $bg $bg #ffffff
-            active_workspace   $bg $bg #ffffff
-            inactive_workspace $bg $bg #aaaaaa
-            urgent_workspace   $bg $fg #aaaaaa
-            binding_mode       $bg $bg #aaaaaa
+            focused_workspace  $bg $bg #cccccc
+            active_workspace   $bg $bg #cccccc
+            inactive_workspace $bg $bg #555555
+            urgent_workspace   $bg $fg #666666
+            binding_mode       $bg $bg #666666
         }
         status_command i3status
-        tray_output primary
+        strip_workspace_numbers yes
+        tray_output none
+        font pango:DejaVu Sans Mono 10
 }

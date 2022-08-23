@@ -1,25 +1,33 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
-export TERM='rxvt-unicode'
-export COLORTERM='rxvt-unicode-256color'
+
+bindkey  "^[[1~"   beginning-of-line # Home
+bindkey  "^[[4~"   end-of-line # End
+bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
 xmodmap ~/.Xmodmap
 
+xset s off
+xset -dpms
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+#source /usr/bin/virtualenvwrapper.sh
+
 ###################
 # COMMAND ALIASES #
 ###################
 
-alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias c="clear"
 alias car="cat"
 alias f="fzf"
 alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias ls="ls -a"
-alias nf="neofetch"
+alias s="exa --group-directories-first"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
 alias spr="sudo pacman -R"
@@ -27,7 +35,6 @@ alias sps="sudo pacman -S"
 alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
-alias timezone="cp /usr/share/zoneinfo/America/Chicago /etc/localtime"
 alias update="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
@@ -37,17 +44,24 @@ alias ..="cd .."
 #####################
 
 # Classes
+alias sys="cd ~/Classes/syslunch"
+alias sec="cd ~/Classes/seclunch"
+alias pl="cd ~/Classes/pl"
+alias emb="cd ~/Classes/embsyslunch"
+
+alias aero="cd ~/GitHub/aero"
+alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
-alias cs101="cd ~/GitHub/CS101"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
 alias gh="cd ~/GitHub"
-alias notes="cd ~/GitHub/notes"
-alias otw="cd ~/GitHub/ctf-writeups/Wargames/overthewire"
+alias phd="cd ~/GitHub/phd"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
 alias site="cd ~/GitHub/website"
+alias til="cd ~/GitHub/til"
 alias tl="cd ~/GitHub/ctf-tools"
+alias tslim="cd ~/GitHub/tslim-re"
 alias wiki="cd ~/GitHub/wikipedia"
 alias wp="cd ~/GitHub/ctf-writeups-private"
 
@@ -59,10 +73,7 @@ alias config="vim ~/.config/i3/config"
 alias gconfig="vim ~/.gitconfig"
 alias pm="vim ~/Dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
-alias rc="vim ~/.config/awesome/rc.lua"
-alias resources="vim ~/.Xresources"
 alias vimrc="vim ~/.vimrc"
-alias vundle="vim +PluginInstall +qall"
 alias zshrc="vim ~/.zshrc"
 
 ###############
@@ -79,13 +90,8 @@ alias gy="git pull"
 # PROG ALIASES #
 ################
 
-alias charles="~/Repos/charles/bin/charles"
-alias eclipse="~/eclipse/eclipse"
-alias matrix="cmatrix"
 alias metasploit="msfconsole"
 alias python="python3"
-alias taizen="~/Repos/taizen/target/release/taizen"
-alias telegram="~/Repos/Telegram/Telegram"
 
 ###############
 # SSH ALIASES #

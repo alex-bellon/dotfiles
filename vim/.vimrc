@@ -13,45 +13,17 @@ set numberwidth=5
 set pastetoggle=<F2>
 set nofoldenable
 set clipboard=unnamed
+set backspace=indent,eol,start
 
 highlight Comment cterm=italic
 
 " Mappings
-map <C-t> :NERDTreeToggle<CR>
+noremap! <C-BS> <C-w>
 
-" set crosshair colors
-"highlight CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=black guibg=darkred guifg=gray
-"highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=black guibg=darkred guifg=white
+map <ESC>^[[1;5C <C-Right>
+map <ESC>^[[1;5D <C-Left>
 
-" Set crosshairs
-":set cursorline    " enable the horizontal line
-":set cursorcolumn  " enable the vertical line
-
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'dylanaraps/wal.vim'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'lilydjwg/colorizer'
-Plugin 'RRethy/vim-illuminate'
-Plugin 'junegunn/goyo.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mboughaba/i3config.vim'
-Plugin 'pandysong/ghost-text.vim'
-" Plugin 'junegunn/limelight.vim' // not supported on urxvt
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-let g:lightline = {
-      \ 'colorscheme': 'wal',
-\ }
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
