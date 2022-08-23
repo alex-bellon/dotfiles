@@ -8,8 +8,6 @@ bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
-xmodmap ~/.Xmodmap
-
 xset s off
 xset -dpms
 
@@ -54,7 +52,9 @@ alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
 alias df="cd ~/Dotfiles"
 alias dl="cd ~/Downloads"
+alias fmc="cd ~/GitHub/aero/fmc/smiths/"
 alias gh="cd ~/GitHub"
+alias hal="cd ~/GitHub/aero/fmc/smiths/halucinator"
 alias phd="cd ~/GitHub/phd"
 alias rp="cd ~/Repos/"
 alias rs="cd ~/GitHub/cybersecurity-resources"
