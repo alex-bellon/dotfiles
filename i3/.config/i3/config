@@ -158,6 +158,9 @@ bindsym $mod+f fullscreen toggle
 #### TOGGLE TILING/FLOATING
 bindsym $mod+Shift+f floating toggle
 
+for_window [class="Steam"] floating enable
+for_window [class="steam"] floating enable
+
 #### SWITCH TO WORKSPACE (normal)
 bindsym $mod+1 workspace 1:1
 bindsym $mod+2 workspace 2:2
