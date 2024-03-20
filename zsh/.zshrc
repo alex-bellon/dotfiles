@@ -8,10 +8,8 @@ bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
-#xmodmap ~/.Xmodmap
-
-#xset s off
-#xset -dpms
+xset s off
+xset -dpms
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
