@@ -8,10 +8,10 @@ bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
-xmodmap ~/.Xmodmap
+#xmodmap ~/.Xmodmap
 
-xset s off
-xset -dpms
+#xset s off
+#xset -dpms
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
@@ -52,18 +52,17 @@ alias emb="cd ~/Classes/embsyslunch"
 alias aero="cd ~/GitHub/aero"
 alias brain="cd ~/GitHub/brain"
 alias cl="cd ~/Classes/"
-alias df="cd ~/Dotfiles"
+alias df="cd ~/dotfiles"
 alias dl="cd ~/Downloads"
-alias gh="cd ~/GitHub"
-alias phd="cd ~/GitHub/phd"
-alias rp="cd ~/Repos/"
-alias rs="cd ~/GitHub/cybersecurity-resources"
-alias site="cd ~/GitHub/website"
-alias til="cd ~/GitHub/til"
-alias tl="cd ~/GitHub/ctf-tools"
-alias tslim="cd ~/GitHub/tslim-re"
-alias wiki="cd ~/GitHub/wikipedia"
-alias wp="cd ~/GitHub/ctf-writeups-private"
+alias gh="cd ~/git"
+alias phd="cd ~/git/phd"
+alias rp="cd ~/repos/"
+alias rs="cd ~/git/cybersecurity-resources"
+alias site="cd ~/git/website"
+alias til="cd ~/git/til"
+alias tl="cd ~/git/ctf-tools"
+alias tslim="cd ~/git/tslim-re"
+alias wiki="cd ~/git/wikipedia"
 
 ###################
 # DOTFILE ALIASES #
@@ -71,7 +70,7 @@ alias wp="cd ~/GitHub/ctf-writeups-private"
 
 alias config="vim ~/.config/i3/config"
 alias gconfig="vim ~/.gitconfig"
-alias pm="vim ~/Dotfiles/scripts/pacman.sh"
+alias pm="vim ~/dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
@@ -81,7 +80,7 @@ alias zshrc="vim ~/.zshrc"
 ###############
 
 alias gp="git push"
-alias gr="~/Repos/git-summary/git-summary"
+alias gr="~/repos/git-summary/git-summary"
 alias gs="git status"
 alias gu="git-summary"
 alias gy="git pull"
@@ -147,3 +146,14 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+echo "cheese"
