@@ -17,7 +17,7 @@
         ("CANC" . (:foreground "red" :weight bold)))))
 
 (require 'org-journal)
-(setq org-journal-dir "~/GitHub/planner/"
+(setq org-journal-dir "~/git/planner/"
       org-journal-file-format "%Y-%m-%d.org")
 (setq org-journal-date-format "%a %b %d")
 (setq org-journal-carryover-items "TODO=\"TODO\"|TODO=\"PROG\"|TODO=\"WAIT\"")
