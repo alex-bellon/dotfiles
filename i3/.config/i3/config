@@ -118,10 +118,10 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume alsa_output.pci-000
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5% #decrease sound volume
 
 #### BRIGHTNESS
-bindsym $mod+Control+Up exec brightnessctl set +10% # increase screen brightness
-bindsym $mod+Control+Down exec brightnessctl set 10%- # decrease screen brightness
-bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym $mod+Control+Up exec brightnessctl set +5% # increase screen brightness
+bindsym $mod+Control+Down exec brightnessctl set 5%- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 #####################
 # PROGRAM SHORTCUTS #
@@ -134,7 +134,7 @@ bindsym $mod+Return exec kitty -1 #terminal
 bindsym $mod+Control+b exec firefox
 bindsym $mod+Control+d exec "discord"
 bindsym $mod+Control+f exec "thunar ~/Downloads"
-bindsym $mod+Control+g exec "thunar ~/GitHub"
+bindsym $mod+Control+g exec "thunar ~/git"
 bindsym $mod+Control+n exec "mousepad"
 bindsym $mod+Control+p exec "flameshot gui"
 bindsym $mod+Control+z exec "zathura"
@@ -157,6 +157,9 @@ bindsym $mod+f fullscreen toggle
 
 #### TOGGLE TILING/FLOATING
 bindsym $mod+Shift+f floating toggle
+
+for_window [class="Steam"] floating enable
+for_window [class="steam"] floating enable
 
 #### SWITCH TO WORKSPACE (normal)
 bindsym $mod+1 workspace 1:1

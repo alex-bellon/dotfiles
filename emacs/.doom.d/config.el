@@ -17,11 +17,12 @@
         ("CANC" . (:foreground "red" :weight bold)))))
 
 (require 'org-journal)
-(setq org-journal-dir "~/GitHub/planner/day/"
-      org-journal-file-format "%Y/%m/%d.org")
-
-(setq org-directory "~/GitHub/planner")
-(setq org-agenda-files (directory-files-recursively "~/GitHub/planner/day/" "org"))
+(setq org-journal-dir "~/git/planner/"
+      org-journal-file-format "%Y-%m-%d.org")
+(setq org-journal-date-format "%a %b %d")
+(setq org-journal-carryover-items "TODO=\"TODO\"|TODO=\"PROG\"|TODO=\"WAIT\"")
 
 (map! :n "C-="    #'text-scale-increase
       :n "C--"    #'text-scale-decrease)
+
+(setq org-fold-core-style 'overlays)
