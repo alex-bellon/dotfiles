@@ -144,6 +144,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="${PATH}:${HOME}/.config/emacs/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
