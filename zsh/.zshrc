@@ -47,8 +47,8 @@ alias sec="cd ~/Classes/seclunch"
 alias pl="cd ~/Classes/pl"
 alias emb="cd ~/Classes/embsyslunch"
 
-alias aero="cd ~/GitHub/aero"
-alias brain="cd ~/GitHub/brain"
+alias aero="cd ~/git/aero"
+alias brain="cd ~/git/brain"
 alias cl="cd ~/Classes/"
 alias df="cd ~/dotfiles"
 alias dl="cd ~/Downloads"
@@ -148,6 +148,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/repos/jlink:$PATH"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
@@ -155,3 +156,7 @@ export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 echo "cheese"
+source /usr/share/nvm/init-nvm.sh
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
