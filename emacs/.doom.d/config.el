@@ -5,6 +5,8 @@
 
 (setq doom-theme 'doom-one)
 
+(add-hook 'prog-mode-hook 'highlight-indentation-mode)
+
 (setq display-line-numbers-type t)
 (setq org-hide-emphasis-markers t)
 (setq org-startup-with-inline-images t)
@@ -16,6 +18,12 @@
         '(("PROG" . "yellow") ("WAIT" . "yellow") ("MOVE" . "orange")
         ("CANC" . (:foreground "red" :weight bold)))))
 
+(setq dotspacemacs-configuration-layers
+      '(
+        (multiedit :variables multiedit-many-to-one-bindings t)
+        ))
+
+
 (require 'org-journal)
 (setq org-journal-dir "~/git/planner/"
       org-journal-file-format "%Y-%m-%d.org")
@@ -26,3 +34,4 @@
       :n "C--"    #'text-scale-decrease)
 
 (setq org-fold-core-style 'overlays)
+

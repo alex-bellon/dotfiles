@@ -149,6 +149,7 @@ export PATH="${PATH}:${HOME}/.config/emacs/bin"
 export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/repos/jlink:$PATH"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
@@ -161,3 +162,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 echo "cheese"
+source /usr/share/nvm/init-nvm.sh
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

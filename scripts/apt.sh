@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mkdir ~/Repos
+mkdir ~/repos
 
 # Add PPAs
 sudo apt-get update
@@ -11,10 +11,9 @@ sudo apt-get install automake calcurse cmatrix compton curl feh firefox gimp git
 
 # Background
 echo "Downloading background"
-wget https://cs.utexas.edu/~abellon/images/background.png -o ~/Pictures/background.png
 
 # betterlockscreen
-cd ~/Repos/
+cd ~/repos/
 git clone https://github.com/pavanjadhaw/betterlockscreen
 cd betterlockscreen
 cp betterlockscreen ~/.local/bin/
@@ -28,32 +27,6 @@ cd ~/Repos
 git clone https://github.com/MirkoLedda/git-summary.git
 cd git-summary
 sudo cp git-summary /usr/local/bin/git-summary
-
-# GIMP Theme
-cd ~/Repos
-git clone https://github.com/draekko/gimp-cc-themes.git
-cd gimp-cc-themes
-cp -r Gimp-CC-Theme-Darkest ~/.gimp-2.8/themes
-cd
-
-# Materia Theme
-echo "Installing Materia theme"
-cd ~/Repos/
-wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
-cd materia-theme-master
-sudo ./install.sh
-cd
-
-# Neofetch
-echo "Installing neofetch"
-cd ~/Repos/
-git clone https://github.com/dylanaraps/neofetch
-cd neofetch
-make install
-cd
-
-# rclone
-curl https://rclone.org/install.sh | sudo bash
 
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -86,7 +59,7 @@ if  [[ $1 = "-i" ]]; then
 fi
 
 #stow everything
-cd ~/Dotfiles
+cd ~/dotfiles
 
 stow rofi
 stow tmux
