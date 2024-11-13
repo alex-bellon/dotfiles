@@ -149,6 +149,7 @@ export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/repos/jlink:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
