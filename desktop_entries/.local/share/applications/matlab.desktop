@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+MimeType=text/x-matlab
+Exec=/home/alex/repos/matlab/MATLAB/R2024b/bin/matlab -desktop -useStartupFolderPref
+Name=MATLAB
+Icon=matlab
+Categories=Development;Math;Science
+Comment=Scientific computing environment
+StartupNotify=true
