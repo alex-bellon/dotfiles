@@ -6,7 +6,7 @@ syntax on
 set laststatus=2
 set scrolloff=2
 set expandtab
-set tabstop=2
+set tabstop=4
 set mouse=a
 set number
 set numberwidth=5
