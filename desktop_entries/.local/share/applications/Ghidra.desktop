@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ghidra
+Comment=Reverse Engineering and Decompilation Suite
+Exec=ghidra
+Icon=ghidra
+Terminal=false
+Type=Application
+Categories=Utility;

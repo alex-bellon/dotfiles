@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=JADX
+Comment=Reverse Engineering Tool for Android
+Exec=jadx-gui
+Icon=jadx
+Terminal=false
+Type=Application
+Categories=Utility;
