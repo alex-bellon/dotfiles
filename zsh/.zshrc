@@ -16,6 +16,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 #source /usr/bin/virtualenvwrapper.sh
 
+export CALIBRE_OVERRIDE_DATABASE_PATH=~/Documents/calibre/calibre.db
+
 ###################
 # COMMAND ALIASES #
 ###################
@@ -142,28 +144,20 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/.config/emacs/bin"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+#export PATH="$HOME/repos/jlink:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-export WASMTIME_HOME="$HOME/.wasmtime"
-
-export PATH="$HOME/.emacs.d/bin:$PATH"
-export PATH="$HOME/repos/jlink:$PATH"
-export PATH="$HOME/.config/emacs/bin:$PATH"
-
-export PATH="$WASMTIME_HOME/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
+#export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#source /usr/share/nvm/init-nvm.sh
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 echo "cheese"
-source /usr/share/nvm/init-nvm.sh
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"

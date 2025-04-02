@@ -1,9 +1,9 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(setq user-full-name "Alex Bellon"
+(setq user-full-name "alex bellon"
       user-mail-address "emacs@alex-bellon.com")
 
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-balex)
 
 (add-hook 'prog-mode-hook 'highlight-indentation-mode)
 

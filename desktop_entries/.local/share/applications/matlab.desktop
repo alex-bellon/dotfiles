@@ -2,7 +2,7 @@
 Type=Application
 Terminal=false
 MimeType=text/x-matlab
-Exec=/home/alex/repos/matlab/MATLAB/R2024b/bin/matlab -desktop -useStartupFolderPref
+Exec=/home/alex/repos/matlab/MATLAB/R2024b/bin/matlab -desktop -useStartupFolderPref -softwareopengl
 Name=MATLAB
 Icon=matlab
 Categories=Development;Math;Science
