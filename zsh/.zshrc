@@ -43,11 +43,8 @@ alias ..="cd .."
 # DIRECTORY ALIASES #
 #####################
 
-# Classes
-alias sys="cd ~/Classes/syslunch"
-alias sec="cd ~/Classes/seclunch"
-alias pl="cd ~/Classes/pl"
-alias emb="cd ~/Classes/embsyslunch"
+alias gogo="cd ~/git/aero/gogo"
+alias wap="cd ~/git/aero/gogo/wap"
 
 alias aero="cd ~/git/aero"
 alias brain="cd ~/git/brain"
@@ -57,7 +54,6 @@ alias dl="cd ~/Downloads"
 alias gh="cd ~/git"
 alias phd="cd ~/git/phd"
 alias rp="cd ~/repos/"
-alias rs="cd ~/git/cybersecurity-resources"
 alias site="cd ~/git/website"
 alias til="cd ~/git/til"
 alias tl="cd ~/git/ctf-tools"

@@ -3,10 +3,13 @@ set nocompatible              " be iMproved, required
 filetype on                 " required
 syntax on
 
+set autoindent
 set laststatus=2
 set scrolloff=2
 set expandtab
 set tabstop=4
+set shiftwidth=4
+
 set mouse=a
 set number
 set numberwidth=5
@@ -23,7 +26,16 @@ noremap! <C-BS> <C-w>
 map <ESC>^[[1;5C <C-Right>
 map <ESC>^[[1;5D <C-Left>
 
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pa
+"vmap <C-c> "+yi
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <ESC>"+pa
+
+" ctrl + backspace deletes word
+imap <C-BS> <C-W>
+
+" shift + tab outdent
+" For command/normal mode
+nnoremap <S-Tab> <<
+" For insert mode
+inoremap <S-Tab> <C-d>

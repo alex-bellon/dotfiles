@@ -50,3 +50,4 @@
 ;(unpin! t)
 
 (package! highlight-indentation)
+(package! engrave-faces)

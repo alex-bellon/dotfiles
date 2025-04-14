@@ -35,3 +35,11 @@
 
 (setq org-fold-core-style 'overlays)
 
+
+(use-package engrave-faces
+  :ensure t
+  :init
+  (setq org-latex-src-block-backend 'engraved))
+;;(setq org-latex-src-block-backend 'engraved)
+;;(setq org-latex-engraved-theme 'doom-flatwhite)  ;; Optional
+

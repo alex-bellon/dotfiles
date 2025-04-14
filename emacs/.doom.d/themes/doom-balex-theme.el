@@ -1,14 +1,3 @@
-;;; doom-balex-theme.el --- inspired by Atom One Dark -*- lexical-binding: t; no-byte-compile: t; -*-
-;;
-;; Added: May 23, 2016 (28620647f838)
-;; Author: Henrik Lissner <https://github.com/hlissner>
-;; Maintainer: Henrik Lissner <https://github.com/hlissner>
-;; Source: https://github.com/atom/one-dark-ui
-;;
-;;; Commentary:
-;;
-;; This themepack's flagship theme.
-;;
 ;;; Code:
 
 (require 'doom-themes)
