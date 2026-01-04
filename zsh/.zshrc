@@ -1,5 +1,3 @@
-if [ "$TMUX" = "" ]; then tmux; fi
-
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
 
 bindkey  "^[[1~"   beginning-of-line # Home
@@ -25,17 +23,12 @@ export CALIBRE_OVERRIDE_DATABASE_PATH=~/Documents/calibre/calibre.db
 alias c="clear"
 alias car="cat"
 alias f="fzf"
-alias h="cd"
 alias lock="gnome-screensaver-command -l"
-alias s="exa --group-directories-first"
 alias scrot='scrot ~/Pictures/scrots/%b-%d-%H:%M:%S.png'
 alias shutdown="shutdown -h now"
-alias spr="sudo pacman -R"
-alias sps="sudo pacman -S"
 alias t1="tree . -L 1"
 alias t2="tree . -L 2"
 alias t3="tree . -L 3"
-alias update="sudo pacman -Syu"
 alias x="bye"
 alias ..="cd .."
 
@@ -66,7 +59,6 @@ alias wiki="cd ~/git/wikipedia"
 
 alias config="vim ~/.config/i3/config"
 alias gconfig="vim ~/.gitconfig"
-alias pm="vim ~/dotfiles/scripts/pacman.sh"
 alias power="sudo vim /etc/systemd/logind.conf"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
@@ -151,9 +143,7 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #source /usr/share/nvm/init-nvm.sh
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init --path)"
+#eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
-
-echo "cheese"

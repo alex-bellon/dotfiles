@@ -35,14 +35,8 @@ mouse_warping none
 # ON START UP #
 ###############
 
-#### ADD ROUNDED CORNERS
-border_radius 5
-
 #### CHANGE CAPS LOCK TO ESCAPE
 exec xmodmap ~/.Xmodmap
-
-#### START COMPTON
-exec compton -b -f --config ~/.compton.conf
 
 #### LOAD WALLPAPER
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
