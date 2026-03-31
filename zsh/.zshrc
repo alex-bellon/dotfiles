@@ -6,8 +6,9 @@ bindkey  "^H"      backward-kill-word
 
 ZSH_THEME="punctual"
 
-xset s off
-xset -dpms
+# Only for X server
+#xset s off
+#xset -dpms
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
@@ -147,3 +148,10 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 #eval "$(pyenv init --path)"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
+
+xmodmap ~/.Xmodmap
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+
+. "$HOME/.local/bin/env"
+
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"

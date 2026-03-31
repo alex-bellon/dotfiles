@@ -1,3 +1,5 @@
 .DS_Store*
 
+**/cache
+
 oh-my-zsh/.oh-my-zsh/cache
