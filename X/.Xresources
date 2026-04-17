@@ -1,0 +1,51 @@
+! --- Appearance ---
+URxvt.font:              xft:Hack:size=14
+URxvt.lineSpace: 0
+URxvt.letterSpace: -1
+
+! --- Functionality ---
+URxvt.visualBell:        false
+URxvt.print-pipe:        cat
+URxvt.scrollBar:         false
+URxvt.saveLines:         200000
+
+! --- Colors ---
+URxvt.foreground:        #c7ccd1
+URxvt.background:        #101010
+URxvt.cursorColor:       #c7ccd1
+
+! black
+URxvt.color0:            #1c2023
+URxvt.color8:            #747c84
+! red
+URxvt.color1:            #c7ae95
+URxvt.color9:            #c7ae95
+! green
+URxvt.color2:            #95c7ae
+URxvt.color10:           #95c7ae
+! yellow
+URxvt.color3:            #aec795
+URxvt.color11:           #aec795
+! blue
+URxvt.color4:            #ae95c7
+URxvt.color12:           #ae95c7
+! magenta
+URxvt.color5:            #c795ae
+URxvt.color13:           #c795ae
+! cyan
+URxvt.color6:            #95aec7
+URxvt.color14:           #95aec7
+! white
+URxvt.color7:            #c7ccd1
+URxvt.color15:           #f3f4f5
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! --- Keyboard Shortcuts ---
+! urxvt does not support dynamic font resizing natively. 
+URxvt.perl-ext-common:   default,font-size
+URxvt.keysym.C-S-plus:   font-size:increase
+URxvt.keysym.C-S-minus:  font-size:decrease

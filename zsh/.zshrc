@@ -1,3 +1,5 @@
+#if [ "$TMUX" = "" ]; then tmux; fi
+
 export ZSH=~/.oh-my-zsh #point to where oh my zsh is
 
 bindkey  "^[[1~"   beginning-of-line # Home
@@ -7,8 +9,8 @@ bindkey  "^H"      backward-kill-word
 ZSH_THEME="punctual"
 
 # Only for X server
-#xset s off
-#xset -dpms
+xset s off
+xset -dpms
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
@@ -154,4 +156,4 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
 . "$HOME/.local/bin/env"
 
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+clear
